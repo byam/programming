@@ -1,0 +1,817 @@
+/* Simple Talk CSS Document */
+
+body {
+	color:#666666;
+	background-color:#dad9d6;
+	font-family:arial, verdana, sans-serif;
+	margin:0px;
+	text-align:center;}
+
+a {text-decoration:none; color:#CC6633;}
+
+a:hover {text-decoration:underline;}
+
+a img {border:none;}
+
+	td {border-spacing:0px;
+		border-collapse:collapse;}
+	table{
+		
+		border-spacing:0px;
+		border-collapse:collapse;
+		}
+		tr {border-spacing:0px;
+		border-collapse:collapse;}
+
+.hidden {display:none;}
+
+.site {
+	width:996px;
+	background: url(../images/interface/background.gif);
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;}
+
+.page {
+	width:992px;
+	margin-left:2px;}
+
+.header {
+    background-color:#333333;
+	padding:10px 0px 14px 22px;}
+
+.search {
+	float:right;
+	text-align:right;
+	width:600px;
+	height:19px;
+	padding-right:20px;}
+
+.searchform{margin-top:10px;vertical-alignment:top;height:19px;}
+.txtSearch{border:5px solid #333333;padding:2px;}
+.searchresults {margin:10px 40px 10px 40px;}
+.searchresults td {font-size:80%;}
+
+div.search input.btnSearch{border:12px solid #333333;}
+
+.redgate {font-size:75%; color:#d6d6d6;}
+.redgate a {color:#ffffff;}
+
+.maincontent {
+	float:left;
+	width:666px;
+	margin:0px; 
+	padding:0px;
+	background-color:#ffffff;}
+
+.rightcolumn {
+	float:right;
+	width:324px;
+	margin:0px;
+	padding:0px 0px 0px 0px;}
+
+.clear {clear:both;}
+
+input, form {margin:0px; padding:0px;}
+
+.primarynav, .membernav {
+    padding:3px 0px 3px 18px;
+	font-size:80%;
+	font-weight:bold;}
+	
+.primarynav a {
+	margin-right:14px;
+	color:#ffffff;}
+
+.primarynav span.on {margin-right:14px;}
+.primarynav a.on {color:#ff9933;}
+.membernav {margin-right:10px;}
+.membernav, .membernav a  {color:#ffffff;}
+
+.primarynav {
+	float:left;
+	}
+
+.membernav {text-align:right;}
+
+.mainnav { background-color:#595959;}
+.subnav {background-color:#cc6633; padding:3px 0px 3px 18px; font-size:75%; font-weight:normal; color:#ffffff;}
+.subnav a { color: #666666; }
+
+span.on {color:#ff9933;}
+
+.orange {background-color:#cc6633;}
+
+.pagefooter {
+	clear:both;
+    background-color:#333333;
+	padding:3px 5px 3px 5px;}
+
+.pagefooternavright {
+    float:right;
+	width:450px;
+	text-align:right;}
+	
+.pagefooter a {
+	color:#ffffff;
+	font-size:80%;}
+
+.logo {background: url(../images/interface/simple-talk-logo_252x50.gif);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:252px; 
+	height:50px;}
+
+.10reasons {float:right;width:200px;}
+
+.categoriespanel span.articlecount {color:#666666;}
+
+.articlesummary p.editorscomment {color:#777777;}
+.subarticlesummary {padding:10px 0px 0px 50px;}
+.summarytext {margin-top:8px;}
+
+/* email to friend page */
+.emailpage {padding:10px;}
+.emailcontent {border:1px solid #000000; background-color:#d6d6d6;padding:10px;}
+
+/* 404 and 500 error pages */
+.error {padding:10px;}
+
+/* front page panels */
+
+.sectionhomelink {font-weight:bold;}
+
+.featurearticlepanel {
+	width:666px;
+	margin:0px;}
+
+.homepanels {width:662px;margin-top:-18px;text-align:right;}
+
+.sqlpanel, .opinionpanel {
+	width:326px;
+	float:left;
+	margin:0px 0px 0px 4px;
+	padding:0px;}
+
+.aspnetpanel, .forumspanel {
+	width:326px;
+	float:right;
+	margin:0px;
+	padding:0px;}
+
+
+.featurearticlepanel .header {
+	background: url(../images/interface/panel_header_feature_666x56.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:666px; 
+	height:56px;}
+
+.sqlpanel .header {
+	background: url(../images/interface/panel_head_sql_326x53.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:326px; 
+	height:48px;}
+
+.aspnetpanel .header {
+	background: url(../images/interface/panel_head_net_326x53.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:326px; 
+	height:48px;}
+
+.exchangepanel .header {
+	background: url(../images/interface/panel_head_exchange_326x53.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:326px; 
+	height:48px;}
+
+.opinionpanel .header {
+	background: url(../images/interface/panel_header_opinion_326x53.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:326px; 
+	height:48px;}
+
+.forumspanel .header {
+	background: url(../images/interface/panel_header_forums_326x53.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:326px; 
+	height:48px;}
+
+.featurearticlepanel .middle {
+	background: url(../images/interface/panel_background_666x1.jpg);
+	width:666px;}
+	
+.sqlpanel .middle, .aspnetpanel .middle, .opinionpanel .middle, .forumspanel .middle {
+	background: url(../images/interface/panel_background_333x1.jpg);
+	width:326px;
+	height:46px;}
+
+
+.featurearticlepanel .footer {
+	background: url(../images/interface/panel_footer_666x38.jpg);
+	background-repeat:no-repeat;
+	width:666px; 
+	height:56px;}
+
+.sqlpanel .footer, .aspnetpanel .footer, .opinionpanel .footer, .forumspanel .footer {
+	background: url(../images/interface/panel_footer_326x53.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:326px; 
+	height:53px;}
+
+.sqlpanel .rsslink, .opinionpanel .rsslink {
+	float:right;
+	width:36px;
+	margin:3px 0px 0px 0px;}
+
+.aspnetpanel .rsslink, .forumspanel .rsslink {
+	float:right;
+	width:36px;
+	margin:3px 0px 0px 0px;}
+
+.featurearticlecontent {
+	width:600px;
+	padding:5px 30px 5px 30px;
+	font-size:80%;}
+
+.title {
+	font-family:"Times New Roman", Times, serif;
+	font-size:180%;}
+
+.articlesummary span.title, .articlesummary a.title {font-family:arial, verdana, sans-serif;
+	font-weight:normal;}
+
+.panelcontent {
+	padding:5px 20px 0px 20px;
+	font-size:80%;}
+
+div.title a.featuretitlelink {color:#CC6633;}
+
+.paneltitlelink {
+	font-weight:bold;}
+
+.panellink {
+	padding:0px;
+	margin:0px 20px 0px 20px;
+	font-size:80%;}
+
+.panelline {margin:0px 0px 5px 8px;}
+
+.panelarticlecredit {margin:7px 0px 5px 0px;}
+
+.readmore {
+	margin:0px;
+	text-align:right;}
+
+.categoriespanel .header {clear:both;}
+.categoriespanel .middle .content {margin:0px 0px 0px 18px;}
+.categoriespanel .middle .left {float:left;width:300px;font-size:80%;}
+.categoriespanel .middle .right {float:left;width:300px;font-size:80%;}
+
+.newsletterpanel 
+{
+	font-size: 75%;
+}
+
+.newsletterpanel .header {
+	background-image: url(../images/interface/archive-header.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;
+	}
+	
+.newsletterpanel .middle {
+	background-image: url(../images/interface/panel_background_666x1.jpg);
+	width:666px;
+	padding:0px 0px 0px 0px;
+	margin:0px;}
+
+.newslettermonth {
+    margin-left: 30px;
+}
+
+
+.newsletterpanel .footer {
+	background-image: url(../images/interface/panel_footer_666x38.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:38px;
+	padding:0px;
+	margin:0px;}
+	
+.newsletterpanel div 
+{
+	width: 300px;
+}
+	
+.newsletterpanel p 
+{
+	margin: 0px 0px 10px 30px;
+	width: 600px; 
+}
+
+.newsletterpanel p.returnButton
+{
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+.newsletterrow
+{
+    padding-left: 30px;
+}
+.newsletterlines
+{
+    padding-left: 15px;
+}
+
+/* all article pages */
+.title a {color:#666666;}
+
+.article {
+	color:#333333;
+	padding:10px;
+	font-size:80%;
+	line-height:1.4;}
+.articletitle {
+	font-family:"Times New Roman", Times, serif;
+	font-size:170%;}
+.author {font-style:italic;}	
+
+table.rating td {
+	text-align:center;
+	width:70px;
+	font-size:80%;}
+
+.articlesummary {
+	margin:5px 27px 5px 22px;
+	font-size:80%;}
+
+.articlesummary p {margin:0px;color:#444444;} 
+
+.articlesummary .title {
+	font-family:"Times New Roman", Times, serif;
+	font-size:140%;
+	font-weight:bold;
+	margin: 0px 0px 0px 0px;}
+
+.articledetail {font-size:85%;background-color:#d6d6d6;}
+.articledetail2 {
+	font-size:85%;
+	padding:3px;
+	margin:6px 0px 5px 0px;
+	background-color:#d6d6d6;}
+
+.articlesummary p {clear:both;}
+
+.articledetail2 .category {text-align:right;}
+
+.homepagepanel .category {float:right; width:180px;padding:3px 3px 0px 3px;}
+.homerss {float:right;text-align:right; height:30px;width:200px; margin:14px 0px 0px 0px;}
+
+.signature {position:relative; top:4px;}
+
+.homepagepanel .authorpicture {margin:0px 0px 5px 8px;} 
+.authorpanel p {margin:7px 0px 10px 0px;}
+
+table.morearticles {
+	border:none; 
+	width:600px;}
+
+table.morearticles td, table.morearticles th {
+	font-size:75%;
+	font-family:Arial, Verdana, sans-serif}	
+
+.morearticles th, .newsletters th {text-align:left;}
+.morearticles th.listtitle {text-align:left;padding-left:20px;}
+.morearticles td.listtitle {width:300px;padding-left:20px;}
+.morearticles td.date {width:115px;}
+.morearticles td.rating {width:65px;}
+.morearticles td.vote {width:75px}
+
+.morearticles td.listtitle a, .archivelink {color:#cc6633;}
+td.archives {padding:0px 0px 0px 20px;}
+
+.sidepanels {margin:0px 0px 0px 5px;}
+
+/* end all article pages */
+
+/* panel page styles */
+.authorspanel {
+	width:666px;}
+
+.authorspanel .header {
+	background-image: url(../images/interface/header_authors_666x48.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+
+.authornamepanel .header {
+	background-color:#ffffff;
+	background-image: url(../images/interface/header_authorprofile_666x48.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+
+
+.allarticlespanel .header {
+	background-color:#ffffff;
+	background-image: url(../images/interface/header_authorarticle_666x48.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+
+.homepagepanel .header {
+	background-color:#ffffff;
+	background-image: url(../images/interface/header_latestitems_666x48.gif);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+    
+.authorspanel .middle, .authornamepanel .middle, .allarticlespanel .middle, .homepagepanel .middle {
+	background-image: url(../images/interface/panel_background_666x1.jpg);
+	width:666px;
+	padding:0px;
+	margin:0px;}
+
+
+.authorspanel .footer, .authornamepanel .footer,.allarticlespanel .footer, .homepagepanel .footer  {
+	background-image: url(../images/interface/panel_footer_666x38.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:44px;
+	padding:0px;
+	margin:0px;}
+
+.authorspanel .lines, .authornamepanel .lines, .allarticlespanel .lines, .homepagepanel .lines {margin:5px 0px 5px 14px;} 
+
+.articlesummary {
+	margin:0px 27px 0px 22px;
+	font-size:80%;}
+
+.articlesummary p {margin:0px;} 
+
+.articlesummary .title {
+	font-family:"Times New Roman", Times, serif;
+	font-size:140%;
+	margin: 0px 0px 0px 0px;}
+
+.content a {text-decoration:none; color:#CC6633;}
+
+.commenttable {width:500px;}
+
+.rss_link {width:100px; float:right;height:40px;}
+
+.authorpicture {margin:0px 7px 0px 0px;} 
+/* end author page styles */
+
+/* section headers */
+.catHeader2 {background-image: url(../images/interface/header_sql_666x84.jpg);width:666px;height:84px;}
+.catHeader3 {background-image: url(../images/interface/header_net_666x84.jpg);width:666px;height:84px;}
+.catHeader4 {background-image: url(../images/interface/header_opinion_666x84.jpg);width:666px;height:84px;}
+.catHeader5 {background-image: url(../images/interface/header_sqllearn_666x84.jpg);width:666px;height:84px;}
+.catHeader6 {background-image: url(../images/interface/header_sqltraining_666x84.jpg);width:666px;height:84px;} 
+.catHeader7 {background-image: url(../images/interface/header_sqlserverdbadmin_666x84.jpg);width:666px;height:84px;}
+.catHeader8 {background-image: url(../images/interface/header_sqlserver2005_666x84.jpg);width:666px;height:84px;}
+.catHeader9 {background-image: url(../images/interface/header_sqlserverdevelopment_666x84.jpg);width:666px;height:84px;}
+.catHeader10 {background-image: url(../images/interface/header_sqltsql_666x84.jpg);width:666px;height:84px;}
+.catHeader11 {background-image: url(../images/interface/header_sqlSSIS_666x84.jpg);width:666px;height:84px;}
+.catHeader12 {background-image: url(../images/interface/header_sqlperformance_666x84.jpg);width:666px;height:84px;}
+.catHeader13 {background-image: url(../images/interface/header_sqlbackupandrecovery_666x84.jpg);width:666px;height:84px;}
+.catHeader14 {background-image: url(../images/interface/header_sqltools_666x84.jpg);width:666px;height:84px;}
+.catHeader15 {background-image: url(../images/interface/header_netlearn_666x84.jpg);width:666px;height:84px;}
+.catHeader16 {background-image: url(../images/interface/header_netaspnet_666x84.jpg);width:666px;height:84px;}
+.catHeader17 {background-image: url(../images/interface/header_netdataaccess_666x84.jpg);width:666px;height:84px;}
+.catHeader18 {background-image: url(../images/interface/header_netframework_666x84.jpg);width:666px;height:84px;}
+.catHeader19 {background-image: url(../images/interface/header_netperformance_666x84.jpg);width:666px;height:84px;}
+.catHeader20 {background-image: url(../images/interface/header_netvb_666x84.jpg);width:666px;height:84px;}
+.catHeader21 {background-image: url(../images/interface/header_netvs_666x84.jpg);width:666px;height:84px;}
+.catHeader22 {background-image: url(../images/interface/header_netdevelopment_666x84.jpg);width:666px;height:84px;}
+.catHeader23 {background-image: url(../images/interface/header_nettools_666x84.jpg);width:666px;height:84px;}
+.catHeader24 {background-image: url(../images/interface/header_opinionpieces_666x84.jpg);width:666px;height:84px;}
+.catHeader25 {background-image: url(../images/interface/header_opinioneditor_666x84.jpg);width:666px;height:84px;}
+.catHeader26 {background-image: url(../images/interface/header_opiniongeek_666x84.jpg);width:666px;height:84px;}
+.catHeader28 {background-image: url(../images/interface/header_neteditors_666x84.gif);width:666px;height:84px;}
+.catHeader29 {background-image: url(../images/interface/header_sqleditors_666x84.gif);width:666px;height:84px;}
+.catHeader31 {background-image: url(../images/interface/header_sysadmin_666x84.jpg);width:666px;height:84px;}
+.catHeader33 {background-image: url(../images/interface/header_exchange_666x84.jpg);width:666px;height:84px;}
+.catHeader35 {background-image: url(../images/interface/header_books_666x84.jpg);width:666px;height:84px;}
+.catHeader36 {background-image: url(../images/interface/header_ssis_666x84.jpg);width:666px;height:84px;}
+.catHeader37 {background-image: url(../images/interface/header_reportingservices_666x84.jpg);width:666px;height:84px;}
+.catHeader38 {background-image: url(../images/interface/header_general_666x84.jpg);width:666px;height:84px;}
+.catHeader39 {background-image: url(../images/interface/header_virtualization_666x84.jpg);width:666px;height:84px;}
+.catHeader40 {background-image: url(../images/interface/header_unified_messaging_666x84.jpg);width:666px;height:84px;}
+.catHeader41 {background-image: url(../images/interface/header_powershell_666x84.jpg);width:666px;height:84px;}
+.catHeader45 {background-image: url(../images/interface/header_netbooks_666x84.jpg);width:666px;height:84px;}
+.catHeader46 {background-image: url(../images/interface/header_sqlbooks_666x84.jpg);width:666px;height:84px;}
+.catHeader47 {background-image: url(../images/interface/header_sysadminbooks_666x84.jpg);width:666px;height:84px;}
+
+/* end section headers */
+
+/* start widgets */
+
+.widget{
+	width:315px;
+	font-size:70%;
+	margin:0px;
+	padding:0px;
+	color:#d6d6d6;}
+
+#RelatedArticles .header {
+	background: url(../images/interface/w_relatedarticles_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#RelatedLinks .header {
+	background: url(../images/interface/w_relatedlinks_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#BlogTalk .header {
+	background: url(../images/interface/w_blogtalk_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#WhyJoin .header {
+	background: url(../images/interface/w_whyjoin_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#GeekOfTheWeek .header {
+	background: url(../images/interface/w_geekoftheweek_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#SQLOpinion .header {
+	background: url(../images/interface/w_philfactor_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#NETOpinion .header {
+	background: url(../images/interface/w_damonsdiscourse_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#blogger .header {
+	background: url(../images/interface/w_blogtalk_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#AskedInForums .header {
+	background: url(../images/interface/w_askedintheforums_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+
+#recentarticles .header {
+	background: url(../images/interface/w_latestarticles_header_315.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#recentblogs .header {
+	background: url(../images/interface/w_recentblogs_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#bloggerlist .header {
+	background: url(../images/interface/w_allbloggers_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#OpinionOpinion .header {
+	background: url(../images/interface/w_editorstalk_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#poll .header {
+	background: url(../images/interface/w_poll_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#mostviewedarticles .header {
+	background: url(../images/interface/w_mostviewed_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#topratedarticles .header {
+	background: url(../images/interface/w_toprated_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#freestuff .header {
+	background: url(../images/interface/w_freestuff_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+	
+#communityspotlight .header {
+	background: url(../images/interface/w_communityspot_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#forumpersonalities .header {
+	background: url(../images/interface/w_forumpersonalities_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+
+#pinvoke .header {
+	background: url(../images/interface/w_pinvoke_header_315x50.gif);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#exchange_ebook .header {
+	background: url(../images/interface/w_exchange_ebook_header_315x50.gif);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+#LarryGonnick .header {
+	background: url(../images/interface/w_larrygonick_header_315x50.jpg);
+	background-repeat:no-repeat;
+	margin:0px;
+	padding:0px;
+	width:315px; 
+	height:50px;}
+
+
+#recentarticles, #recentblogs, #bloggerlist {font-size:90%;}
+#recentarticles a, #bloggerlist a {color:#ff9933;}
+#bloggerlist .widgetcontent {width:300px;position:relative;}
+#OpinionOpinion .widgetcontent  {width:260px;position:relative;}
+#freestuff .freething {padding:4px 15px 4px 20px;}
+
+.widget .middle {
+	margin:0px; 
+	padding:0px;
+	border:0px;
+	background-image: url(../images/interface/w_background_315x1.jpg);}
+
+.widget .footer {
+	margin:0px padding:0px;
+	height:42px;
+	width:315px;
+	background-image:url(../images/interface/w_footer_small_315x42.jpg);}
+
+.relateditemlinks{
+	display:block;
+	margin:0px 20px 0px 20px;}
+
+.bloglinks, .widgetcontent {
+	display:block;
+	margin:0px 20px 0px 22px;}
+
+#recentblogs .bloggerprofile {
+	margin:0px 0px 10px 0px;
+	font-size:80%;}
+
+.bloggerprofile img {margin-right:5px;}
+.bloggerprofile .name {font-weight:bold;}
+.bloglinks .allblogs {text-align:right;}
+.joinbutton {width:100%; text-align:right;}
+.widget ul {margin:0px;}
+
+#recentblogs .bloggerprofile {background:none;width:275px;position:relative;}
+#forumpersonalities .bloggerprofile {background:none;width:275px;position:relative;font-size:120%;}
+#communityspotlight {font-size:80%;}
+
+#editorstalk {
+	width:315px;
+	height:236px;
+	background-image: url(../images/interface/w_editorstalk_panel2_315x23.jpg);}
+
+
+
+#WhyJoin img.paper {margin:0px 10px 0px 0px;}
+.widgetline {margin:4px 0px 4px 9px;border:0px; padding:0px;}
+
+.widget .text a {color:#ff9933;}
+
+.avatar {margin:0px 5px 5px 0px;}
+
+/* colour of links in all side widgets */
+.widget a, .widgetcontent a, .sidelinks a {color:#ff9933;}
+
+#AskInForums {
+	width:315px;
+	height:236px;
+	background-image: url(../images/interface/w_askinforums_315x236.jpg);}
+
+#AskInForums .text {padding:0px 125px 0px 20px;}
+
+#AskInForums .text a {font-weight:bold;color:#ff9933;}
+
+#SQLOpinion img.avatar, #NETOpinion.avatar {margin:0px 5px 5px 0px;}
+
+.bloggerprofile .avatar {float:left; width:65px;}
+.bloggerprofile {clear:left;}
+
+/* end widgets */
+
+/* article text styles */
+.CodeForeground{font-family:courier new, courier, monospaced;}
+.CodeBackground{font-family:courier new, courier, monospaced;background-color:#ffffff;}
+.CodeInText {
+	font-family:courier new, courier, monospaced;
+	font-weight:bold;}
+.ImportantWords {font-weight:bold;}
+.ScreenText {font-family:Tahoma, Arial, sans-serif;color:#888888;font-weight:bold;}
+PRE {padding:5px 10px 5px 10px;}
+.commentlink {color:#ffffff;}
+.commenttitle {font-weight:bold;width:100px;}
+.commenttable td {font-size:80%;}
+/* end article text styles */
+
+/* visited links */
+
+a.featuretitlelink:visited, a.paneltitlelink:visited, a.title:visited, .listtitle a:visited, .left a:visited, .right:visited {color:#996633;}
+.widget a:visited {color:#cc6633;}
+.CommonSidebarArea a:visited{color:#339933;}
+
+body {font-family:arial;}
+
+.searchterm { color: green; }

@@ -1,0 +1,313 @@
+/* Simple Talk Opinion Section styles */
+
+.maincontent .header, .rightcolumn .header {background-color:#ffffff;}
+
+.mainnav {background-color:#647C5D;}
+.subnav {background-color:#D8E1D5; color:#666666;}
+
+.summarybox {
+	float:right;
+	width:200px;}
+.summarybox .header {
+	margin:0px;
+	padding:0px;
+	height:24px;
+	width:200px;
+	background-image:url(../../images/interface/summary_opinion_header_200x24.jpg);
+	background-repeat:no-repeat;}
+.summarybox .middle {
+	padding:0px;
+	margin:0px;
+	font-size:75%;
+	background-image:url(../../images/interface/summary_opinion_middle_200x1.jpg);}
+.summaryboxcontent {
+	padding:0px 20px 5px 20px;}
+.summaryboxcontent2 {
+	padding:7px 20px 0px 20px;}
+.summaryboxcontent2 a {color:#333333;}
+.summaryboxcontent2 a:hover {color:#CC6600;}
+.summarybox .footer {
+	height:38px;
+	width:200px;
+	background-image:url(../../images/interface/summary_opinion_bottom_200x38.jpg);
+	background-repeat:no-repeat;}
+.summaryboxlines {
+	margin:0px 10px 0px 11px;}
+
+.codeforeground {
+	background-color:#D8E1D5;
+	padding:5px 10px 5px 10px;
+	margin:5px 0px 5px 0px;
+	color:#333333;}
+
+.authorpanel {
+	margin:10px;
+	padding:5px 10px 5px 10px;
+	border:1px solid #647C5D;
+	background-color:#D8E1D5;
+	color:#333333;
+	font-size:75%;}
+
+.authorpanel .authorpicture {margin:10px 10px 0px 0px;}
+
+div.rating {
+	margin:10px;
+	padding:5px 10px 5px 10px;
+	border:1px solid #647C5D;
+	background-color:#D8E1D5;
+	color:#333333;
+	font-size:75%;}
+	
+.sidenav {width:320px;}
+
+.sidenav .header {
+ 	background-image:url(../../images/interface/sidenav_opinion_header_320x46.jpg);
+	background-repeat:no-repeat;
+	width:320px;
+	height:46px;
+	margin:0px;
+	padding:0px;}
+
+.sidenav .middle {
+	background-image:url(../../images/interface/sidenav_opinion_bg_320x1.jpg);
+	width:320px;
+	font-size:80%;
+	margin:0px;
+	padding:0px;}
+
+.sidenav .footer {
+	background-image:url(../../images/interface/sidenav_opinion_footer_320x38.jpg);
+	background-repeat:no-repeat;
+	width:320px;
+	height:38px;
+	margin:0px 0px 10px 0px;
+	padding:0px;}
+
+.sidenav .middle a {
+	color:#FFFFFF; 
+	font-weight:bold;}
+
+.sidenav .middle span.selected { color:#ff9933; font-weight:bold; }
+
+.navitem {padding:4px 0px 4px 22px;}
+
+.articlecount {
+	color:#FF9933; 
+	font-weight:normal;
+	margin:0px 0px 0px 5px;}
+
+.sidenav .footer .sidehomelink  {
+	padding:5px 0px 4px 20px;
+	color:#FFFFFF;
+	font-size:70%;}
+
+.sidenav .footer a {
+	color:#FF9933;
+	text-decoration:underline;}
+
+.featurearticlespanel .header {
+	background-image:url(../../images/interface/header_opinion_features_666x48.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+
+.allarticlespanel .header {
+	background-image:url(../../images/interface/header_opinion_all_666x48.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+	
+.morearticlespanel .header {
+	background-image:url(../../images/interface/header_opinion_more_666x48.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+	
+.editorscommentpanel .header {
+	background-image:url(../../images/interface/header_opinion_editors_666x48.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+
+.categoriespanel .header {
+	background-image:url(../../images/interface/header_opinion_categories_666x48.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+
+.columnistspanel .header {
+	background-image:url(../../images/interface/header_opinion_columnists_666x84.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:48px;
+	padding:0px;
+	margin:0px;}
+
+.featurearticlespanel .middle, .allarticlespanel .middle, .morearticlespanel .middle, .editorscommentpanel .middle, .categoriespanel .middle, .allarticlespanel .middle, .columnistspanel .middle {
+	background-image:url(../../images/interface/panel_background_666x1.jpg);
+	width:666px;
+	padding:0px;
+	margin:0px;}
+
+
+.featurearticlespanel .footer, .allarticlespanel .footer, .morearticlespanel .footer, .editorscommentpanel .footer, .categoriespanel .footer, .allarticlespanel .footer, .columnistspanel .footer {
+	background-image:url(../../images/interface/panel_footer_666x38.jpg);
+	background-repeat:no-repeat;
+	width:666px;
+	height:38px;
+	padding:0px;
+	margin:0px;}
+
+.featurearticlespanel .lines, .allarticlespanel .lines {margin:5px 0px 5px 18px;clear:left;}
+.editorscommentpanel .lines {margin:5px 0px 5px 0px;} 
+td img.lines {margin:0px 0px 0px 14px;}
+
+.columnistspanel .content {font-size:70%;margin:5px 0px 5px 18px;}
+.columnistspanel .content .authordetail {margin:0px 10px 0px 0px;clear:both;}
+.columnistspanel .authordetail p {margin:0px;}
+.columnistspanel .lines {clear:left;} 
+
+.authordetail .authorpicture {float:left; width:75px;}
+
+pre, PRE {background-color:#D8E1D5;}
+#recentblogs .bloggerprofile {
+	margin:0px 0px 10px 0px;
+	font-size:85%;}
+
+
+/* forum styles */
+
+hr {color:#647C5D;}
+
+.comments {margin:10px 0px 10px 0px;}
+
+.haveyoursayheader {
+	background-color:#647C5D;
+	color:#D8E1D5;
+	margin:10px;
+	padding:10px;
+	font-size:80%;}
+
+.haveyoursayheader .title {
+	font-size:160%;
+	font-family:"times new roman", times, serif;}
+
+.forumview {margin:0px 10px 0px 10px;}
+
+
+.CommonMessageError {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding: 4px;
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 100%;
+	color: #443333;
+	font-weight: bold;
+	border: solid;
+	border-width: 1px;
+	border-color: #647C5D;
+	background-color: #D8E1D5;}
+
+.CommonImageTextButton {
+	display: inline-table;
+	display: -moz-inline-box;
+	display: inline-block;
+	padding: 4px;
+	margin: 1px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #647C5D;
+	border-top-color: #647C5D;
+	border-left-color: #647C5D;
+	background-color: #D8E1D5;
+	color: #333333;
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 80%;
+	font-weight: bold;
+	background-repeat: no-repeat;
+	background-position: 1px 1px;
+	padding-left: 22px;
+	line-height: normal;
+	white-space: nowrap;}
+
+.CommonListTitle {
+	padding: 6px;
+	padding-left: 8px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #647C5D;
+	background-color: #D8E1D5; /* was #e2eecd */
+	color: #647C5D;
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 90%;
+	font-weight: bold;
+	margin: 5px 0px 10px 0px;}
+
+
+.CommonListHeaderLeftMost {
+	text-align: center;
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #D8E1D5;
+	background-color: #D8E1D5;
+	color: #666666;
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 80%;
+	font-weight: bold;}
+
+.CommonListHeader {
+	text-align: center;
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-left-width: 0px;
+	border-color: #D8E1D5;
+	background-color: #D8E1D5;
+	color: #666666;
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 80%;
+	font-weight: bold;}
+
+.CommonListCellLeftMost {
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-top-width: 0px;
+	border-color: #D8E1D5;
+	color: #647C5D;
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 80%;}
+
+.CommonListCell {
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-color: #D8E1D5;
+	color: #647C5D;
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 80%;
+	text-align: left;}
+
+.ForumListCellLeftMostImageOnly {
+	padding: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-color: #D8E1D5;
+	color: #647C5D;
+	font-family: Arial, Verdana, Sans-serif;
+	width: 20px;}

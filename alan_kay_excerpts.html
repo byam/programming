@@ -1,0 +1,388 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><title>"Alan Kay" Excerpts -- paul's e-scrapbook</title><style id="BANNERSTYLE" type="text/css">
+div#tb_container{text-align:center; color:#fff}
+div#tb_container a{color:#fff; font-family:Arial, Helvetica, sans-serif; font-size:11px; text-decoration:none}
+div#tb_container a:hover{color:#292929; text-shadow:none}
+div#tb_container div.tb_menu_bg{width:760px; margin:0 auto 10px; padding:0; text-shadow:1px 1px 1px #515151;
+	background-color: #7F9343;
+  	background-image: -moz-linear-gradient(top, #7F9343, #CAD99B); 
+  	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #7F9343),color-stop(1, #CAD99B));
+  	-moz-border-radius:0 0 10px 10px; -webkit-border-radius:0 0 10px 10px; border-radius:0 0 10px 10px;
+  	-moz-box-shadow:1px 1px 2px #292929; -webkit-box-shadow:1px 1px 2px #292929; box-shadow:1px 1px 2px #292929; overflow:hidden;
+	font-family:Arial, Helvetica, sans-serif;
+}
+div#tb_container div.tb_menu_bg a.floatLeftAd{float:left; margin-left:13px; background:url(adm/common/images/tripodLogoAd.png) no-repeat -94px 0; height:27px; width:86px}
+div#tb_container div.tb_menu_bg a.floatLeftAd:hover{background-position:0 0}
+div#tb_container div.tb_menu_bg .txtContainer{float:left; margin:4px 0 0 10px}
+div#tb_container div.tb_menu_bg .txtContainer strong{margin-left:5px; border-left:1px solid; padding-left:18px; color:#292929; text-shadow:none}
+div#tb_container div.tb_menu_bg a.big{font-size:17px; margin:0 10px;}
+</style></head><body bgcolor="yellow" text="black">
+
+
+<script type="text/javascript" src="alan_kay_excerpts_files/hb.js"></script>
+<script type="text/javascript">
+var cm_role = "live";
+var cm_host = "tripod.lycos.com";
+var cm_taxid = "/memberembedded";
+var tripod_member_name = "pq.1994";
+var tripod_member_page = "pq.1994/alan_kay_excerpts.html";
+var tripod_ratings_hash = "1299518717:860e1257313cc5515ab9a5381d6d583d";
+
+var lycos_ad_category = {"dmoz":"business\/opportunities","ontarget":"&CAT=b2b","find_what":"Earn Extra Income"};
+
+var lycos_ad_remote_addr = "50.15.223.83";
+var lycos_ad_www_server = "www.tripod.lycos.com";
+var lycos_ad_track_small = "http://members.tripod.com/adm/img/common/ot_smallframe.gif?rand=112583";
+var lycos_ad_track_served = "http://members.tripod.com/adm/img/common/ot_adserved.gif?rand=112583";
+</script>
+
+<script type="text/javascript" src="alan_kay_excerpts_files/init.js"></script><script type="text/javascript" src="alan_kay_excerpts_files/memberembedded.js"></script>
+<script type="text/javascript" src="alan_kay_excerpts_files/jquery.js"></script>
+<script type="text/javascript"> 
+var lycos_ad = Array();
+var lycos_search_query = "";
+var lycos_onload_timer;
+
+function lycos_check_size() {
+    var window_width = 0, window_height = 0;
+    if (typeof(window.innerWidth) == 'number' ) {
+        window_width = window.innerWidth;
+        window_height = window.innerHeight;
+    } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+        window_width = document.documentElement.clientWidth;
+        window_height = document.documentElement.clientHeight;
+    } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+        window_width = document.body.clientWidth;
+        window_height = document.body.clientHeight;
+    } 
+    
+    var lycos_track_img = document.createElement('img');
+    if( top == self ) {
+        return 1;
+    } else {
+        if ((window_width < 300) || (window_height < 300)) {
+            lycos_track_img.src=this.lycos_ad_track_small+"&w="+window_width+"&h="+window_height;
+            return 0;
+        } else {
+            lycos_track_img.src=this.lycos_ad_track_served+"&w="+window_width+"&h="+window_height;
+            return 1;
+        }
+    }
+}
+       
+function lycos_insert_ads() {
+    var lycos_ad_mgr = new AdManager();
+    
+    if (this.lycos_search_query) {
+        lycos_ad_mgr.setForcedParam("keyword", this.lycos_search_query);
+    } else if (this.lycos_ad_category && this.lycos_ad_category.find_what) {
+        lycos_ad_mgr.setForcedParam("keyword", this.lycos_ad_category.find_what);
+    }
+
+    if (this.lycos_ad_category && this.lycos_ad_category.dmoz) {
+        lycos_ad_mgr.setForcedParam("page", this.lycos_ad_category.dmoz);
+    } else {
+        lycos_ad_mgr.setForcedParam("page", "member");
+    }
+
+    var lycos_prod_set = lycos_ad_mgr.chooseProductSet();
+    var slots = ["leaderboard", "leaderboard2"];
+    for (var slot in slots) {
+        if (lycos_ad_mgr.isSlotAvailable(slots[slot])) {
+            lycos_ad[slots[slot]] = lycos_ad_mgr.getSlot(slots[slot]);
+        }
+    }
+
+    lycos_ad_mgr.renderFooter();
+}
+
+function generateHref(atag, template){
+    atag.href=template.replace('_MYURL_', window.location.href.replace('http://', '')).replace('_MYTITLE_', 'Check%20out%20this%20Tripod%20Member%20site!'); 
+}
+
+if (lycos_check_size()) {
+    lycos_insert_ads();
+}
+
+
+jQuery.noConflict();
+jQuery(function(){
+  if ( ! lycos_check_size() ) { jQuery("#tb_container").hide(); jQuery("#FooterAd").hide(); return; }
+
+  var onButton = -44;
+  var onShare = -89;
+  var onSearch = 0;
+  var $build = jQuery("#build");
+  var ss = $build.css("top");
+
+	jQuery("#more_click").unbind().click(function(ev){
+      if (ss == onShare) {
+          $build.animate({"top": onButton + "px"});
+          ss = onButton;
+      }
+      else {
+          $build.animate({"top": onShare + "px"});
+          ss = onShare;
+      }
+	});
+											
+	jQuery("#searchlycos").unbind().click(function(ev){
+      if (ss == onSearch) {
+          $build.animate({"top": onButton + "px"});
+          ss = onButton;
+      }
+      else {
+          $build.animate({"top": onSearch + "px"});
+          ss = onSearch;
+      }
+	});
+	
+  var f = jQuery("#FooterAd").remove();
+  f.children("script").remove();
+  f.appendTo("body");
+
+  jQuery("#BANNERSTYLE").appendTo("head");
+
+});
+</script><!-- Casale Media 2007 (C) -->
+<!-- Ad Format: Pop Under -->
+<!-- Domain(s): lycos.com -->
+<script type="text/javascript"><!--
+var casaleD=new Date();var casaleR=(casaleD.getTime()%8673806982)+Math.random();
+var casaleU=escape('lycos.com');
+var casaleHost=' type="text/javascript" src="http://as.casalemedia.com/s?s=';
+document.write('<scr'+'ipt'+casaleHost+'92311&amp;u=');
+document.write(casaleU+'&amp;f=1&amp;id='+casaleR+'"></scr'+'ipt>');
+//--></script><script type="text/javascript" src="alan_kay_excerpts_files/s"></script><input value="0.3310869976005436" style="width: 0px; top: 0px; position: absolute; visibility: hidden;" id="oV6" onchange="fV8(fV1,5,true)"><div style="display: inline;" id="oV10"></div>
+<!-- Casale Media 2007 (C) -->
+<div id="tb_container">
+    <div class="tb_menu_bg">
+        <div id="tb_menu">
+        
+   <a href="http://www.tripod.com/" title="tripod.com" class="floatLeftAd"></a>
+   
+   <div class="txtContainer">
+   <a href="http://www.tripod.com/" title="tripod.com" class="big">Build your own FREE website at Tripod.com</a>
+   <strong style="font-size: 14px;">Share: </strong>
+
+<a href="http://www.facebook.com/" onclick="generateHref(this, 'http://facebook.com/sharer.php?u=_MYURL_&amp;t=_MYTITLE_')" id="facebook">Facebook</a> |
+<a href="http://www.twitter.com/" onclick="generateHref(this, 'http://twitter.com/home?status=_MYTITLE_%20-%20_MYURL_')" id="twitter">Twitter</a> |
+<a href="http://www.digg.com/" onclick="generateHref(this, 'http://digg.com/submit?phase=2&amp;url=_MYURL_&amp;title=_MYTITLE_')" id="digg">Digg</a> |
+<a href="http://reddit.com/" onclick="generateHref(this, 'http://reddit.com/submit?url=_MYURL_&amp;title=_MYTITLE_')" id="reddit">reddit</a>
+</div>
+		</div>
+    </div>
+	
+    
+ 
+    <div id="tb_ad" style="display: block ! important;"><div id="ad_container" style="display: block ! important;"><script type="text/javascript">document.write(lycos_ad['leaderboard']);</script><script language="JavaScript" type="text/javascript">
+<!--
+google_position = 'above'; 
+google_ad_client = 'ca-lycos_tripod';
+google_ad_channel = 'TRI_above_728x90';
+google_ad_width = '728';
+google_ad_height = '90';
+google_ad_format = '728x90_pas_abgnc';
+google_color_bg = 'ffffff';
+google_color_border = 'ffffff';
+google_alternate_ad_url = 'http://ad.yieldmanager.com/st?ad_type=iframe&amp;ad_size=728x90&amp;section=67698';
+google_ad_type = 'text,image,flash,html';
+google_image_size = '728x90';
+google_safe = 'high';
+// -->
+</script><script language="JavaScript" src="alan_kay_excerpts_files/show_ads.js" type="text/javascript">
+</script><script src="alan_kay_excerpts_files/expansion_embed.js"></script><script src="alan_kay_excerpts_files/test_domain.js"></script><script>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</script><ins style="display: inline-table; border: medium none; height: 90px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 728px;"><ins id="google_ads_frame1_anchor" style="display: block; border: medium none; height: 90px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame1" marginheight="0" marginwidth="0" name="google_ads_frame" src="alan_kay_excerpts_files/ads.html" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins><noscript><img height="1" width="1" border="0" src="http://pagead2.googlesyndication.com/pagead/imp.gif?client=ca-lycos_tripod&channel=TRI_above_728x90&event=noscript"></noscript></div></div>
+</div>
+
+<noscript>
+ <img src="http://members.tripod.com/adm/img/common/ot_noscript.gif?rand=112583" alt="" width="1" height="1" />
+ <!-- BEGIN STANDARD TAG - 728 x 90 - Lycos - Tripod Fallthrough - DO NOT MODIFY -->
+ <iframe frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="728" height="90" src="http://ad.yieldmanager.com/st?ad_type=iframe&ad_size=728x90&section=209094"></iframe>
+ <!-- END TAG -->
+</noscript>
+
+
+
+<br><br><table background="alan_kay_excerpts_files/bg-notepad.gif" border="3" cellpadding="75" width="85%" align="center"><tbody><tr><td><h1 align="center"><font color="#400000">paul's e-scrapbook</font></h1><h2 align="center"><font color="#000080">"ALAN KAY" EXCERPTS</font></h2><br><h4 align="center">Collated by <i><a href="mailto:paulquek88@yahoo.com">Paul Quek</a></i></h4><div align="center"><br><br><img src="alan_kay_excerpts_files/alan_kay_anim.gif"><br><br><br><a href="http://pq.1994.tripod.com/alan_kay_short_bio.html">Click here for short bio</a><br><br><br></div><br><br><br><table bgcolor="black" cellpadding="35" align="center"><tbody><tr><td><font color="yellow" face="arial" size="2"><div align="justify">Perhaps it was commercialization in the 1980s that killed off the next expected
+new thing. Our plan and our hope was that the next generation of kids would
+come along and do something better than Smalltalk around 1984 or so. We all
+thought that the next level of programming language would be much more <font color="#00ff80"><b>strategic</b></font> and even <font color="#00ff80"><b>policy-oriented</b></font> and would have much more knowledge about what it was trying to do. <i><b>But a variety of different things conspired together, and that next generation
+actually didn't show up.</b></i> One could actually argue -- as I sometimes do -- that <b><i>the success of commercial personal computing and operating systems has actually
+led to a considerable retrogression in many, many respects.</i></b><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+You could think of it as putting a low-pass filter on some of the good ideas
+from the '60s and '70s, as <font color="#ffffff"><b><i>computing spread out much, much faster than educating unsophisticated people
+can happen. In the last 25 years or so, we actually got something like a <font size="+1">pop culture</font></i></b></font>, similar to what happened when television came on the scene and some of its
+inventors thought it would be a way of getting Shakespeare to the masses. But
+they forgot that you have to be more sophisticated and have more perspective to
+understand Shakespeare. What television was able to do was to capture people as
+they were.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+So I think the lack of a real computer science today, and the lack of real
+software engineering today, is partly due to this <font size="+1">pop culture</font>.</div></font><br><br><font color="white" face="times new roman" size="1">&nbsp;&nbsp;&nbsp;
+-- <a href="http://acmqueue.com/modules.php?name=Content&amp;pa=printer_friendly&amp;pid=273&amp;page=1"><b><font color="#ffffff">"A Conversation with Alan Kay"</font></b></a> (adapted)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Programming Languages</i> (Vol. 2, No. 9 - Dec/Jan 2004-2005)</font></td></tr></tbody></table><br><br><br><hr width="95%" align="center"><br><br><br><table bgcolor="grey" cellpadding="35" align="center"><tbody><tr><td><font purple="" color="#0000d0" face="arial" size="1"><div align="justify">If you look at software today, through the lens of the history of engineering,
+it's certainly engineering of a sort -- but it's the kind of engineering that
+people without the concept of the arch did. Most software today is very much
+like an Egyptian pyramid with millions of bricks piled on top of each other,
+with no structural integrity, but just done by brute force and thousands of
+slaves.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+I would compare the Smalltalk stuff that we did in the '70s with something like
+a Gothic cathedral. We had two ideas, really. One of them we got from Lisp: <font color="white" size="2"><b>late binding</b></font>. The other one was the idea of <font color="white" size="2"><b>objects</b></font>. Those gave us something a little bit like the arch, so we were able to make
+complex, seemingly large structures out of very little material, but I wouldn't
+put us much past the engineering of 1,000 years ago.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If you look at [Doug] Engelbart's demo [a live online hypermedia demonstration
+of the pioneering work that Engelbart's group had been doing at Stanford
+Research Institute, presented at the 1968 Fall Joint Computer Conference], then
+you see many more ideas about <b>how to boost the collective IQ of groups and help
+them to work together</b> than you see in the commercial systems today. I think
+there's this very long lag between what you might call the best practice in
+computing research over the years and what is able to leak out and be adapted
+in the much more expedient and deadline-conscious outside world.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+It's not that people are completely stupid, but if there's a big idea and you
+have deadlines and you have expedience and you have competitors, very likely
+what you'll do is take a low-pass filter on that idea and implement one part of
+it and miss what has to be done next. This happens over and over again. If
+you're using early-binding languages as most people do, rather than
+late-binding languages, then you really start getting locked in to stuff that
+you've already done. You can't reformulate things that easily.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Let's say the adoption of programming languages has very often been somewhat
+accidental, and the emphasis has very often been on how easy it is to implement
+the programming language rather than on its actual merits and features. For
+instance, Basic would never have surfaced because there was always a language
+better than Basic for that purpose. That language was Joss, which predated
+Basic and was beautiful. But Basic happened to be on a GE timesharing system
+that was done by Dartmouth, and when GE decided to franchise that, it started
+spreading Basic around just because it was there, not because it had any
+intrinsic merits whatsoever.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+This happens over and over again. The languages of Niklaus Wirth have spread
+wildly and widely because he has been one of the most conscientious documenters
+of languages and one of the earlier ones to do algorithmic languages using <font color="#ffffff"><b>p-codes (pseudocodes)</b></font> -- the same kinds of things that we use. The idea of using
+those things has a common origin in the hardware of a machine called the <font color="#ffffff"><b>Burroughs B5000</b></font> from the early 1960s, which the establishment hated.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+... I was there, and Burroughs actually hired college graduates to explain that
+machine to data-processing managers. There was an immense amount of information
+available. The problem was that the DP managers didn't want to learn new ways
+of computing, or even how to compute. IBM realized that and Burroughs didn't.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+... the original machine [<font color="#ffffff"><b>Burroughs B5000</b></font>] had two CPUs, and it was described quite adequately in a 1961 paper by Bob
+Barton, who was the main designer. One of the great documents was called &#8220;The
+Descriptor&#8221; and laid it out in detail. The problem was that almost everything
+in this machine was quite different and what it was trying to achieve was quite
+different.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The reason that line lived on -- even though the establishment didn't like it
+-- was precisely because it was almost impossible to crash it, and so the
+banking industry kept on buying this line of machines, starting with the B5000.
+Barton was one of my professors in college, and I had adapted some of the ideas
+on the first desktop machine that I did. Then we did a much better job of
+adapting the ideas at Xerox PARC <i>(Palo Alto Research Center)</i>.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Neither Intel nor Motorola nor any other chip company understands the first
+thing about why that architecture was a good idea. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Just as an aside, to give you an interesting benchmark -- on roughly the same
+system, roughly optimized the same way, a benchmark from 1979 at Xerox PARC
+runs only 50 times faster today. <font color="#ffffff"><b>Moore's law</b></font> has given us somewhere between 40,000 and 60,000 times improvement in that
+time. So there's <b>approximately a factor of 1,000 in efficiency that has been <i>lost</i> by bad CPU architectures</b>.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The myth that it doesn't matter what your processor architecture is -- that
+Moore's law will take care of you -- is totally false. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+... both <font color="#ffffff"><b>Lisp</b></font> and <font color="#ffffff"><b>Smalltalk</b></font> were done in by the eight-bit microprocessor -- it's not because they're
+eight-bit micros, it's because the processor architectures were bad, and they
+just killed the <font color="#ffffff"><b>dynamic languages</b></font>. Today these languages run reasonably because even though the architectures
+are still bad, the level 2 caches are so large that some fraction of the things
+that need to work, work reasonably well inside the caches; so both Lisp and
+Smalltalk can do their 	things and are viable today. But both of them are quite
+obsolete, of course.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The stuff that is in vogue today is only about &#8220;one- half&#8221; of those languages.
+Sun Microsystems had the right people to make <font color="#ffffff" size="3"><b>Java</b></font> into a first-class language, and I believe it was <b><i>the Sun marketing people</i></b> who rushed the thing out before it should have gotten out. They <b><i>made it impossible for the Sun software people to do what needed to be done.</i></b><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+...<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Like I said, it's a pop culture. A commercial hit record for teenagers doesn't
+have to have any particular musical merits. I think a lot of the success of
+various programming languages is expeditious gap-filling. <font color="#ffffff"><b>Perl</b></font> is another example of filling a tiny, short-term need, and then being a real
+problem in the longer term. <b>Basically, a lot of the problems that computing has
+had in the last 25 years comes from systems where the designers were trying to
+fix some short-term thing and didn't think about <i>whether the idea would scale</i> if it were adopted.</b> There should be a half-life on software so old software
+just melts away over 10 or 15 years.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+It was a different culture in the '60s and '70s; the ARPA <i>(Advanced Research Projects Agency)</i> and PARC culture was basically a mathematical/scientific kind of culture and
+was interested in <font color="white" face="times new roman" size="3"><b><i>scaling</i></b></font>, and of course, the <font purple="" color="#0000d0" size="3"><b>Internet was an exercise in scaling</b></font>. There are just two different worlds, and I don't think it's even that helpful
+for people from one world to complain about the other world -- like people from
+a literary culture complaining about the majority of the world that doesn't
+read for ideas. It's futile.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+I don't spend time complaining about this stuff, because <font color="#ffffff"><b>what happened in the last 20 years is quite normal, even though it was
+unfortunate. Once you have something that grows faster than education grows,
+you're always going to get a pop culture.</b></font> It's well known that I tried to kill Smalltalk in the later '70s.
+There were a few years when it was the most wonderful thing in the world. It
+answered needs in a more compact and beautiful way than anything that had been
+done before. But time moves on. As we learned more and got more ambitious about
+what we wanted to do, we realized that there are all kinds of things in
+Smalltalk that don't <font purple="" color="#0000d0"><b>scale</b></font> the way they should -- for instance, the <font color="#0000ff"><b>reflection</b></font> stuff that we had in there. It was one of the first languages to really be
+able to see itself, but now it is known how to do all levels of reflection much
+better -- so we should implement that.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+We saw after a couple of years that this could be done much better. The <font color="#0000ff"><b>object model</b></font> we saw after a couple of years could be done much better, etc. So the problem
+is -- I've said this about both Smalltalk and Lisp -- they tend to eat their
+young. What I mean is that both Lisp and Smalltalk are really fabulous
+vehicles, because they have a <font color="#ffffff"><b>meta-system</b></font>. They have so many ways of dealing
+with problems that the <font color="#ffffff"><b>early-binding languages</b></font> don't have, that it's very, very difficult for people who like Lisp or
+Smalltalk to imagine anything else.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Now just to mention a couple of things about Java: it really doesn't have a
+full <font color="#ffffff"><b>meta-system</b></font>. It has always had the problem -- for a variety of reasons -- of having two
+regimes, not one regime. It has things that aren't objects, and it has things
+that it calls objects. It has real difficulty in being dynamic. It has a
+garbage collector. So what? Those have been around for a long time. But it's
+not that great at adding to itself.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For many years, the development kits for Java were done in <font color="#ffffff"><b>C++</b></font>. That is a telling thing.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+We looked at Java very closely in 1995 when we were starting on a major set of
+implementations, just because it's a lot of work to do a viable language <b>kernel</b>. The thing we liked least about Java was the way it was implemented. It
+had this old idea, which has never worked, of having a set of paper specs,
+having to implement the <font color="#ffffff" size="3"><b>VM</b></font> <i>(virtual machine)</i> to the paper specs, and then having benchmarks that try to validate what
+you've just implemented -- and that has never resulted in a completely
+compatible system.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The technique that we had for Smalltalk was to write the VM in itself, so
+there's a <b>Smalltalk simulator of the VM</b> that was essentially the only specification of the VM. You could debug and you
+could answer any question about what the VM would do by submitting stuff to it,
+and you made every change that you were going to make to the VM by changing the
+simulator. After you had gotten everything debugged the way you wanted, you
+pushed the button and it would generate, without human hands touching it, <b><i>a mathematically correct version of C that would go on whatever platform you
+were trying to get onto</i></b>.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The result is that this system today, called <font purple="" color="#0000d0" size="3"><b>Squeak</b></font>, runs identically on more than two dozen platforms. Java does not do that. <i><b>If you think about what the Internet means, it means you have to run
+identically on everything that is hooked to the Internet.</b></i> So Java, to me, has always violated one of the prime things about software
+engineering in the world of the Internet.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Once we realized that Java was likely not to be compatible from platform to
+platform, we basically said we'll generate our own system that is absolutely
+compatible from platform to platform, and that's what we did.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Anybody can do that. If the pros at Sun had had a chance to fix Java, the world
+would be a much more pleasant place. This is not secret knowledge. It's just
+secret to this pop culture.</div></font><br><br><font face="times new roman" size="1">&nbsp;&nbsp;&nbsp;
+-- <a href="http://acmqueue.com/modules.php?name=Content&amp;pa=printer_friendly&amp;pid=273&amp;page=1"><b>"A Conversation with Alan Kay"</b></a> (adapted)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Programming Languages</i> (Vol. 2, No. 9 - Dec/Jan 2004-2005)</font></td></tr></tbody></table><br><br><br><hr width="95%" align="center"><br><br><br><table bgcolor="#cadb88" cellpadding="35" align="center"><tbody><tr><td><font purple="" color="#0000d0" face="arial" size="1"><div align="justify">... the big revelation to me when I was in graduate school [was that Lisp was
+carefully defined in terms of Lisp] -- when I finally understood that the half
+page of code on the bottom of page 13 of the Lisp 1.5 manual was Lisp in
+itself. These were <b>"Maxwell's Equations of Software!"</b> This is the whole world of programming in a few lines that I can put my hand
+over. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+I realized that anytime I want to know what I'm doing, I can just write down
+the <b>kernel</b> of this thing in a half page and it's not going to lose any power. In fact,
+it's going to gain power by being able to reenter itself much more
+readily than most systems done the other way can possibly do.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+All of these ideas could be part of both software engineering and computer
+science, but I fear -- as far as I can tell -- that most undergraduate degrees
+in
+computer science these days are basically Java vocational training. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+I've heard complaints from even mighty Stanford University with its illustrious
+faculty that basically the undergraduate computer science program is little
+more than Java certification. </div></font><br><br><font face="times new roman" size="1">&nbsp;&nbsp;&nbsp;
+-- <a href="http://acmqueue.com/modules.php?name=Content&amp;pa=printer_friendly&amp;pid=273&amp;page=1"><b>"A Conversation with Alan Kay"</b></a> (adapted)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Programming Languages</i> (Vol. 2, No. 9 - Dec/Jan 2004-2005)</font></td></tr></tbody></table><br><br><br><hr width="95%" align="center"><br><br><br><table bgcolor="yellow" cellpadding="35" align="center"><tbody><tr><td><font color="black" face="garamond" size="2"><div align="justify">Somebody recently asked me what I am and I answered along the following lines:
+there is a discipline called mathematics, one called science, and one called
+engineering, and if those are put in a Venn diagram the intersection of the
+three is modern-day technology. Engineering was around a lot longer than
+science, but there is very little engineering that is done today that is not
+hooked into scientific investigation and scientific results. And math is the
+lingua franca for both of these disciplines. <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+I would say that, temperamentally, I am basically an idealist, which makes me
+pretty much of a mathematician. Scientists tend to be realists, and engineers
+pragmatists. I am much more of an idealist than a realist or a pragmatist. In a
+way, when I think of myself, I think of myself as a scientist more than a
+mathematician or an engineer, but when I look at what I have done it has been
+mostly math and engineering and very little actual science. So these are just
+three ways of dealing with those things. </div></font></td></tr></tbody></table><br><br><br><hr width="95%" align="center"><br><br><font purple="" color="#0000d0" face="times new roman" size="1"></font><blockquote><font purple="" color="#0000d0" face="times new roman" size="1">Check these out:<br><br><li><a href="http://www.ecotopia.com/webpress/futures.htm"><b>"Predicting The Future"</b></a> -- By Alan C. Kay (from <i>Stanford Engineering</i>, Volume 1, Number 1, Autumn 1989, pg 1-6)<br></li><li><a href="http://www.contextmag.com/setFrameRedirect.asp?src=/archives/199907/TheLastWord.asp"><b>Distant Thunder: Interview in <i>Context Magazine</i> (1999)</b></a><br></li><li><a href="http://www.squeakland.org/school/HTML/draper/draperscroll.htm"><b>"The Power Of The Context"</b></a> by Alan Kay (Remarks upon being awarded &#8212; with Bob Taylor, Butler Lampson and
+Chuck Thacker &#8212; the Charles Stark Draper Prize of the National Academy of
+Engineering, February 24, 2004
+)<br></li><li><a href="http://www.educause.edu/ir/library/html/erm/erm99/erm99027.html"><b>"Software Design, the Future of Programming and the Art of Learning"</b></a> -- interview with Alan Kay (EduCom Review - March-April 1999)<br></li><li><a href="http://www.educause.edu/apps/er/review/reviewArticles/31422.html"><b>"Revealing the Elephant:  The Use and Misuse of Computers in Education"</b></a> -- By Alan Kay (Educom Review July-August 1996)<br><br></li><li>mp3 -- <a href="http://dc-mrg.english.ucsb.edu/conference/2002/voice/Fri_1701_Alan_Kay_disc.mp3"><b>Alan Kay, "The Computer Revolution Hasn't Happened Yet"</b></a><br><br></li><li><a href="http://www.viewpointsresearch.org/alan.html"><b>Alan Kay</b></a> -- <a href="http://www.viewpointsresearch.org/">Viewpoints Research Institute</a> (President: Alan Kay)<br></li><li><a href="http://ei.cs.vt.edu/%7Ehistory/GASCH.KAY.HTML"><b>Alan Kay</b></a>, by Scott Gasch (mirror of above)<br><br></li><li>Kay, Alan -- <a href="http://www.squeakland.org/community/biography/alanbio.html"><b>"Welcome to Squeakland"</b></a> (27 December, 2005) <br><blockquote><a href="http://www.squeakland.org/">Homepage of Squeakland</a><br><a href="http://www.squeak.org/">Homepage of the <i>Squeak</i> programming language</a></blockquote></li><li>Alan Kay Colloquium: <a href="http://www.tc.columbia.edu/news/article.htm?id=4363&amp;tid=9"><b>Squeaking by on New Ideas</b></a><br><br></li><li><a href="http://www.smalltalk.org/alankay.html"><b>Alan Kay</b></a> -- <a href="http://www.smalltalk.org/main/">Smalltalk.org</a><font new="" roman="" face="times" size="-2"><sup>TM</sup></font><br><br></li><li><a href="http://searchwebservices.techtarget.com/qna/0,289202,sid26_gci962762,00.html"><b>Smalltalk with object-oriented programming pioneer Kay</b></a><br></li><li><a href="http://en.wikipedia.org/wiki/Alan_Kay"><b>Alan Kay</b></a> -- From Wikipedia, the free encyclopedia<br></li><li><a href="http://minnow.cc.gatech.edu/squeak/378"><b>Alan Kay</b></a> -- <a href="http://minnow.cc.gatech.edu/">minnow.cc.gatech.edu</a><br></li><li><a href="http://acmqueue.com/modules.php?name=Content&amp;pa=printer_friendly&amp;pid=273&amp;page=1"><b>"A Conversation with Alan Kay"</b></a> -- <i>Programming Languages</i> (Vol. 2, No. 9 - Dec/Jan 2004-2005)<br></li><li><a href="http://unrev.stanford.edu/presenters/alan_kay/alan_kay.html"><b>Alan Kay</b></a> -- unrev.stanford.edu<br></li><li><a href="http://www.artmuseum.net/w2vr/timeline/Kay.html"><b>Pioneers | Alan Kay | Interface (1972)</b></a><br><br></li><li><a href="http://www.openp2p.com/pub/a/p2p/2003/04/03/alan_kay.html"><b>Daddy, Are We There Yet? A Discussion with Alan Kay</b></a><br></li><li><a href="http://www.openp2p.com/lpt/a/3369"><b>Daddy, Are We There Yet? A Discussion with Alan Kay</b></a> -- mirror page<br></li><li><a href="http://craphound.com/kayetcon2003"><b>Notes from "Daddy, Are We There Yet?"</b></a><br><br></li><li><a href="http://www.internetnews.com/dev-news/print.php/3342511"><b>Smalltalk Creator Wins 'Nobel Prize' of Computing</b></a> -- Internetnews.com<br></li><li><a href="http://www.macworld.com/news/2001/06/15/alankay/"><b>What will Alan Kay do next?</b></a> -- Macworld.com<br></li><li><a href="http://www.acypher.com/wwid/FrontMatter/"><b><i>Watch What I Do</i></b></a> -- ebook (Foreword by Alan Kay)</li></font></blockquote><font purple="" color="#0000d0" face="times new roman" size="1"></font><br><br><hr width="95%" align="center"><br><br><center><b><a href="http://pq.1994.tripod.com/alan_kay_short_bio.html">Alan Kay Short Bio</a><br><br><a href="http://pq.1994.tripod.com/alan_kay_quotes.html">Alan Kay Quotes</a><br><br><a href="http://pq.1994.tripod.com/index.html">Computer Science / Personal Computing</a><br><i>(in http://pq.1994.tripod.com)</i><br><br><a href="http://pq.escrapbook.tripod.com/html/contents.html">CONTENTS page -- paul's (OLD) e-scrapbook</a><br><br><a href="http://pq.escrapbook.tripod.com/index.html">paul's e-scrapbook</a><br><br><a href="http://paulquek888.tripod.com/index.html">Paul Quek's Website</a><br><br><a href="http://queksiewkhoon.tripod.com/index.html">Paul Quek's Website</a><br><i>(mirror of http://paulquek888.tripod.com)</i><br><br><a href="http://rsscashsecrets.tripod.com/index.html">RSS Cash Secrets</a><br><i>(Liz Tomey's FREE content-generating system)</i><br><br><a href="http://creatingwealth888.tripod.com/index.html">Creating Wealth</a></b></center><br></td></tr></tbody></table><br><br><br><div id="FooterAd" style="text-align: center; display: block ! important; width: 100% ! important;">
+<ins style="display: inline-table; border: medium none; height: 90px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 728px;"><ins id="google_ads_frame2_anchor" style="display: block; border: medium none; height: 90px; margin: 0pt; padding: 0pt; position: relative; visibility: visible; width: 728px;"><iframe allowtransparency="true" hspace="0" id="google_ads_frame2" marginheight="0" marginwidth="0" name="google_ads_frame" src="alan_kay_excerpts_files/ads_002.html" style="left: 0pt; position: absolute; top: 0pt;" vspace="0" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+<noscript>
+<img height="1" width="1" border="0" 
+
+src="http://pagead2.googlesyndication.com/pagead/imp.gif?client=ca-lycos_tripod&channel=TRI_below_728x90&event=noscript">
+</noscript></div></body></html>

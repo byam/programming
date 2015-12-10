@@ -1,0 +1,1064 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+<link rel="stylesheet" href="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/main.css" type="text/css">
+    <script language="javascript">
+        function siteSearch(e, strUrl, strSearchParam, strSearchControl)
+        {
+        	if (e.keyCode == 13)
+	        {
+	            // force a mouseover
+	            btnSearchOver();
+	            
+                // let the click event do the work
+	            return(doSiteSearch(strUrl, strSearchParam, strSearchControl));
+            }
+            else
+            {
+                // allow further processing
+                return(true);
+            } 
+        }
+        var m_over = false;
+        function btnSearchOver() { m_over = true; }
+        function btnSearchOut() { m_over = false; }
+        function doSiteSearch(strUrl, strSearchParam, strSearchControl)
+        {
+        	if (m_over == true)
+	        {
+                // get the text and strip any spaces
+                var strText = document.getElementById(strSearchControl).value;
+                while (strText.substring(0,1) == ' ') strText = strText.substring(1,strText.length);
+                while (strText.substring(strText.length-1,strText.length) == ' ') strText = strText.substring(0,strText.length-1);
+      
+                // add the parameters
+                strUrl = strUrl + "?" + strSearchParam + "=" + encodeString(strText);
+             
+                // now navigate
+                document.location.href = strUrl;
+            }
+                            
+            // stop further processing
+            return(false);
+        }        
+        function encodeString(plaintext)
+        {
+            var encodedtext = "";
+            for (var i=0; i<plaintext.length; i++)
+            {
+                if (plaintext.charAt(i) == " ")
+                    encodedtext += "+";
+                else
+                    encodedtext += plaintext.charAt(i);
+            }
+            return(escape(encodedtext));
+        }
+    </script>
+    
+  <link rel="stylesheet" href="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/colorbox.css" type="text/css">
+<link href="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/opinion.css" type="text/css" rel="stylesheet"><meta description="It is difficult to begin to estimate the huge extent of the contribution that Niklaus Wirth has made to IT as it exists today. Although now retired for ten years, he remains a abiding influence on the design of computer languages. It is likely that the first structured computer language you ever learned was written by him. He still has fascinating views on contemporary software trends, as Richard Morris found out when he spoke to him."><title>
+	Niklaus Wirth: Geek of the Week
+</title></head><body><div style="display: none;" id="cboxOverlay"></div><div style="padding-bottom: 42px; padding-right: 42px; display: none;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div class="" id="cboxLoadedContent" style="width: 0pt; height: 0pt; overflow: hidden;"></div><div class="" id="cboxLoadingOverlay"></div><div class="" id="cboxLoadingGraphic"></div><div class="" id="cboxTitle"></div><div class="" id="cboxCurrent"></div><div class="" id="cboxNext"></div><div class="" id="cboxPrevious"></div><div class="" id="cboxSlideshow"></div><div class="" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+<form name="aspnetForm" method="post" action="http://www.simple-talk.com/content/article.aspx?article=747" id="aspnetForm">
+<div>
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTU2NTQ1ODE3ZBgEBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WDAUPY3RsMDAkYnRuU2VhcmNoBRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmcxBRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmcxBRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmcyBRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmcyBRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmczBRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmczBRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmc0BRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmc0BRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmc1BRxjdGwwMCRNYWluQ29udGVudCRyYWRSYXRpbmc1BSBjdGwwMCRNYWluQ29udGVudCRidG5SYXRlQXJ0aWNsZQUGX19QYWdlDxQrAANkBbYDSXQgaXMgZGlmZmljdWx0IHRvIGJlZ2luIHRvIGVzdGltYXRlIHRoZSBodWdlIGV4dGVudCBvZiB0aGUgY29udHJpYnV0aW9uIHRoYXQgTmlrbGF1cyBXaXJ0aCBoYXMgbWFkZSB0byBJVCBhcyBpdCBleGlzdHMgdG9kYXkuIEFsdGhvdWdoIG5vdyByZXRpcmVkIGZvciB0ZW4geWVhcnMsIGhlIHJlbWFpbnMgYSBhYmlkaW5nIGluZmx1ZW5jZSBvbiB0aGUgZGVzaWduIG9mIGNvbXB1dGVyIGxhbmd1YWdlcy4gSXQgaXMgbGlrZWx5IHRoYXQgdGhlIGZpcnN0IHN0cnVjdHVyZWQgY29tcHV0ZXIgbGFuZ3VhZ2UgeW91IGV2ZXIgbGVhcm5lZCB3YXMgd3JpdHRlbiBieSBoaW0uIEhlIHN0aWxsIGhhcyBmYXNjaW5hdGluZyB2aWV3cyBvbiBjb250ZW1wb3Jhcnkgc29mdHdhcmUgdHJlbmRzLCBhcyBSaWNoYXJkIE1vcnJpcyBmb3VuZCBvdXQgd2hlbiBoZSBzcG9rZSB0byBoaW0uZWQFHGN0bDAwJE1haW5Db250ZW50JEZvcnVtVmlldzEPFCsAAmQCwqoDZAURY3RsMDAkTmF2aWdhdGlvbjEPFCsAAmQy9wQAAQAAAP////8BAAAAAAAAAAwCAAAAP1dlYlNpdGUsIFZlcnNpb249MS4zLjAuMTQsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAQBAAAAeVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtbU2ltcGxlVGFsay5NZW51SXRlbSwgV2ViU2l0ZSwgVmVyc2lvbj0xLjMuMC4xNCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1udWxsXV0DAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgQAABVTaW1wbGVUYWxrLk1lbnVJdGVtW10CAAAACAgJAwAAAAMAAAADAAAABwMAAAAAAQAAAAQAAAAEE1NpbXBsZVRhbGsuTWVudUl0ZW0CAAAACQQAAAAJBQAAAAkGAAAACgUEAAAAE1NpbXBsZVRhbGsuTWVudUl0ZW0EAAAADG1fQ2hpbGRDb3VudAptX1NlbGVjdGVkB21fVGl0bGUFbV9VcmwAAAEBCAECAAAAAAAAAAAGBwAAAAxPcGluaW9uIEhvbWUGCAAAACNodHRwOi8vd3d3LnNpbXBsZS10YWxrLmNvbS9vcGluaW9uLwEFAAAABAAAAAAAAAAABgkAAAAQR2VlayBvZiB0aGUgV2VlawYKAAAANGh0dHA6Ly93d3cuc2ltcGxlLXRhbGsuY29tL29waW5pb24vZ2Vlay1vZi10aGUtd2Vlay8BBgAAAAQAAAAAAAAAAAYLAAAAH05pa2xhdXMgV2lydGg6IEdlZWsgb2YgdGhlIFdlZWsGDAAAAAALZA==" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/WebResource.js" type="text/javascript"></script>
+
+
+<script src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/ScriptResource.js" type="text/javascript"></script>
+<script src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/ScriptResource_002.js" type="text/javascript"></script>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+    <script language="javascript" type="text/javascript">
+        function EndRequestHandler()
+        {
+            if (theForm._initialAction == undefined)
+                theForm._initialAction = theForm.action;
+            else
+                theForm.action = theForm._initialAction;
+        }
+        if( typeof(Sys) != "undefined" )
+        {
+            EndRequestHandler();
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+        }
+    </script>
+    <div class="site">
+        <div class="page">
+            <div class="header">
+                <div class="search">
+					<div class="redgate"><a href="http://www.red-gate.com/?utm_source=simpletalk&amp;utm_medium=textad&amp;utm_campaign=homepage"><img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/aservicefromredgate.gif" alt="A service from Red Gate" height="16" width="133"></a></div>
+					<div class="searchform"><table align="right"><tbody><tr><td><input name="ctl00$txtSearch" id="ctl00_txtSearch" class="txtSearch" onkeydown="return(siteSearch(event,'http://www.simple-talk.com/search/default.aspx','search','ctl00_txtSearch'));" type="text"></td><td><input name="ctl00$btnSearch" id="ctl00_btnSearch" class="btnSearch" onmouseover="btnSearchOver();" onmouseout="btnSearchOut();" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/btn_search_56x19.gif" onclick="return(doSiteSearch('http://www.simple-talk.com/search/default.aspx','search','ctl00_txtSearch'));WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="border-width: 0px;" type="image"></td></tr></tbody></table></div>
+				</div>
+                <div class="logo"><a id="ctl00_lnkGotoHome" href="http://www.simple-talk.com/default.aspx"><img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/1px.gif" height="55" width="250"></a></div>
+            </div>
+            
+
+<div class="mainnav">
+    <div class="primarynav">
+        <a id="ctl00_Navigation1_lnkGotoHome" href="http://www.simple-talk.com/default.aspx">Home</a>
+        <a id="ctl00_Navigation1_lnkGotoSql" href="http://www.simple-talk.com/sql/">SQL</a>
+        <a id="ctl00_Navigation1_lnkGotoNet" href="http://www.simple-talk.com/dotnet/">.NET</a>
+        <a id="ctl00_Navigation1_lnkGotoExchange" href="http://www.simple-talk.com/sysadmin/">SysAdmin</a>
+        <a id="ctl00_Navigation1_lnkGotoOpinion" class="on" href="http://www.simple-talk.com/opinion/">Opinion</a>
+        <a id="ctl00_Navigation1_lnkGotoBlogs" href="http://www.simple-talk.com/community/blogs/">Blogs</a>
+        <a id="ctl00_Navigation1_lnkGotoForums" href="http://www.simple-talk.com/community/forums/">Forums</a>
+        <a id="ctl00_Navigation1_lnkGotoBooks" href="http://www.simple-talk.com/books/">Books</a>
+    </div>
+     <div class="membernav">
+        
+        <span id="ctl00_Navigation1_panAnonymous"><a id="ctl00_Navigation1_lnkLogin" href="http://www.simple-talk.com/community/login.aspx?ReturnUrl=%2fopinion%2fgeek-of-the-week%2fniklaus-wirth-geek-of-the-week%2f">Sign in</a>
+            &nbsp;|&nbsp;<a id="ctl00_Navigation1_lnkJoin" href="http://www.simple-talk.com/community/user/CreateUser.aspx?ReturnUrl=%2fopinion%2fgeek-of-the-week%2fniklaus-wirth-geek-of-the-week%2f">Join</a></span>
+        &nbsp;|&nbsp;<a id="ctl00_Navigation1_lnkHelp" href="http://www.simple-talk.com/community/languages/en-US/docs/faq.aspx">Help</a>
+        
+    </div>
+</div>
+<div class="subnav">
+    
+            <a id="ctl00_Navigation1_repSubMenu_ctl00_lnkItem" href="http://www.simple-talk.com/opinion/">Opinion Home</a>
+        &nbsp;&gt;&nbsp;
+            <a id="ctl00_Navigation1_repSubMenu_ctl02_lnkItem" href="http://www.simple-talk.com/opinion/geek-of-the-week/">Geek of the Week</a>
+        &nbsp;&gt;&nbsp;
+            <span>Niklaus Wirth: Geek of the Week</span>
+        
+</div>
+            <div class="maincontent">
+                
+  <div class="article">
+  
+    <div id="ctl00_MainContent_panSummary" class="summarybox">
+	
+	  <div class="header"></div>
+	  <div class="middle">
+		<div class="summaryboxcontent">
+          Av rating: <img id="ctl00_MainContent_imgRating1" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_opinion_5star_70x13.gif" style="height: 13px; width: 70px; border-width: 0px;"><br>
+		  Total votes: 110<br>
+		  Total comments: 9
+        </div>
+	    <div class="summaryboxlines"><img id="ctl00_MainContent_imgLines" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/summary_opinion_lines_176x3.gif" style="height: 3px; width: 176px; border-width: 0px;"></div>
+	    <div class="summaryboxcontent2">
+          
+		  <img id="ctl00_MainContent_imgEmail" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_opinion_email_13x11.gif" style="height: 11px; width: 14px; border-width: 0px;">&nbsp;<a id="ctl00_MainContent_lnkEmail" href="http://www.simple-talk.com/content/email.aspx?article=747">send to a friend</a><br>
+		  <img id="ctl00_MainContent_imgPrint" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_opinion_print_13x11.gif" style="height: 11px; width: 14px; border-width: 0px;">&nbsp;<a id="ctl00_MainContent_lnkPrint" href="http://www.simple-talk.com/content/print.aspx?article=747" target="_blank">printer friendly version</a><br>
+	    </div>
+	  </div>
+	  <div class="footer"></div>
+	
+</div>
+
+    <br><br>
+    <img id="ctl00_MainContent_imgAuthor" class="authorpicture" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/52.gif" alt="Richard Morris" style="border-width: 0px;" align="left">
+    <div class="articletitle">Niklaus Wirth: Geek of the Week</div>
+    <div class="date">02 July 2009</div>
+    <div class="author">by <a id="ctl00_MainContent_lnkAuthor" href="http://www.simple-talk.com/author/richard-morris/">Richard Morris</a></div>
+
+    <div class="clear"></div>
+
+	
+<style type="text/css">#pretty {
+	
+}
+#pretty DIV.note {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0in; BORDER-TOP: medium none; PADDING-LEFT: 6pt; PADDING-BOTTOM: 0in; MARGIN-LEFT: 28.35pt; BORDER-LEFT: gray 2.25pt solid; MARGIN-RIGHT: 0in; PADDING-TOP: 0in; BORDER-BOTTOM: medium none; mso-element: para-border-div
+}
+#pretty P.pullout {
+	BORDER-RIGHT: #706573 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #786d7d 1px solid; PADDING-LEFT: 10px; FLOAT: right; PADDING-BOTTOM: 10px; MARGIN-LEFT: 10px; BORDER-LEFT: #766b7b 1px solid; WIDTH: 350px; MARGIN-RIGHT: 0px; PADDING-TOP: 10px; BORDER-BOTTOM: blue 1px solid; BACKGROUND-COLOR: #fbfbfd; TEXT-ALIGN: left
+}
+#pretty P.start:first-letter {
+	FONT-SIZE: 280%; FLOAT: left; LINE-HEIGHT: 100%
+}
+#pretty P.note {
+	BORDER-RIGHT: silver 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: silver 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN-LEFT: 80px; BORDER-LEFT: silver 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: silver 1px solid; TEXT-ALIGN: left
+}
+#pretty DIV.note P.note {
+	MARGIN-LEFT: 0in
+}
+#pretty P.quote {
+	BORDER-RIGHT: medium none; PADDING-RIGHT: 0px; BORDER-TOP: silver 2px solid; FONT-WEIGHT: bold; FONT-SIZE: 17px; FLOAT: right; PADDING-BOTTOM: 15px; MARGIN-LEFT: 10px; LINE-HEIGHT: 15px; MARGIN-RIGHT: 10px; PADDING-TOP: 10px; BORDER-BOTTOM: silver 1px solid; TEXT-ALIGN: left
+}
+#pretty P {
+	FONT-SIZE: 12px; MARGIN-LEFT: 20px; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-ALIGN: justify
+}
+#pretty DL {
+	FONT-SIZE: 12px; MARGIN-LEFT: 20px; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-ALIGN: justify
+}
+#pretty DT {
+	CLEAR: both; MARGIN-TOP: 10px; FONT-WEIGHT: bold; FLOAT: left; WIDTH: 50px
+}
+#pretty DD {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 70px
+}
+#pretty LI {
+	MARGIN-TOP: 0px; FONT-SIZE: 12px; MARGIN-BOTTOM: 3px; MARGIN-LEFT: 20px; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-ALIGN: justify
+}
+#pretty PRE {
+	BORDER-RIGHT: silver 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: silver 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; BORDER-LEFT: silver 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: silver 1px solid; BACKGROUND-COLOR: #f5f5f5; TEXT-ALIGN: left
+}
+#pretty DIV.code {
+	BORDER-RIGHT: silver 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: silver 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 10px; MARGIN-LEFT: 0px; BORDER-LEFT: silver 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: silver 1px solid; FONT-FAMILY: "Courier New", Courier, monospace; BACKGROUND-COLOR: #f5f5f5; TEXT-ALIGN: left
+}
+#pretty H1 {
+	FONT-SIZE: 145%; MARGIN-LEFT: 0px; FONT-FAMILY: "Times New Roman", Times, serif
+}
+#pretty H2 {
+	FONT-SIZE: 130%; MARGIN-LEFT: 20px; FONT-FAMILY: "Times New Roman", Times, serif
+}
+#pretty H3 {
+	FONT-SIZE: 115%; MARGIN-LEFT: 40px; FONT-FAMILY: "Times New Roman", Times, serif
+}
+#pretty H4 {
+	MARGIN-LEFT: 40px; FONT-FAMILY: "Times New Roman", Times, serif
+}
+#pretty SPAN.codeBlack {
+	COLOR: black
+}
+#pretty TABLE {
+	BORDER-RIGHT: #cacaca 1px solid; BORDER-TOP: #cacaca 1px solid; MARGIN-LEFT: 20px; BORDER-LEFT: #cacaca 1px solid; BORDER-BOTTOM: #cacaca 1px solid
+}
+#pretty TABLE P {
+	FONT-SIZE: 11px; MARGIN: 0px 5px
+}
+#pretty TABLE TD {
+	FONT-SIZE: 11px
+}
+#pretty UL {
+	MARGIN-TOP: 0px
+}
+#pretty TABLE LI {
+	FONT-SIZE: 11px; MARGIN-LEFT: 5px; TEXT-ALIGN: left
+}
+#pretty TABLE OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN-LEFT: 15px; PADDING-TOP: 0px
+}
+#pretty TABLE UL {
+	MARGIN-LEFT: 10px
+}
+#pretty SPAN.mono {
+	FONT-WEIGHT: bold; FONT-FAMILY: "Courier New", Courier, monospace
+}
+#pretty .codeBlue {
+	COLOR: blue
+}
+#pretty .codeBrown {
+	COLOR: brown
+}
+#pretty .codeGray {
+	COLOR: gray
+}
+#pretty .codeGreen {
+	COLOR: green
+}
+#pretty .codeMagenta {
+	COLOR: magenta
+}
+#pretty .codeRed {
+	COLOR: red
+}
+#pretty .codeDarkRed {
+	COLOR: darkred
+}
+#pretty FIELDSET {
+	BORDER-RIGHT: #cacaca 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cacaca 1px solid; PADDING-LEFT: 10px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 10px; MARGIN-LEFT: 20px; BORDER-LEFT: #cacaca 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #cacaca 1px solid; FONT-FAMILY: "Courier New", Courier, monospace; BACKGROUND-COLOR: #f2f2f2; TEXT-ALIGN: left
+}
+#pretty DIV.listing {
+	BORDER-RIGHT: #cacaca 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #cacaca 1px solid; PADDING-LEFT: 3px; FONT-WEIGHT: normal; FONT-SIZE: 11px; PADDING-BOTTOM: 10px; MARGIN-LEFT: 20px; BORDER-LEFT: #cacaca 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #cacaca 1px solid; FONT-FAMILY: "Courier New", Courier, monospace; BACKGROUND-COLOR: #f9f9f9; TEXT-ALIGN: left
+}
+#pretty DIV.listing P {
+	PADDING-RIGHT: 0px; MARGIN-TOP: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 0px; MARGIN-LEFT: 0px; PADDING-TOP: 0px; FONT-FAMILY: "Courier New", Courier, monospace; TEXT-ALIGN: left
+}
+#pretty LEGEND {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FONT-SIZE: 14px; PADDING-BOTTOM: 10px; MARGIN-LEFT: 20px; PADDING-TOP: 10px; FONT-FAMILY: "Times New Roman", Times, serif; TEXT-ALIGN: left
+}
+#pretty DIV.indent {
+	MARGIN-LEFT: 20px
+}
+#pretty .indented {
+	MARGIN-LEFT: 80px
+}
+#pretty PRE.inline {
+	MARGIN-LEFT: 20px
+}
+#pretty HR {
+	BORDER-TOP: #d2d2d2 1px dotted; BORDER-BOTTOM: thin
+}
+#pretty DIV.illustration {
+	MARGIN-BOTTOM: 20px
+}
+#pretty P.illustration {
+	MARGIN-BOTTOM: 0px; MARGIN-LEFT: 20px; TEXT-ALIGN: left
+}
+#pretty P.caption {
+	MARGIN-TOP: 0px; FONT-WEIGHT: bold; FONT-SIZE: 11px; MARGIN-LEFT: 20px; TEXT-ALIGN: left
+}
+.CodeInText {
+	FONT-WEIGHT: bold; FONT-FAMILY: courier new, courier, monospaced
+}
+.ImportantWords {
+	FONT-WEIGHT: bold
+}
+.ScreenText {
+	FONT-FAMILY: Century Gothic, Tahoma, Lucida Sans, sans-serif
+}
+PRE {
+	BACKGROUND-COLOR: #d6d6d6
+}
+.CodeInText {
+	FONT-WEIGHT: bold; FONT-FAMILY: courier new, courier, monospaced
+}
+.ImportantWords {
+	FONT-WEIGHT: bold
+}
+.ScreenText {
+	FONT-FAMILY: Century Gothic, Tahoma, Lucida Sans, sans-serif
+}
+PRE {
+	BACKGROUND-COLOR: #d6d6d6
+}
+.CodeInText {
+	FONT-WEIGHT: bold; FONT-FAMILY: courier new, courier, monospaced
+}
+.ImportantWords {
+	FONT-WEIGHT: bold
+}
+.ScreenText {
+	FONT-FAMILY: Century Gothic, Tahoma, Lucida Sans, sans-serif
+}
+PRE {
+	BACKGROUND-COLOR: #d6d6d6
+}
+.CodeInText {
+	FONT-WEIGHT: bold; FONT-FAMILY: courier new, courier, monospaced
+}
+.ImportantWords {
+	FONT-WEIGHT: bold
+}
+.ScreenText {
+	FONT-FAMILY: Century Gothic, Tahoma, Lucida Sans, sans-serif
+}
+PRE {
+	BACKGROUND-COLOR: #d6d6d6
+}
+.CodeInText {
+	FONT-WEIGHT: bold; FONT-FAMILY: courier new, courier, monospaced
+}
+.ImportantWords {
+	FONT-WEIGHT: bold
+}
+.ScreenText {
+	FONT-FAMILY: Century Gothic, Tahoma, Lucida Sans, sans-serif
+}
+PRE {
+	BACKGROUND-COLOR: #d6d6d6
+}
+.CodeInText {
+	FONT-WEIGHT: bold; FONT-FAMILY: courier new, courier, monospaced
+}
+.ImportantWords {
+	FONT-WEIGHT: bold
+}
+.ScreenText {
+	FONT-FAMILY: Century Gothic, Tahoma, Lucida Sans, sans-serif
+}
+PRE {
+	BACKGROUND-COLOR: #d6d6d6
+}
+</style>
+
+<div id="pretty">
+<p class="note">It is difficult to begin to estimate the huge extent of 
+the contribution that Niklaus Wirth has made to IT as it exists today. 
+Although now retired for ten years, he remains a abiding influence on 
+the design of computer languages. It is likely that the first structured
+ computer language you ever learned was written by him. He still has 
+fascinating views on contemporary software trends, as Richard Morris 
+found out when he spoke to him.</p>
+<p class="start">In 1970 a Swiss mathematician and computer scientist 
+named Niklaus Wirth designed Pascal, possibly the best known, and most 
+influential, programming languages of all time. Originally it was 
+intended as a teaching tool to promote the structured programming style 
+of another leading computing pioneer, Edsger W. Dijkstra, but it quickly
+ transcended its initial remit and became a general-purpose language. </p>
+<div style="float: right; margin-left: 25px; width: 400px;"><img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/747-NiklausWirth.jpg" border="0"> 
+<p style="padding-right: 10px; padding-left: 15px; margin: 0px; font-style: italic; text-align: left;"><span style="font-size: 18pt; font-family: Arial;">‟<br></span>As
+ long as programmers cherish their freedom not only to design their own 
+clever software, but also to modify adopted software according to their 
+likings, a proper design discipline remains unlikely. And as long as 
+companies secretly cherish complexity as an effective protection against
+ being copied, there is little hope for dramatic improvements of the 
+state of the art.<span style="font-size: 18pt;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ”</span></p></div>
+<p>Pascal's simplicity was one of the secrets of its success. Wirth was 
+able to develop a small and elegant Pascal compiler, written in the 
+language itself. It was, at the time, revolutionary. </p>
+<p>From the very successful Pascal of the 1970s through to successive 
+languages such as Modula-2 and Oberon, Wirth has built a reputation as 
+an excellent educator who inspires research. He has clear and well 
+thought-out views on computer languages and software development, and he
+ isn’t afraid to express them. Even today, his ideas often sound 
+radical. </p>
+<p>A true engineer by nature, with interests in both software and 
+hardware, he also influenced the modern computer keyboard after 
+insisting that the design of the PDP – 1 used two extra modifier keys. 
+This computer became famous for being important in the creation of 
+hacker culture at MIT and elsewhere. The vestigial remains of Wirth’s 
+keys can be found in the ‘alt’ keys on PC and ‘option’ key Apple 
+keyboards. </p>
+<p>Professor Wirth was born in 1934, and obtained his degree in 
+electrical engineering from the Swiss Federal Institute of Technology 
+(ETH) Zurich in 1959. He received an MSc from Laval University, Quebec, 
+Canada, in 1960 and then studied for his doctorate under the supervision
+ of the pioneering computer designer Harry D. Huskey at the University 
+of California, Berkeley. From 1963 to 1967 he taught as an assistant 
+professor at the newly created computer science department at Stanford 
+University in California and then at the University of Zurich. In 1968 
+he was appointed full professor of computer science at ETH Zurich. In 
+1970 he devised the language Pascal, in about 1980 came Modula-2, and in
+ 1988 a language with some object-oriented features named Oberon. He 
+designed the Lilith and Ceres computers, and subsequently became 
+involved with circuit design tools, finally becoming head of the 
+institute of computer systems at ETH in 1990 and retired on April 1 
+1999. </p>
+<p>Over the years, Niklaus Wirth has received numerous honorary 
+doctorates and awards including the 1984 Association for Computing 
+Machinery Turing Award, computer science's nearest equivalent to a Nobel
+ prize, and the 1987 Computer Pioneer Award from the Institute of 
+Electrical and Electronics Engineers' Computer Society. </p>
+<p>It is probably the extraordinary feat of designing not one, but three
+ popular computer languages that makes his contribution so exceptional. </p>
+<p>He developed his initial version of the Modula programming language 
+as a research exercise, aimed at demonstrating that an operating system 
+for a personal work station could be written entirely in a high-level 
+language. The subsequent and much more widely used Modula-2 language was
+ developed between about 1979 and 1981. </p>
+<p>The Oberon project, which contains the most mature fruits of Wirths 
+design talents, was launched in 1985 by Wirth with Jurg Gutknecht. 
+Oberon had many of the features of Modula-2, but some unwanted aspects 
+were removed and other features were added. The project was originally 
+targeted towards in-house hardware and this drove the language design, 
+but versions of the Oberon language and system were made available for a
+ number of commercial platforms. With Oberon, Wirth has tackled the most
+ difficult feat of all: to create the simplest possible language: Oberon
+ 7 is an intellectual tour de force. </p>
+<p>One of his most remarkable projects beside the languages was the 
+design of the Lilith personal workstation, based on the programming 
+language Modula-2. It was influenced by the renowned Alto computer, 
+designed at Xerox Palo Alto Research Center in the United States. 
+Although both were technical triumphs, neither resulted in direct 
+commercial success. Nikalus Wirth is primarily remembered as a prolific,
+ expert and successful designer of imperative programming languages and 
+was important in the structured programming movement. His languages have
+ helped in the quest for more understandable programs. </p>
+<dl>
+<dt>RM: 
+</dt><dd>‟Given that our technological civilization depends on software why is most of it so poor?” </dd>
+<dt>NW: 
+</dt><dd>‟In fact, most of it works correctly most of the time. We have 
+the tendency to consider software for PCs only, and expect it to be 
+(almost) for free. But professional software design is labor-intensive 
+and therefore cannot be cheap.” </dd>
+<dt>RM: 
+</dt><dd>‟Do you think better education is the answer to poor software? 
+Surely teaching people better would be cheaper in the long run and 
+certainly avoid the huge bloat we see today and we would be able to use 
+simpler and less power-hungry hardware?” </dd>
+<dt>NW: 
+</dt><dd>‟A proper education certainly would help. However, the belief 
+is wide-spread that programming is easy, can be learned on the job, and 
+does not require specific training or talent. However, it is not 
+programming in the sense of coding that is the problem, but design. 
+Applications have become very demanding and their tasks complex. 
+Mastering this growing complexity is the primary challenge. To tackle 
+this task requires experience and an explicit ability for abstraction on
+ many levels. It is difficult to learn this, and even more so to teach 
+it. Not every programmer is a born designer.” </dd>
+<dt>RM: 
+</dt><dd>‟Did you think you would ever design a new language from scratch?” </dd>
+<dt>NW: 
+</dt><dd>‟None of my languages were designed from scratch. Oberon (1988)
+ evolved from Modula-2, Modula-2 (1979) from Pascal and Mesa, Pascal 
+(1970) from Algol-W, and Algol-W from Algol 60. They represent an 
+evolutionary sequence. Each time a new paradigm entered the picture, yet
+ the general structure and syntax were retained. In Algol-W the record 
+and pointer facilities entered the picture, in Pascal the strict 
+application of structuring, not only of programs, but also of data, in 
+Modula-2 it was modularization in combination with type-safe, separate 
+compilation, and in Oberon it was object-orientation in disguise, 
+combined with a rigorous desire to reduce the number of features and 
+facilities, to get rid of bells and whistles.<br><br>Whereas the earlier
+ languages were implemented on the basis of an existing environment, 
+Oberon was implemented from scratch. My colleague J.Gutknecht and I 
+programmed the entire system, including the system’s kernel, the file 
+and window modules, the display mechanism, the entire text system for 
+document production, and a graphics module for drawing diagrams. The 
+extreme, self-imposed restriction on man-power made concentration on the
+ essentials mandatory, and enforced a homogeneous, integrating design 
+philosophy.” </dd>
+<dt>RM: 
+</dt><dd>‟How soon after you created Pascal did you see it start to take over the industry?” </dd>
+<dt>NW: 
+</dt><dd>‟During the first seven years we received many requests from 
+universities for help in implementing Pascal on their specific 
+computers, main-frames in computer centers. To facilitate this activity,
+ we specified a hypothetical stack computer, which could easily be 
+reprogrammed on the computers in question, and whose code was called 
+Pascal-P, the P standing for portable. <br><br>This technique turned out
+ to be very successful, and it caused Pascal to spread among 
+universities for teaching programming. However, industry remained aloof.
+ They claimed that retraining their work force to a “non-standard” 
+language would be impossible, and shifting to a “university product” 
+suicidal. The break-through came with the arrival of the 
+micro-computers, cheap machines that entered schools and homes. These 
+computers did not feature large memories. Hence, the Pascal system with 
+its compact interpreter was the ideal vehicle to introduce a high-level 
+language, adequate for teaching programming in a structured fashion. <br><br>Pascal
+ did not spread in industry, but rather among people who had not to be 
+retrained from the use of an unstructured, feature-ridden language.” </dd>
+<dt>RM: 
+</dt><dd>‟Was the development of Object Pascal a positive thing? Is the result still, recognizably ‘Pascal’?” </dd>
+<dt>NW: 
+</dt><dd>‟During my sabbatical at Xerox Research in Palo Alto in 1985, 
+Larry Tesler approached me with his proposal for an object-oriented 
+version of Pascal. He was a member of the team around Alan Kay 
+implementing Smalltalk. I believe it was a valuable contribution to 
+provide the object-oriented paradigm in a language with static typing. 
+It contained several additions, but essentially retained the character 
+and appearance of Pascal.” </dd>
+<dt>RM: 
+</dt><dd>‟What of the valuable features of Pascal and Modula-2 do you 
+think were brought into Java and C#? Is there a ghost form of Pascal in 
+these two languages?” </dd>
+<dt>NW: 
+</dt><dd>‟There is more in them than merely a ghost. Most of the 
+statement structures and data structures appear in them, and, I believe,
+ also the important concept of static typing of all constants, 
+variables, and procedures. The similarity is not obvious, as both 
+languages have adopted the syntax of C which gives them a quite 
+different appearance. Its terseness was intended to reduce the amount of
+ typing, which seemed important in the era preceding the mouse.” </dd>
+<dt>RM: 
+</dt><dd>‟Oberon for .NET seems an interesting development, because of 
+Oberon’s simplicity, particularly in Oberon-7. It seems a great tool for
+ education. Do you see a time when the project be revived?” </dd>
+<dt>NW: 
+</dt><dd>‟I do not know, and I have never been involved in this project.
+ The integration of Oberon in .NET seems to be a problem infinitely more
+ complex than the Oberon compiler itself!” </dd>
+<dt>RM: 
+</dt><dd>‟How do you see the future for procedural programming languages? ” </dd>
+<dt>NW: 
+</dt><dd>‟Procedural programming is still the most common paradigm, and 
+it will remain so, because the semantic gap between procedural languages
+ and computers is smaller than for any other paradigm. Instruction 
+sequences are represented by statements, and the state space by 
+variables.<br><br>I consider object-oriented languages also as 
+procedural. They emphasize the grouping of related data into objects, 
+and the attachment of methods to objects. The close relationship between
+ object-oriented and procedural views becomes apparent if we relate the 
+respective terminologies: Basically the terms class, object, and method 
+stand for the classical type, variable, and procedure. Instead of 
+calling a procedure, we now send a message.” </dd>
+<dt>RM: 
+</dt><dd>‟A number of highly current successful windows tools and 
+applications have been written in Pascal and Delphi, and yet we seem to 
+hear very little of the languages they were written in. Why is this, do 
+you think?” </dd>
+<dt>NW: 
+</dt><dd>‟Once a house stands, nobody asks with which hammers and nails 
+it was built. If the design was successful, the competition need not 
+know which tools were used. They were, after all, part of the success.” </dd>
+<dt>RM: 
+</dt><dd>‟I once read that you were not a great fan of C++. Has your opinion changed? ” </dd>
+<dt>NW: 
+</dt><dd>‟This is an understatement. As a teacher, I have a great 
+aversion against over boarding complexity. C++ is a language that was 
+designed to cater to everybody’s perceived needs. As a result, the 
+language and even more so its implementations have become monstrously 
+complex and bulky, difficult to understand, and likely to contain errors
+ for ever.<br><br>Yet, C++ will remain in use, mostly as a software 
+legacy. The more complex an object, the larger the investment in 
+learning to use it, and the greater the resistance to abandon it.<br><br>We
+ recently have heard considerable grumbling about the complexity, 
+bulkiness, and lack of reliability of the widely used software systems 
+for PCs and servers, particularly from people who are concerned about 
+their trustworthiness. Being constantly connected to a world-wide 
+network, the systems are vulnerable, be it through vicious attacks or 
+through back doors. In order to protect a system from attacks, all 
+possible cracks must be removed, and in order to eliminate hidden back 
+doors, the entire system must be in the open to the designer.<br><br>Proprietary
+ software preclude these possibilities, and therefore the Open Source 
+approach has gained many supporters. I remain skeptical. As it stands 
+now, also the systems available in open source are complex, and who 
+wants to read and comprehend millions of lines of code before using 
+these programs?<br><br>Besides all the good things, the open source 
+movement ignores and actually hinders the perception of one of the most 
+important ideas in designing complex systems, namely their partitioning 
+in modules, and their formation as an orderly hierarchy of modules. The 
+key idea is that the designer of a module using (importing) other 
+modules, need not know any of the source code of them. He must rely 
+solely on a clear specification of the interface of these modules. Most 
+of the time, modules lack such clear, complete, and unambiguous 
+interface specifications. And if the complete source is available 
+anyhow, so the story goes, who needs it?<br><br>As long as programmers 
+cherish their freedom not only to design their own clever software, but 
+also to modify adopted software according to their likings, a proper 
+design discipline remains unlikely. And as long as companies secretly 
+cherish complexity as an effective protection against being copied, 
+there is little hope for dramatic improvements of the state of the art. </dd></dl></div>
+
+    <br><br>This article has been viewed 13796 times.
+  </div>
+
+  
+<div class="authorpanel">
+    <a id="ctl00_MainContent_Author1_lnkImage" title="Richard Morris" href="http://www.simple-talk.com/author/richard-morris/"><img id="ctl00_MainContent_Author1_imgAuthor" class="authorpicture" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/52.gif" alt="Richard Morris" style="border-width: 0px;" align="left"></a>
+    <p><strong>Author profile:</strong> <a id="ctl00_MainContent_Author1_lnkName" href="http://www.simple-talk.com/author/richard-morris/">Richard Morris</a></p>
+    <p>Richard Morris is a journalist, author and public 
+relations/public affairs consultant.
+He has written for a number of UK and US newspapers and magazines and 
+has offered strategic advice to numerous tech companies including 
+Digital Island, Sony and several ISPs. He now specialises in social 
+enterprise and is, among other things, a member of the Big Issue Invest 
+advisory board. Big Issue Invest is the leading provider to 
+high-performing social enterprises &amp; has a strong brand name based 
+on its parent company The Big Issue, described by McKinsey &amp; Co as 
+the most well known and trusted social brand in the UK. 
+
+</p>
+    <p><a id="ctl00_MainContent_Author1_lnkSearch" href="http://www.simple-talk.com/author/richard-morris/">Search for other articles by Richard Morris</a></p>
+    <div class="clear"></div>
+</div>
+
+  <div id="ctl00_MainContent_panVoting" class="rating">
+	
+    <strong>Rate this article:</strong> &nbsp;&nbsp;Avg rating: <img id="ctl00_MainContent_imgRating2" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_opinion_5star_70x13.gif" style="height: 13px; width: 70px; border-width: 0px;"> from a total of 110 votes.<br><br>
+    <div id="ctl00_MainContent_panToRate">
+		
+        <table class="rating" border="0">
+          <tbody><tr>
+	        <td><input id="ctl00_MainContent_radRating1" name="ctl00$MainContent$radRating" value="radRating1" type="radio"><br>Poor</td>
+	        <td><input id="ctl00_MainContent_radRating2" name="ctl00$MainContent$radRating" value="radRating2" type="radio"><br>OK</td>
+	        <td><input id="ctl00_MainContent_radRating3" name="ctl00$MainContent$radRating" value="radRating3" type="radio"><br>Good</td>
+	        <td><input id="ctl00_MainContent_radRating4" name="ctl00$MainContent$radRating" value="radRating4" type="radio"><br>Great</td>
+	        <td><input id="ctl00_MainContent_radRating5" name="ctl00$MainContent$radRating" value="radRating5" type="radio"><br>Must read</td>
+		    <td>
+		        <input name="ctl00$MainContent$btnRateArticle" id="ctl00_MainContent_btnRateArticle" title="Rate article" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/btn_submit.gif" style="height: 19px; width: 56px; border-width: 0px;" type="image">
+		    </td>
+	      </tr>
+        </tbody></table>
+    
+	</div>
+    
+    
+  
+</div>
+  
+  <div id="ctl00_MainContent_panComments" class="comments">
+	
+    <a name="forum">&nbsp;</a>
+    <div class="haveyoursayheader">
+      <div class="title">Have Your Say</div>
+        Do you have an opinion on this article? Then <a href="#commentform" class="commentlink"><u>add your comment below</u></a>:
+      </div>
+      <div class="forumview">
+        <div id="ctl00_MainContent_ForumView1_panPostingNotAllowed" style="width: 100%;">
+	
+    You must be logged in to post to this forum<br><br><a id="ctl00_MainContent_ForumView1_lnkLogin" href="http://www.simple-talk.com/community/login.aspx?ReturnUrl=%2fopinion%2fgeek-of-the-week%2fniklaus-wirth-geek-of-the-week%2f">Click here to log in</a>.
+
+</div>
+
+
+        <br><hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl01_lblSubject">Fascinating read</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl01_lblAuthor">Diarmuid</span></i> (<span>not signed in</span>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl01_lblDate">Friday, July 03, 2009 at 4:34 AM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl01_lblMessage">Very interesting, some excellent points there.<br>I was thought Pascal in college, then worked as a C++ programmer for several years. <br>"The more complex an object, the larger the investment in learning to use it, and the greater the resistance to abandon it."<br>Too
+ true. I found it difficult to leave behind C++, having finally acheived
+ a certain level of knowledge. Plus I could no longer look down on the 
+non C++ people!<br>I think its hard to leave behind any language though, as its a long time to become "good" at a new one. <br></span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl03_lblSubject">A Genius.</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl03_lblAuthor">Phil Factor</span></i> (<a id="ctl00_MainContent_ForumView1_repPosts_ctl03_lnkProfile" href="http://www.simple-talk.com/community/user/Profile.aspx?UserID=2126">view profile</a>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl03_lblDate">Saturday, July 04, 2009 at 8:10 AM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl03_lblMessage">I
+ was programming in Pl/1 when I first came across Pascal in the 
+seventies. The contrast was enormous and I remember programming in 
+Pascal as a very liberating experience. If one could somehow bottle 
+Niklaus Wirth's great wisdom, it would look like Pascal. The legacy 
+lives on in C#. I loved the article and Niklaus's continuing sagacity.</span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl05_lblSubject">Good</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl05_lblAuthor">Arcko</span></i> (<a id="ctl00_MainContent_ForumView1_repPosts_ctl05_lnkProfile" href="http://www.simple-talk.com/community/user/Profile.aspx?UserID=16934">view profile</a>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl05_lblDate">Sunday, July 12, 2009 at 9:42 PM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl05_lblMessage">Agree with the opinion of open sourse</span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl07_lblSubject">Common sense and wisdom</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl07_lblAuthor">Anonymous</span></i> (<span>not signed in</span>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl07_lblDate">Monday, July 13, 2009 at 3:52 AM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl07_lblMessage">Inspiring article. His example of clear thought and common sense is what makes great designers. <br><br>btw.. "The key idea is that the designer of a module using (importing) other modules..<br><br>What was wrong with the word "using"...? Even Niklaus seems to be behind in IT verb-replacement - how heartening.<br></span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl09_lblSubject">Good read</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl09_lblAuthor">Jon Gilbert</span></i> (<span>not signed in</span>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl09_lblDate">Monday, July 13, 2009 at 5:03 AM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl09_lblMessage">Really nice to read this interview - thanks a lot - and I agree with a lot of NW's (possibly controversial) views :-)<br></span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl11_lblSubject">Nicklaus Interview</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl11_lblAuthor">Arthur Fuller</span></i> (<span>not signed in</span>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl11_lblDate">Monday, July 13, 2009 at 7:09 AM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl11_lblMessage">What
+ a superb interview this was, and what a superb candidate! The only 
+thing one might revise is "Geek of the Week". Surely Nicklaus deserves 
+"Geek of the Decade". I loved his concise puncturing of the OOP parade. 
+When you strip the covers off, all it is is arrays of arrays, with some 
+pointers tossed in.</span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl13_lblSubject">Excellent Insight</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl13_lblAuthor">Anonymous</span></i> (<span>not signed in</span>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl13_lblDate">Monday, July 13, 2009 at 11:47 AM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl13_lblMessage">Simplify!</span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl15_lblSubject">Thanks, Richard!</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl15_lblAuthor">Anonymous</span></i> (<span>not signed in</span>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl15_lblDate">Thursday, July 16, 2009 at 9:08 AM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl15_lblMessage">Great
+ interview!  Good to go back to the roots, to see where we've been!  
+Helps us to keep a better course on where we want to go!  ... oh well, 
+back to work ...</span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+	<table class="commenttable" border="0" cellpadding="0" cellspacing="4" width="500">
+          <tbody><tr><td class="commenttitle">Subject: </td><td><b><span id="ctl00_MainContent_ForumView1_repPosts_ctl17_lblSubject">Programming - just digging a trench... may be the grave?</span></b></td></tr>
+          <tr><td class="commenttitle">Posted by: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl17_lblAuthor">muet</span></i> (<a id="ctl00_MainContent_ForumView1_repPosts_ctl17_lnkProfile" href="http://www.simple-talk.com/community/user/Profile.aspx?UserID=17259">view profile</a>)</td></tr>
+          <tr><td class="commenttitle">Posted on: </td><td><i><span id="ctl00_MainContent_ForumView1_repPosts_ctl17_lblDate">Monday, July 20, 2009 at 2:53 AM</span></i></td></tr>
+          <tr><td class="commenttitle" valign="top">Message: </td><td><span id="ctl00_MainContent_ForumView1_repPosts_ctl17_lblMessage">What
+ a compassion! Real progress in deed advances much slower than the 
+increase of computing and storage power. To feel the pain enjoy reading 
+http://www.inf.ethz.ch/personal/wirth/Articles/Miscellaneous/IEEE-Annals.pdf
+ - If fathers could be adopted: Niklaus Wirth is one of mine!</span></td></tr>
+	</tbody></table>
+    
+        <hr>
+    
+
+
+
+        <a name="commentform">&nbsp;</a>
+      </div>
+  
+</div>
+  
+  <script src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/swfobject.js"></script>
+  <script src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/jquery-1.js"></script>
+  <script src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/jquery_002.js"></script>
+  <script src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/jquery.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".video-lightbox").video();
+    });
+  </script>
+  
+
+            </div> 
+            <div class="rightcolumn">
+                
+    
+
+<div class="sidenav">
+    <div class="header"></div>
+    <div class="middle">
+        
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl00_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl00_lnkCategory" href="http://www.simple-talk.com/opinion/">Opinion Home</a> 
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl01_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl02_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl02_lnkCategory" href="http://www.simple-talk.com/opinion/opinion-pieces/">Opinion Pieces</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl02_spaCount" class="articlecount">(200 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl03_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl04_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl04_lnkCategory" href="http://www.simple-talk.com/opinion/geek-of-the-week/">Geek of the Week</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl04_spaCount" class="articlecount">(81 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl05_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl06_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl06_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=2">Tony Davis - Editor</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl06_spaCount" class="articlecount">(5 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl07_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl08_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl08_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=3">Phil Factor</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl08_spaCount" class="articlecount">(59 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl09_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl10_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl10_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=8">Damon Armstrong</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl10_spaCount" class="articlecount">(10 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl11_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl12_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl12_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=10">Douglas Reilly</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl12_spaCount" class="articlecount">(40 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl13_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl14_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl14_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=44">Adrian Furnham</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl14_spaCount" class="articlecount">(1 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl15_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl16_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl16_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=48">Claire Brooking</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl16_spaCount" class="articlecount">(1 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl17_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl18_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl18_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=52">Richard Morris</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl18_spaCount" class="articlecount">(85 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl19_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl20_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl20_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=53">Tim Gorman</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl20_spaCount" class="articlecount">(1 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl21_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl22_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl22_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=56">Jesse Liberty</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl22_spaCount" class="articlecount">(5 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl23_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl24_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl24_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=57">Sarah Blow</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl24_spaCount" class="articlecount">(1 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl25_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl26_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl26_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=67">Anna Larjomaa</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl26_spaCount" class="articlecount">(1 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl27_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl28_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl28_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=70">Gaidar Magdanurov</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl28_spaCount" class="articlecount">(2 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl29_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl30_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl30_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=79">Regular Columnists</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl30_spaCount" class="articlecount">(1 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl31_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl32_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl32_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=100">Ben Hall</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl32_spaCount" class="articlecount">(5 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl33_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl34_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl34_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=143">Larry Gonick</a> <span id="ctl00_RightColumn_Categories1_repCategories_ctl34_spaCount" class="articlecount">(83 articles)</span>
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl35_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl36_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl36_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=207">Simon Holness</a> 
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl37_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl38_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl38_lnkCategory" href="http://www.simple-talk.com/content/columnist.aspx?columnist=225">Michael Williamson</a> 
+    	        </div>
+            
+                <img id="ctl00_RightColumn_Categories1_repCategories_ctl39_imgSpacer" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/sidenav_opinion_lines_320x3.jpg" style="height: 3px; width: 320px; border-width: 0px;"><br>
+            
+    	        <div class="navitem">
+    	            <img id="ctl00_RightColumn_Categories1_repCategories_ctl40_imgArrow" src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_arrow_white_5x9.gif" style="height: 9px; width: 5px; border-width: 0px;">&nbsp;&nbsp;<a id="ctl00_RightColumn_Categories1_repCategories_ctl40_lnkCategory" href="http://www.simple-talk.com/community/blogs/">Blogs Home</a> 
+    	        </div>
+            
+    </div>
+    <div class="footer"></div>  
+</div>
+    <div class="sidepanels">
+        
+        
+        
+        
+              
+        
+        
+        
+        
+<div class="widget" id="topratedarticles">
+    <div class="header"><a id="ctl00_RightColumn_ArticlesRated1_lnkHeader"><img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/1px.gif" title="Phil Factor - the wilder shores of transact sql" height="30" width="300"></a></div>
+    <div class="middle">
+        <div class="widgetcontent">
+            
+                    <strong><a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl00_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-derek-in-therapy/">Raw Materials: Derek in Therapy</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;Our DBA gets in touch with his inner circuits.&nbsp;<a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl00_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-derek-in-therapy/">Read more...</a><br><br>
+                
+                    <strong><a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl01_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-teamwork/">Raw Materials: Teamwork</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;Derek suffers from fragmentation.&nbsp;<a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl01_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-teamwork/">Read more...</a><br><br>
+                
+                    <strong><a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl02_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-the-eyes-of-derek/">Raw Materials: The Eyes of Derek</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;Keeping Developers in the Proper Frame of Mind.&nbsp;<a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl02_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-the-eyes-of-derek/">Read more...</a><br><br>
+                
+                    <strong><a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl03_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-summer-on-the-lake/">Raw Materials: Summer on the Lake</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;Derek gets away from it all.&nbsp;<a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl03_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-summer-on-the-lake/">Read more...</a><br><br>
+                
+                    <strong><a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl04_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-wake-up-call/">Raw Materials: Wake-up Call</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;A robot's reaction may be a little different from yours or mine.&nbsp;<a id="ctl00_RightColumn_ArticlesRated1_repArticles_ctl04_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/raw-materials-wake-up-call/">Read more...</a><br><br>
+                
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+        
+
+<div class="widget" id="mostviewedarticles">
+    <div class="header"><a id="ctl00_RightColumn_ArticlesViewed1_lnkHeader"><img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/1px.gif" title="Phil Factor - the wilder shores of transact sql" height="30" width="300"></a></div>
+    <div class="middle">
+        <div class="widgetcontent">
+            
+                    <strong><a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl00_lnkArticle1" href="http://www.simple-talk.com/opinion/geek-of-the-week/linus-torvalds,-geek-of-the-week/">Linus Torvalds, Geek of the Week</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;Linus Torvalds is remarkable, not only for being the technical genius who wrote Linux, but for then...&nbsp;<a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl00_lnkArticle2" href="http://www.simple-talk.com/opinion/geek-of-the-week/linus-torvalds,-geek-of-the-week/">Read more...</a><br><br>
+                
+                    <strong><a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl01_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/driving-up-software-quality---the-role-of-the-tester/">Driving up software quality - the role of the tester</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;Have you ever wondered what a software tester does? Helen Joyce, test engineer at Red Gate software...&nbsp;<a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl01_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/driving-up-software-quality---the-role-of-the-tester/">Read more...</a><br><br>
+                
+                    <strong><a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl02_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/coming-out-as-a-cancer-survivor---a-guide-for-software-developers/">Coming Out as a Cancer Survivor - A Guide for Software Developers</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;A personal perspective on the responsibilities of a cancer-surviving software developer&nbsp;<a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl02_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/coming-out-as-a-cancer-survivor---a-guide-for-software-developers/">Read more...</a><br><br>
+                
+                    <strong><a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl03_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/bad-carma/">Bad CaRMa</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;From hope and euphoria, to desperation, firings and the ultimate demise of a company. Tim Gorman charts...&nbsp;<a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl03_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/bad-carma/">Read more...</a><br><br>
+                
+                    <strong><a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl04_lnkArticle1" href="http://www.simple-talk.com/opinion/opinion-pieces/the-computer-that-swore/">The Computer that Swore</a></strong><br>
+                    <img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/w_icon_article_9x11.jpg" height="11" width="9">&nbsp;Database Developers occasionally get crazy ideas into their heads. Phil Factor should know; He...&nbsp;<a id="ctl00_RightColumn_ArticlesViewed1_repArticles_ctl04_lnkArticle2" href="http://www.simple-talk.com/opinion/opinion-pieces/the-computer-that-swore/">Read more...</a><br><br>
+                
+        </div>
+    </div>
+    <div class="footer"></div>
+</div>
+        
+      <div class="widget" id="WhyJoin">
+        <div class="header"><a id="ctl00_RightColumn_WhyJoin1_LoginView1_lnkJoin1" href="http://www.simple-talk.com/community/user/CreateUser.aspx?ReturnUrl=%2fopinion%2fgeek-of-the-week%2fniklaus-wirth-geek-of-the-week%2f"><img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/1px.gif" title="Join Simple Talk" height="50" width="315"></a></div>
+        <div class="middle">
+          <div class="widgetcontent">
+		<a id="ctl00_RightColumn_WhyJoin1_LoginView1_lnkJoin2" href="http://www.simple-talk.com/community/user/CreateUser.aspx?ReturnUrl=%2fopinion%2fgeek-of-the-week%2fniklaus-wirth-geek-of-the-week%2f"><img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/icon_newsletter_54x43.jpg" class="paper" title="Join Simple Talk" height="43" width="54" align="left"></a>
+		Over 150,000 Microsoft professionals subscribe to the Simple-Talk 
+technical journal. Join today, it's fast, simple, free and secure.<br><br>
+		    <div class="joinbutton"><a id="ctl00_RightColumn_WhyJoin1_LoginView1_lnkJoin3" href="http://www.simple-talk.com/community/user/CreateUser.aspx?ReturnUrl=%2fopinion%2fgeek-of-the-week%2fniklaus-wirth-geek-of-the-week%2f"><img src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/btn_join_117x19.jpg" alt="Join Simple Talk" height="19" width="117"></a></div>
+          </div>
+        </div>
+        <div class="footer"></div>
+      </div>
+    
+    </div>
+
+                <div class="clear"></div><br>
+            </div>
+            <div class="clear"></div><br>
+            <div class="pagefooter">
+                <div class="pagefooternavright">
+                    <a id="ctl00_lnkGotoPrivacy" href="http://www.simple-talk.com/privacy-policy.aspx">Privacy policy</a> |
+                    <a id="ctl00_lnkGotoTerms" href="http://www.simple-talk.com/terms-and-conditions.aspx">Terms and conditions</a> |
+                    <a href="http://www.red-gate.com/" target="_blank">©2005-2011 Red Gate Software</a>
+                </div>
+                <div class="pagefooternavleft">
+                    <a id="ctl00_lnkGotoAbout" href="http://www.simple-talk.com/about.aspx">About</a> |
+                    <a id="ctl00_lnkGotoSitemap" href="http://www.simple-talk.com/site-map.aspx">Site map</a> |
+                    <a id="ctl00_lnkGotoAuthor" href="http://www.simple-talk.com/become-an-author.aspx">Become an author</a> |
+                    <a id="ctl00_lnkGotoArchive" href="http://www.simple-talk.com/newsletter-archive/">Newsletters</a> |
+                    <a id="ctl00_lnkGotoContact" href="http://www.simple-talk.com/contact-us.aspx">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+<script src="Niklaus%20Wirth:%20Geek%20of%20the%20Week_files/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-90206-4";
+urchinTracker();
+</script>
+</body></html>

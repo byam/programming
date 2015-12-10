@@ -1,0 +1,30 @@
+#inf_relatedStories{
+    width: 600px;
+    margin-top: 15px;
+}
+#inf_relatedStories ul{
+	list-style: none;
+	color:#333;
+	line-height:.35em;
+}
+#inf_relatedStories a{
+	color: #007CA5;
+	text-decoration: none;
+}
+#inf_relatedStories h4, h5{
+	font-size:1em;
+}
+#inf_relatedStories a:hover, #inf_relatedStories h2 a:hover, #inf_relatedStories h3 a:hover {
+	background-color:#E5F8FF;
+}
+.iw_moreAbout{
+	margin-top: 10px;
+	font-family: Arial,Verdana,sans-serif;
+}
+.iw_moreAbout li, .iw_moreAbout ul{
+	display: inline;
+	line-height:1.35em;
+}
+.iw_moreAbout h5{
+	display: inline;
+}

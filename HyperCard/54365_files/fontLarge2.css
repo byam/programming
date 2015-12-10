@@ -1,0 +1,43 @@
+/* 
+ -----------------------------------------------------
+ CSS alternative file for large text
+ Version:     2007.02.21
+ -----------------------------------------------------
+*/
+
+/* Story Page */
+
+#breadcrumb,
+#header, #footer,
+#secondary_package {
+    font-size: 100% !important;
+}
+
+#breadcrumb {
+    font-size: 100% !important;
+}
+
+#contentwell {
+	   font-size: 128%;
+}
+
+#river {
+    font-size: 110%;
+}
+
+#multimedia .item {
+	   font-size: 128% !important;
+}
+
+html body #largest {
+    background: transparent url(/images/icon_text_lg2.gif) no-repeat bottom left;
+}
+
+html body #normal {
+    background: transparent url(/images/icon_text_med.gif) no-repeat 0 0;
+}
+
+/* slideshows */
+#mm_tools, #img_links, #ss_nav { font-size:11px !important; }
+div#description p.photocredit { font-size:1em !important; }
+.social #hidden_list { font-size:12px !important; }

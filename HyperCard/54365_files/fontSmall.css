@@ -1,0 +1,33 @@
+/* 
+ -----------------------------------------------------
+ CSS alt file for large text
+ Version:     2007.02.21
+ -----------------------------------------------------
+*/
+
+/* Story Page */
+
+#breadcrumb,
+#header, #footer,
+#secondary_package {
+    font-size: 100% !important;
+}
+
+#contentwell {
+	 font-size: 86%;
+}
+
+#river, #multimedia .item {
+    font-size: 95% !important;
+}
+
+html body #small {
+    background: transparent url(/images/icon_text_sm.gif) no-repeat bottom left;
+}
+
+html body #normal {
+    background: transparent url(/images/icon_text_med.gif) no-repeat 0 0;
+}
+
+/* slideshows */
+#img_links, #ss_nav { font-size:11px !important; }

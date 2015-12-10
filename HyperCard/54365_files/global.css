@@ -1,0 +1,685 @@
+@import url("breadcrumb.css");
+
+* { margin: 0; padding: 0; }
+body { text-align:center; font-family: Georgia, "Times New Roman", serif; font-size:62.5%; color: #000; background: #FFF; }
+a { color:#007CA5; text-decoration:none; outline: none;}
+a:visited { color:#666; } 
+a:active { color:#999; } 
+img, a img { border-style: none; }
+#shell {text-align:left;}
+#content { background:#FFF; color:#000; }
+/* Hide IFRAMES in DART */
+.hiddenDAU {width:0;height:0;}
+.hr { width:628px; height:17px; clear:both; margin:0 0 10px 0; background: url(/images/mb/scratches.gif) repeat-x; }
+#contentwell { width:664px; float:left; overflow:hidden; }
+#contentwell_blogs { width:1000px; float:left; overflow:hidden; }
+#xrail { width:336px; float:left; /*overflow:hidden;*/ }
+.clearer { clear:both; }
+.login { display:none; }
+
+/* 2009 Redesigned Header
+ *************************/
+	#global_header{
+		background-color: #808080;
+		text-align: left;
+		clear: both;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	#global_header ul{
+		list-style-type: none;
+	}
+	#leaderboard{
+		padding: 10px 0;
+	}
+	#leaderboard .advertisement, #leaderboard .subscriptionUnit, #supplemental_links, #global_search{
+		float: left;
+	}
+	#leaderboard .advertisement{
+		width: 728px;
+		height: 90px;
+		margin-right: 20px;
+		padding-left: 10px;
+		background: url('/images/global_header/ad_text.gif') no-repeat center left;
+	}
+	#leaderboard .subscriptionUnit{
+		width: 242px;
+		overflow: visible;
+	}
+
+
+/* Primary Navigation
+ ********************/
+	#global_navigation{
+		clear: both;
+		background-color: #000;
+		background-image: url('/images/global_header/gnav_gradient.gif');
+		background-repeat: repeat-y;
+		background-position: center center;
+		min-width: 1000px;
+		z-index: 1000;
+	}
+	#primary_navigation, #primary_navigation li{
+		position: relative;
+	}
+	#primary_navigation li{
+		float: left;
+	}
+	#primary_navigation a{
+		display: block;
+	}
+	#primary_navigation a.primaryLink/*, #global_navBar a*/{
+		background-image: url('/images/global_header/pnav_icons.gif');
+	}
+	#primary_navigation a.primaryLink span{
+		display: none; /*SEO Friendly Replacement text*/
+	}
+
+	/*Specific Primary Nav Buttons/States*/
+	#pn_home{
+		margin-right: 22px;
+	}
+	#pn_home a.primaryLink{
+		width: 150px;
+		background-position: 0 0;
+	}
+	#pn_sections a.primaryLink{
+		width: 99px;
+		background-position: -151px 0;
+	}
+	.s_cars #pn_sections a.primaryLink, 
+	.s_culture #pn_sections a.primaryLink, 
+	.s_entertainment #pn_sections a.primaryLink, 
+	.s_gadgets #pn_sections a.primaryLink, 
+	.s_gaming #pn_sections a.primaryLink, 
+	.s_medtech #pn_sections a.primaryLink, 
+	.s_multimedia #pn_sections a.primaryLink, .s_politics, 
+	.s_science #pn_sections a.primaryLink, 
+	.s_software #pn_sections a.primaryLink, 
+	.s_techbiz #pn_sections a.primaryLink{
+		background-position: -151px -60px;
+	}
+	#pn_sections a.over{background-position: -151px -30px !important;}
+	
+	#pn_blogs a.primaryLink{
+		width: 77px;
+		background-position: -251px 0;
+	}
+	#pn_blogs a.active,.s_blogs #pn_blogs a.primaryLink,.s_blogs #pn_blogs a.active{background-position: -251px -60px;}
+	#pn_blogs a.over,.s_blogs #pn_blogs a.over{background-position: -251px -30px !important;}
+	
+	#pn_reviews a.primaryLink{
+		width: 93px;
+		background-position: -329px 0;
+	}
+	.s_reviews #pn_reviews a.primaryLink{background-position: -329px -60px;}
+	#pn_reviews a.active{background-position: -329px -60px;}
+	#pn_reviews a.over{background-position: -329px -30px !important;}
+	
+	#pn_video a.primaryLink{
+		width: 74px;
+		background-position: -423px 0;
+	}
+	.s_video #pn_video a.primaryLink{background-position: -423px -60px;}
+	#pn_video a.over{background-position: -423px -30px !important;}
+	
+	#pn_how_to a.primaryLink{
+		width: 94px;
+		background-position: -498px 0;
+	}
+	#pn_how_to a.active{background-position: -498px -60px;}
+	#pn_how_to a.over{background-position: -498px -30px !important;}
+	
+	#pn_magazine a.primaryLink{
+		width: 102px;
+		background-position: -593px 0;
+	}
+	#pn_magazine a.active{background-position: -593px -60px;}
+	#pn_magazine a.over{background-position: -593px -30px !important;}
+
+	.s_magazine #pn_magazine a.primaryLink,.s_wired #pn_magazine a.primaryLink,
+	.magazinewide #pn_magazine a.primaryLink{
+		background-position: -593px -60px;
+	}
+	.magazinewide #pn_sections a.primaryLink{background-position: -151px 0}
+	.s_magazine #pn_magazine a.over,#pn_magazine a.over{background-position: -593px -30px !important;}
+	
+	#pn_subscribe_a a.primaryLink, .pn_subscribe_a a.primaryLink/*, #global_navBar a*/{
+		width: 108px;
+		background-position: -696px 0;
+	}
+	#pn_subscribe_a a.over, .pn_subscribe_a a.over/*, #global_navBar a:hover*/{background-position: -696px -30px !important;}
+	#pn_subscribe_a a.active, .pn_subscribe_a  a.active{background-position: -663px -60px;}
+
+
+/* Dropdown Menus
+ **********************/
+	#primary_navigation .dropdownMenu{
+		position: absolute;
+		left: 0;
+		top: 30px;
+		width: 235px;
+		padding: 5px;
+		z-index: 1000;
+		background-color: #fff;
+		border: 3px solid #dcdcdc;
+		display: none;
+	}
+	#primary_navigation .open{
+		display: block;
+	}
+	#primary_navigation .dropdownMenu ul{
+		width: 115px;
+		float: left;
+	}
+	#primary_navigation .dropdownMenu ul:first-child{
+		margin-right: 5px;
+	}
+	#primary_navigation .dropdownMenu li{
+		float: none; /*rd*/
+		position: static; /*rd*/
+		margin: 0; /*rd*/
+		border-top: 1px solid #dcdcdc;
+	}
+	#primary_navigation .dropdownMenu .lastLink{
+		border-bottom: 1px solid #dcdcdc;
+	}
+	#primary_navigation .dropdownMenu li:first-child{
+		border-top: none;
+	}
+	#primary_navigation .dropdownMenu a{
+		height: 15px;
+		color: #666;
+		font-size: 1.1em;
+		margin: 1px 0;
+		padding: 4px 5px 0 5px;
+	}
+	#primary_navigation .dropdownMenu a:hover{
+		background-color: #efefef;
+		color: #00BCEC;
+	}
+	
+	/*Subscribe*/
+	li#pn_subscribe_a .dropdownMenu{
+		width: 365px;
+		left: 0;
+		right: auto;
+	}
+	/*Full length items and featured items*/
+	#primary_navigation .dropdownMenu .featured{
+		border-top: 2px solid #dcdcdc;
+		clear: both;
+	}
+	#primary_navigation .dropdownMenu ul.fullLength, #primary_navigation .dropdownMenu ul.fullLength li{
+		float: none;
+		width: 265px;
+		clear: both;
+	}
+	#primary_navigation .dropdownMenu ul.fullLength a{
+		height: auto;
+		padding: 5px 4px 4px;
+	}
+
+/* Extra Nav
+ ************/
+	#extra_navigation{
+		background-color: #222;
+	}
+	#supplemental_links{
+		width: 690px;
+		padding: 9px 20px 0 0;
+		text-align: right;
+	}
+	#supplemental_links ul, #supplemental_links li{
+		display: inline;
+	}
+	#supplemental_links, #supplemental_links a{
+		color: #999;
+		font-size: 1.05em;
+	}
+	#supplemental_links a{
+		font-weight: bold;
+	}
+	#supplemental_links a:hover, #gh_rss:hover a{
+		text-decoration: underline;
+	}
+	#gh_rss{
+		position: relative;
+		padding-right: 15px;
+	}
+	#gh_rss img{
+		position: absolute;
+		right: 3px;
+		top: -1px;
+	}
+	#global_search{
+		width: 285px;
+		position: relative;
+		text-align: right;
+		top: -1px;
+		left: 4px;
+	}
+	#global_search input#gs_query{
+		width: 145px;
+	}
+	#global_search select{
+		width: 100px;
+		border: 1px solid #fff;
+	}
+	#gs_submit{
+		position: relative;
+		top: 6px;
+	}
+	.gh_username{
+		font-weight: bold;
+	}
+
+/* OPA pushdown ad container
+ ****************/	
+#pushdownAd {
+	margin:2px 0 0 0px;
+	background-color: #fff;
+	/* margin:12px 0 20px 0; 
+	/* for apple ad 20091028 */
+}
+
+/* Common Styles
+ ****************/
+	/* Addresses centering + 10px left margin for browser windows < 1024px */
+	#shell, #leaderboard, #primary_navigation, #secondary_navigation{
+		width: 1000px;
+		margin: 0 auto;
+        padding-left: 10px;
+	}
+	/*heights*/
+	#global_navigation, #extra_navigation, #home_link, #primary_navigation a{
+		height: 30px;
+	}
+
+    /*	CSS Filters
+     ***************/
+     * + html #global_search{top: 1px;}
+     * + html #gh_rss img{top: 1px;}
+     * + html #gs_submit{top: 3px;}
+     * + html #primary_navigation .dropdownMenu li a{height: 17px;}
+     * html #leaderboard .subscriptionUnit{overflow:hidden;}
+     * html #gh_rss img{position: static;}
+     * html #global_search{top: 1px;}
+     * html #gs_submit{top: 3px;}
+/*end 2009 global header*/
+
+/* begin footer */
+#footer {
+    font: 1em arial, helvetica, sans-serif;
+    line-height: 1.3em;
+    margin:10px 0 0 0;
+    text-align: left;
+    clear: both;
+}
+#footer, #footer p{
+    color: #fff;
+}
+#foot_row1 { background: #222; height:30px;}
+#foot_row2 { background: #181818; height: 30px; }
+#foot_row3 { padding: 10px 0 27px 0; background: #000; position:relative; z-index:101; }
+.footer_rss {padding-left:2px; }
+/*changes for footer design update
+span.pad {
+    display: block;
+    padding: 10px 0 0 0;
+    width: 1000px;
+    margin: 0 auto;
+}
+.home span.pad{
+    margin: 0 0 0 10px;
+    width: auto;
+}
+end changes for footer design update*/
+span.pad {
+    display: block;
+    /*margin: 0 0 0 10px;*/
+    padding: 6px 0 0 10px;
+}
+.link_row { color: #494949; float:left; padding-top:4px;}
+#foot_row2 .link_row { color: #4b4b4b; }
+#foot_row3 .link_row { color: #4c4c4c; }
+.condenet_sites { padding: 10px 0 10px 0; color: #292929; }
+.condenet_sites a { font-weight:bold; }
+#copyright { float:left; }
+#drop_downs { padding-bottom:5px; }
+#drop_downs select{
+    width:170px;
+    border: 1px solid #333;
+    margin-right: 10px;
+}
+#footer .copyright{
+    margin-top: 5px;
+}
+/* text resize component styles */
+#shell #content #footer .text_size, #footer .text_size { /* fixes ie7 but not 6!!! */
+    display: block;
+    padding-right:15px;
+    float: right;      
+    position: static;
+    /*margin: -4px 20px 0 0; */
+}  
+* html #shell #content #with_video #xrail {
+    width: 500px;
+    float: right;
+}
+/* for safari 2 */
+html[xmlns*=""] body:last-child #shell #content #footer .text_size {
+    margin-top: -3px;
+} 
+/* for safari 3 */
+body:first-child #shell #content #footer .text_size {
+    margin-top: 7px;
+} 
+.text_size a {
+    display: block;
+    float: left;
+    width: 18px;
+    height: 18px;
+}
+#footer .text_size img {  
+    display: block;
+    float:left;
+}
+#small {
+    background: transparent url(/images/icon_text_sm.gif) no-repeat 0 0;
+}
+#small:hover, #small:active {
+    background: transparent url(/images/icon_text_sm.gif) no-repeat bottom left;
+}
+#normal {
+    background: transparent url(/images/icon_text_med.gif) no-repeat bottom left;
+}
+#normal:hover, #normal:active {
+    background: transparent url(/images/icon_text_med.gif) no-repeat bottom left;
+}
+#large {
+    background: transparent url(/images/icon_text_lg.gif) no-repeat 0 0;
+}
+#large:hover, #large:active {
+    background: transparent url(/images/icon_text_lg.gif) no-repeat bottom left;
+}
+#largest {
+    background: transparent url(/images/icon_text_lg2.gif) no-repeat 0 0;
+}
+#largest:hover, #largest:active {
+    background: transparent url(/images/icon_text_lg2.gif) no-repeat bottom left;
+}
+/* end text resize */
+
+/* end footer */
+
+div#debugInfoDiv { background:#FFF; text-align:left; clear:both; }
+body > div#debugInfoDiv { margin-top:20px; }
+
+#logout_link {
+    display:none;
+}
+
+.warning {
+    height: 30px;
+    padding: 1em 0 0 3em;
+    font: bold 1.4em arial, helvetica, sans-serif;
+    color: #b40404;
+    vertical-align: bottom;
+    background: transparent url(/images/other/warning.gif) 0 0 no-repeat;
+}
+#footerAd {
+    width: 1000px;
+    text-align: center;
+    margin: 10px;
+}
+#footerAd .dartAdUnit {
+    margin: auto;
+}
+
+
+/* START HP Print Button CSS */
+#hp_advertisement { 
+	text-align: center;
+	margin-left: -10px;
+	font: normal 9px arial, sans-serif; 
+	padding: 2px 0 0 0;
+	*padding: 12px 0 0 0;
+}
+
+ #hp_print {
+    background: url(/images/HP_Printer_Icon2.gif) no-repeat left top;
+    display: block;
+    width: 55px;
+    height: 15px;
+    position: relative;
+    left: -5px;
+    z-index: 15; } 
+
+#hp_print:hover {
+    background-position: 100% -15px;
+   }
+ 
+ #hp_print img {
+	height:15px;
+	_height:13px;
+	width:55px;
+	} 
+
+
+.hp_popup {
+   	position:relative; 
+   	left:-90px; 
+   	top:-151px; 
+   	*top: -53px;
+   	width:225px;
+   	height: 77px;
+   	border-style:none;
+   	border-width:0px;
+ 	background: transparent url(/images/hp_green_box.gif) no-repeat 0 0; 
+ 	*background: transparent url(/images/hp_green_box_bottom.gif) no-repeat 0 0; 
+   	color: #666 !important;
+  	font: normal 11px arial, sans-serif;
+   	z-index:1000;
+   	visibility:hidden;
+   	_display:block;
+   	_margin-bottom:-82px;
+   	padding: 5px 5px 0px 10px;
+   	text-align:left;
+   	}
+#hp_ad {
+	display:none;
+}
+/* END HP Print Button CSS */
+#beta{
+	overflow: visible !important;
+}
+
+
+/* ECommerce: 
+ * readMagazine_rightRail css - formerly subunit.css
+ ****************************************************/
+.xrail_title { padding: 0px 0px 12px 0px;  }
+.sub_unit { width:300px; overflow: hidden; padding:0; }
+#xrail .sub_unit, #xrail .sub_unit p, #side_container .sub_unit, #side_container .sub_unit p{font-family: Arial, Helvetica, sans-serif; font-size: 11px;}
+.cover_img { float:left; width: 145px;}
+.text_side { float:left; padding:0; width: 145px;}
+.xrail_headline { padding: 0px 0px 7px 0px;  }
+.text_side p { background:transparent url(/images/blogs/xrail_bullet.gif) no-repeat scroll 0pt; margin:0px 0px 4px 0px; padding:0px 13px 0px; }
+.text_side a, .text_side a.visited { color: #007ca5; text-decoration:none; }
+.text_side a:hover { text-decoration:underline; }
+a img { border:0px; }
+#mag_sub_promo { width:336px; margin:10px 0px 15px;}
+
+/*typepad blogs*/
+#blogs_rightRail_A .sub_unit{ /*blogs: both atg and failsafe*/
+    margin:10px 0px 15px;
+}
+#blogs_rightRail_A #mag_sub_promo .sub_unit{ /*blogs: failsafe only*/
+    margin: 0;
+}
+/*end typepad blogs*/
+
+/*services*/
+#contactUs_subscribeLink{
+    display: inline;
+}
+
+/* ECommerce: 
+ * global_navBar_embeddedForm: ATG MARKUP
+ * note: when this goes live, delete failsafe flyout css above
+ **************************************************************/
+ #global_navigation a#global_navBar_failsafe, #global_navigation #global_navBar_rollover a{
+     display: block;
+     height: auto;
+     text-align: center;
+     margin-top: 20px;
+ }
+ #global_navigation #global_navBar_failsafe:hover, #global_navigation #global_navBar_rollover a:hover{
+     background: none;
+ }
+ .autosubs{
+     width: 299px;
+     margin: 15px auto 0 auto !important;
+ }
+ .autosubs, .autosubs label, .autosubs p{
+     font-size: 10px;
+ }
+ form.frm_regsub div div img{
+     top: -3px !important;
+ }
+ .frm_offer{
+     padding-left: 92px !important;
+     top: -23px;
+ }
+
+ form.frm_regsub .frm_row{
+     margin-bottom: 2px;
+ }
+ form.frm_regsub .frm_row input{
+     border: 1px solid #CCCCCC;
+     height: 1.7em;
+     position: relative;
+ }
+ form.frm_regsub .frm_row select, form.frm_regsub .frm_row input{
+     top: -6px !important;
+ }
+ form.frm_regsub .frm_row p{
+     margin-bottom: 8px !important;
+ }
+ form.frm_regsub .frm_row label{
+     line-height: 1 !important;
+     clear: none;
+ }
+ .autosubs a:hover{
+     background: none !important;
+ }
+ .autosubs input.submit{
+     background: url('/images/global_header/subscribe/atg_wired_submit.gif');
+     display: block;
+     width: 83px;
+     height: 21px;
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     border: none;
+     /*trick to hide submit button text from IE*/
+     text-indent: -100000px;
+     font-size: 0;
+     text-align: right;
+     color: #535353;
+ }
+ .autosubs .nonusa{
+     left: 78px !important;
+ }
+ .autosubs .privacy{
+     left: -5px !important;
+ }
+  #primary_navigation .dropdownMenu #gh_close_sub_flyout{
+ 	width: 53px;
+ 	height: 17px;
+ 	background-image: url('/images/global_header/subscribe/gh_sub_close.gif');
+ 	background-position: 0 0;
+ 	background-repeat: no-repeat;
+ 	position: absolute;
+ 	top: 5px;
+ 	right: 5px;
+    padding: 0;
+    margin: 0;
+ }
+ #gh_close_sub_flyout:hover{
+     background-position: 0 -17px !important;
+ }
+ #primary_navigation .dropdownMenu #gh_close_sub_flyout, .autosubs input.submit{
+     cursor: hand;
+     cursor: pointer;
+ }
+ 
+ /* ECommerce:
+ * contentPage_headerCallout
+ *****************************/
+#contentPage_headerCallout{
+	height: 90px;
+	width: 280px;
+}
+#contentPage_headerCallout a{
+    display: block;
+    color: #fff;
+    font-size: 10px;
+}
+#header_callout_text{
+    width: 162px;
+    float: left;
+    margin-right: 10px;
+}
+#header_callout_text ul{
+    height: 33px;
+}
+#header_callout_text li{
+    float: left;
+    width: 70px;
+    height: 10px;
+    line-height: 10px;
+    margin: 6px 10px 0 0;
+    overflow: visible;
+}
+#header_callout_text li a{
+    display: inline;
+    text-transform: uppercase;
+    padding-right: 7px;
+    background: url('/images/global_header/subscribe/header_callout/arrow.gif') right 1px no-repeat;
+}
+#header_callout_text li a:hover{
+    text-decoration: underline;
+}
+a#header_callout_cover{
+	display: inline;
+}
+/*Internet Explorer 6*/
+* html #header_callout_text ul{ position: absolute; width: 180px; }
+* html #header_callout_text li{ margin-right: 8px;}
+* html #header_callout_cover{ position: absolute;}
+
+/* WIRED-224 comment out when ready
+#inf_widget {
+    display: none;
+}
+*/
+/* TEMPORARY - IPAD PROMOTION - NAV BAR */
+
+#pn_ipad a.primaryLink { 
+	margin-left:31px;
+	padding:0;
+	border:none; 
+	width:150px; 
+	background: url('/magazine/wp-content/images/assets/ipad_cm_navbar.png')  0 30px;
+}
+
+#content #pn_ipad a.primaryLink { 
+	margin-left:162px;
+}
+
+#pn_ipad a.primaryLink:hover {
+	background: url('/magazine/wp-content/images/assets/ipad_cm_navbar.png') 0 0;
+}
+
+

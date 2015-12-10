@@ -1,0 +1,985 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en-US"><head>
+
+
+
+	<!-- #BeginTemplate "../../public_html.data/Templates/basic%20history.html" -->
+
+		
+			<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+			<meta name="generator" content="Adobe GoLive 6">
+			<title>Apple II History Chap 17</title>
+			<!-- #BeginHeadLocked "" -->
+				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+				<meta name="author" content="Steven Weyhrich">
+				<meta name="ROBOTS" content="ALL">
+				<link title="A2 History" href="ah17_files/a2main.css" type="text/css" rel="stylesheet" media="screen">
+				
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+<script type="text/javascript" src="ah17_files/disclaim-element.js"></script>
+<script type="text/javascript" src="ah17_files/graph-calc.js"></script>
+<script type="text/javascript" src="ah17_files/jquery.js"></script>
+<script type="text/javascript">
+var firstDate = 820454400000;
+var lastDate = 1325375999999;
+var wbPrefix = "http://replay.waybackmachine.org/";
+var wbCurrentUrl = "http://apple2history.org/history/ah17.html";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 16;
+var firstYear = 1996;
+var imgWidth=400;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "14";
+var displayMonth = "Aug";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+</head><body bgcolor="#cdba96"><div id="wm-ipp" style="display: none; position: relative; padding: 0pt 5px; min-height: 70px; min-width: 800px; z-index: 9000;">
+<div id="wm-ipp-inside" style="position: fixed; padding: 0pt ! important; margin: 0pt ! important; width: 97%; min-width: 780px; border-right: 5px solid rgb(0, 0, 0); border-width: medium 5px 5px; border-style: none solid solid; border-color: -moz-use-text-color rgb(0, 0, 0) rgb(0, 0, 0); background-image: url(&quot;http://static.waybackmachine.org/images/toolbar/wm_tb_bk_trns.png&quot;); text-align: center; -moz-box-shadow: 1px 1px 3px rgb(51, 51, 51); font-size: 11px ! important; font-family: 'Lucida Grande','Arial',sans-serif ! important;">
+   <table style="border-collapse: collapse; margin: 0pt; padding: 0pt; width: 100%;"><tbody><tr>
+   <td style="padding: 10px; vertical-align: top; min-width: 110px;">
+   <a href="http://waybackmachine.org/" title="Wayback Machine home page" style="background-color: transparent; border: medium none;"><img src="ah17_files/wayback-toolbar-logo.png" alt="Wayback Machine" border="0" height="39" width="110"></a>
+   </td>
+   <td style="padding: 0pt ! important; text-align: center; vertical-align: top; width: 100%;">
+
+       <table style="border-collapse: collapse; margin: 0pt auto; padding: 0pt; width: 570px;"><tbody><tr>
+       <td style="padding: 3px 0pt;" colspan="2">
+       <form target="_top" method="get" action="http://waybackmachine.org/form-submit.jsp" name="wmtb" id="wmtb" style="margin: 0pt ! important; padding: 0pt ! important;"><input name="url" id="wmtbURL" value="http://apple2history.org/history/ah17.html" style="width: 400px; font-size: 11px; font-family: 'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" type="text"><input name="type" value="replay" type="hidden"><input name="date" value="20070814133756" type="hidden"><input value="Go" style="font-size: 11px; font-family: 'Lucida Grande','Arial',sans-serif; margin-left: 5px;" type="submit"><span id="wm_tb_options" style="display: block;"></span></form>
+       </td>
+       <td style="vertical-align: bottom; padding: 5px 0pt 0pt ! important;" rowspan="2">
+           <table style="border-collapse: collapse; width: 110px; color: rgb(153, 153, 170); font-family: 'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width: 110px; height: 16px; font-size: 10px ! important;">
+           	<td style="padding-right: 9px; font-size: 11px ! important; font-weight: bold; text-transform: uppercase; text-align: right; white-space: nowrap; overflow: visible;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20070701211200/http://apple2history.org/history/ah17.html" style="text-decoration: none; color: rgb(51, 51, 255); font-weight: bold; background-color: transparent; border: medium none;" title="1 Jul 2007"><strong>JUL</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background: none repeat scroll 0% 0% rgb(0, 0, 0); color: rgb(255, 255, 0); font-size: 11px ! important; font-weight: bold; text-transform: uppercase; width: 34px; height: 15px; padding-top: 1px; text-align: center;" title="You are here: 13:37:56 Aug 14, 2007">AUG</td>
+				<td style="padding-left: 9px; font-size: 11px ! important; font-weight: bold; text-transform: uppercase; white-space: nowrap; overflow: visible;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20070918124725/http://apple2history.org/history/ah17.html" style="text-decoration: none; color: rgb(51, 51, 255); font-weight: bold; background-color: transparent; border: medium none;" title="18 Sep 2007"><strong>SEP</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right: 9px; white-space: nowrap; overflow: visible; text-align: right ! important; vertical-align: middle ! important;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20070701211200/http://apple2history.org/history/ah17.html" title="21:12:00 Jul 1, 2007" style="background-color: transparent; border: medium none;"><img src="ah17_files/wm_tb_prv_on.png" alt="Previous capture" border="0" height="16" width="14"></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background: none repeat scroll 0% 0% rgb(0, 0, 0); color: rgb(255, 255, 0); width: 34px; height: 24px; padding: 2px 0pt 0pt; text-align: center; font-size: 24px; font-weight: bold;" title="You are here: 13:37:56 Aug 14, 2007">14</td>
+				<td style="padding-left: 9px; white-space: nowrap; overflow: visible; text-align: left ! important; vertical-align: middle ! important;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20070918124725/http://apple2history.org/history/ah17.html" title="12:47:25 Sep 18, 2007" style="background-color: transparent; border: medium none;"><img src="ah17_files/wm_tb_nxt_on.png" alt="Next capture" border="0" height="16" width="14"></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width: 110px; height: 13px; font-size: 9px ! important;">
+				<td style="padding-right: 9px; font-size: 11px ! important; font-weight: bold; text-align: right; white-space: nowrap; overflow: visible;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20060615103607/http://apple2history.org/history/ah17.html" style="text-decoration: none; color: rgb(51, 51, 255); font-weight: bold; background-color: transparent; border: medium none;" title="15 Jun 2006"><strong>2006</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background: none repeat scroll 0% 0% rgb(0, 0, 0); color: rgb(255, 255, 0); font-size: 11px ! important; font-weight: bold; padding-top: 1px; width: 34px; height: 13px; text-align: center;" title="You are here: 13:37:56 Aug 14, 2007">2007</td>
+				<td style="padding-left: 9px; font-size: 11px ! important; font-weight: bold; white-space: nowrap; overflow: visible;" nowrap="nowrap">
+               
+		                <a href="http://replay.waybackmachine.org/20080926135035/http://apple2history.org/history/ah17.html" style="text-decoration: none; color: rgb(51, 51, 255); font-weight: bold; background-color: transparent; border: medium none;" title="26 Sep 2008"><strong>2008</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align: middle; padding: 0pt ! important;">
+           <a href="http://waybackmachine.org/20070814133756*/http://apple2history.org/history/ah17.html" style="color: rgb(51, 51, 255); font-size: 11px; font-weight: bold; background-color: transparent; border: medium none;" title="See a list of every capture for this URL"><strong>62 captures</strong></a>
+           <div style="margin: 0pt ! important; padding: 2px 0pt 0pt ! important; color: rgb(102, 102, 102); font-size: 9px; white-space: nowrap;" title="Timespan for captures of this URL">23 Jul 01 - 27 Jun 09</div>
+       </td>
+       <td style="padding: 0pt ! important;">
+       <a style="position: relative; white-space: nowrap; width: 400px; height: 27px;" href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" style="position: relative; white-space: nowrap; width: 400px; height: 27px; background-color: rgb(255, 255, 255); cursor: pointer; border-right: 1px solid rgb(204, 204, 204);" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position: absolute; z-index: 9012; top: 0px; left: 0px;" onmouseover="showTrackers('inline');" onmouseout="showTrackers('none');" onmousemove="trackMouseMove(event,this)" alt="sparklines" src="ah17_files/graph.png" border="0" height="27" width="400">
+			<img id="wbMouseTrackYearImg" style="display: none; position: absolute; z-index: 9010;" src="ah17_files/transp-yellow-pixel.png" border="0" height="27" width="25">
+			<img id="wbMouseTrackMonthImg" style="display: none; position: absolute; z-index: 9011;" src="ah17_files/transp-red-pixel.png" border="0" height="27" width="2">
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align: right; padding: 5px; width: 65px; font-size: 11px ! important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display: block; padding-right: 18px; background: url(&quot;http://static.waybackmachine.org/images/toolbar/wm_tb_close.png&quot;) no-repeat scroll 100% 0pt transparent; color: rgb(51, 51, 255); font-family: 'Lucida Grande','Arial',sans-serif; margin-bottom: 23px; border: medium none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.waybackmachine.org/" style="display: block; padding-right: 18px; background: url(&quot;http://static.waybackmachine.org/images/toolbar/wm_tb_help.png&quot;) no-repeat scroll 100% 0pt transparent; color: rgb(51, 51, 255); font-family: 'Lucida Grande','Arial',sans-serif; border: medium none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<csimport occur="29" user="../../public_html.data/Components/history_bar3.html">
+					<link title="A2 History" href="ah17_files/a2main.css" type="text/css" rel="stylesheet" media="screen">
+				</csimport>
+				<csimport user="../../public_html.data/Components/history_bar4.html" occur="19">
+					<link title="A2 History" href="ah17_files/a2main.css" type="text/css" rel="stylesheet" media="screen">
+				</csimport>
+				<csimport user="../../public_html.data/Components/history_bar2.html" occur="37">
+					<link title="A2 History" href="ah17_files/a2main.css" type="text/css" rel="stylesheet" media="screen">
+				</csimport>
+			<!-- #EndHeadLocked -->
+		
+			<div align="center">
+				<csobj csref="../../public_html.data/Components/top_bar.html" h="153" occur="1" t="Component" w="764">
+					<div align="center">
+						<table border="0" cellpadding="0" cellspacing="0" width="640">
+							<tbody><tr bgcolor="#8b7e66">
+								<td>
+									<table width="639">
+										<tbody><tr>
+											<td valign="top" width="193" align="left"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/index.html"><img src="ah17_files/homepage.gif" alt="A2 History Home" border="0"></a></td>
+											<td class="link" valign="top" width="440" align="right"><b><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/intro/intro.html">intro</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah01.html">the history</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/new/new.html">what's new</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/museum/museum.html">museum</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/parodies/parodies.html">song parodies</a>&nbsp;&nbsp;&nbsp;&nbsp;<br>
+													<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/index.html#search">search</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/dl/dl.html">downloads</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/watn/watn.html">watn?</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/links/links.html">links</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/email/email.html">e-mail</a>&nbsp;&nbsp;&nbsp;&nbsp; </b></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+							<tr>
+								<td style="border-top: 2px solid white;">
+									<div align="center">
+										<img src="ah17_files/a2histlogo.jpg" alt="A2 History Logo" height="95" width="615"></div>
+								</td>
+							</tr>
+							<tr>
+								<td style="border-bottom: 2px solid white; border-top: 2px solid white;" bgcolor="#beac8a" valign="top">
+									<div align="center">
+										<i><b>© 1991-2007 by Steven Weyhrich</b></i></div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</csobj>
+				<table bgcolor="#ffe7ba" border="0" cellpadding="0" cellspacing="0" width="640">
+					<tbody><tr>
+						<td bgcolor="#ffe7ba">
+							<table border="0" cellpadding="0" cellspacing="0" height="220" width="620" align="center">
+								<tbody><tr>
+									<td valign="top" width="155"><!-- #BeginEditable "contents" -->
+											<table border="0" cellpadding="2" cellspacing="1" height="216" width="155" align="center">
+												<tbody><tr bgcolor="#cdba96" height="40">
+													<td class="heading" colspan="2" height="40">Contents</td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15" align="center">17</td>
+													<td class="link4" height="12">Languages, Cont.</td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15">&nbsp;</td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#01">Apple Pascal</a></td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15">&nbsp;</td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#02">Instant Pascal</a></td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15">&nbsp;</td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#03">FORTRAN</a></td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15"></td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#04">Other Languages</a></td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15"></td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#05">Assemblers</a></td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15"></td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#06">Macros vs. Scripts</a></td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15"></td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#07">A Leap In Complexity</a></td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15"></td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#07">Hypertext</a></td>
+												</tr>
+												<tr height="12">
+													<td class="link5" height="12" width="15">&nbsp;</td>
+													<td class="link5" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#99">Notes</a></td>
+												</tr>
+											</tbody></table>
+										<!-- #EndEditable --></td>
+									<td valign="top" width="160"><csobj csref="../../public_html.data/Components/history_bar2.html" h="220" occur="37" t="Component" w="160">
+											<table border="0" cellpadding="2" cellspacing="1" height="220" width="155" align="left">
+												<tbody><tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">01</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah01.html">Pre-Apple History</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">02</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah02.html">The Apple-1</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">03</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah03.html">The Apple II</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">04</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah04.html">The Apple II, Cont.</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">05</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah05.html">The Disk II</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">06</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah06.html">The Apple II Plus</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">07</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah07.html">The Apple IIe</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">08</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah08.html">The Apple IIc</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">09</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah09.html">The Apple IIc Plus</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">10</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah10.html">The Apple II<span class="gslink">GS</span></a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">11</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah11.html">The Apple II<span class="gslink">GS</span>, cont.</a></td>
+												</tr>
+												<tr bgcolor="#cdba96">
+													<td class="link4" valign="top" width="15">12</td>
+													<td class="link4" valign="top"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah12.html">Apple II Abroad / Peripherals</a></td>
+												</tr>
+											</tbody></table>
+										</csobj></td>
+									<td valign="top" width="155"><csobj csref="../../public_html.data/Components/history_bar3.html" h="220" occur="29" t="Component" w="160">
+											<table border="0" cellpadding="2" cellspacing="1" height="220" width="160" align="left">
+												<tbody><tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">13</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah13.html">Peripherals, Cont.</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">14</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah14.html">DOS</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">15</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html">DOS 3.3, ProDOS &amp; Beyond</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">16</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah16.html">Languages</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">17</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html">Languages, Cont.</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">18</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah18.html">Software</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">19</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah19.html">AppleWorks</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">20</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah20.html">Magazines</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">21</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah21.html">Magazines, Cont.</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">22</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah22.html">Telecommunications</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15">23</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah23.html">Rennaisance?</a></td>
+												</tr>
+												<tr bgcolor="#cdba96">
+													<td class="link4" colspan="2" valign="top">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</csobj></td>
+									<td valign="top" width="155"><csobj csref="../../public_html.data/Components/history_bar4.html" h="220" occur="19" t="Component" w="155">
+											<table border="0" cellpadding="2" cellspacing="1" height="220" width="155">
+												<tbody><tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15" align="center">A</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/appy/aha.html">Apple II Software Hits</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15" align="center">B</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/appy/ahb.html">Apple II Timeline</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15" align="center">C</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/appy/ahc.html">Apple Geneology</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15" align="center">D</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/appy/ahd.html">Bibliography</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15" align="center">&nbsp;</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/hlinks.html">Index of Hypertext Links</a></td>
+												</tr>
+												<tr bgcolor="#cdba96" height="12">
+													<td class="link4" height="12" valign="top" width="15" align="center">&nbsp;</td>
+													<td class="link4" height="12"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/glossary.html">Glossary</a></td>
+												</tr>
+												<tr bgcolor="#cdba96">
+													<td class="link4" colspan="2" valign="top" align="center">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</csobj></td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+					<tr>
+						<td class="link" bgcolor="#beac8a" valign="top" width="640">
+							<div align="center">
+								<!-- #BeginEditable "Links" --><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah16.html">Prev</a> | <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/index.html">Home</a> | <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah18.html">Next </a><!-- #EndEditable --></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table border="0" cellpadding="0" cellspacing="6" width="100%">
+								<tbody><tr>
+									<td>
+										<p class="heading"><!-- #BeginEditable "title" -->Languages, Cont.<!-- #EndEditable --><br>
+											<!-- #BeginEditable "date" --><span class="ver">v1.0 <img src="ah17_files/bull.gif" alt="bullet" height="10" width="10"> 22 Jan 92</span><!-- #EndEditable --></p>
+									</td>
+								</tr>
+								<tr>
+									<td bgcolor="#ffe7ba">&nbsp;</td>
+								</tr>
+								<tr>
+									<td bgcolor="#ffe7ba"><!-- #BeginEditable "content" -->
+											<div align="left">
+												<p class="subhead"><a name="01"></a><a name="Pascal"></a>APPLE PASCAL</p>
+											</div>
+											<p class="initial"><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah16.html#ApplesoftII">Applesoft</a>
+ was easy to use because it was interactive. You entered a command, and 
+could immediately try it out. The disadvantage was a lack of more 
+powerful commands, and it could be difficult to create large and complex
+ programs. Efforts were begun within Apple to develop a more 
+comprehensive language for the II, one that could be updated and 
+modified if necessary. Since Applesoft was in ROM, it was more expensive
+ and difficult for the end-user to install any upgrades to that 
+language.</p>
+											<p>In 1979 Apple Pascal and the Language System was released.
+ It sold for the steep price of $495, and came on four 5.25 floppy disks
+ (all in the format of the Pascal disk system, of course). It also 
+included the ROMs to change 13 sector disk controllers into 16 sector 
+controllers, and the <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah12.html#LanguageCard">Language Card</a>
+ to plug into slot 0. As discussed previously, the Language Card was a 
+16K RAM card that made an Apple II into a full 64K RAM computer. Because
+ of the extra available RAM, the Pascal system could load into memory 
+without having to avoid the space used by the Applesoft (or <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah16.html#IntegerBasic">Integer BASIC</a>) interpreter. And with some complicated bank switching, even routines in the Monitor could be used if needed.</p>
+											<p>Apple chose to use the Pascal standard defined by the 
+University of California at San Diego (UCSD). To make portability 
+between various different computers possible, UCSD Pascal programs were 
+compiled into a specialized code called "P-code". This "P-code" program 
+could then be executed on any computer that had a proper interpreter. An
+ Apple Pascal program could, then, run a little faster than an Applesoft
+ program (since it <i>was</i> compiled), but not as fast as assembly language. The extra power it provided made it an attractive choice for some programmers.</p>
+											<p>The earliest version of Apple Pascal got complaints from 
+users because it would not support lowercase (for those who had modified
+ their Apple to display lowercase), and it was so large that it was 
+quite awkward to use by those who owned only one disk drive.</p>
+											<p>Since the original UCSD Pascal language was designed to 
+work with a full 80 columns of text, this was somewhat of a problem for 
+the 40-column Apple II. For those Apple II's that did not have an 
+80-column card, Apple Pascal would display half of the screen at a time.
+ In the Pascal Editor, entry of a line longer than 40 columns would 
+cause the screen to scroll to the left. Using the arrow keys to move 
+back to the left would scroll the screen back the other way. If needed, 
+you could jump directly to the other half of the screen by pressing 
+Ctrl-A.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x1">[1]</a></p>
+											<p>The limitation of Apple Pascal came from the need for a 
+user to own the Language Card (or one of the later equivalent 16K RAM 
+cards), and the fact that it was incompatible with the large library of 
+DOS 3.2 programs and files that were already available. Eventually, with
+ the proliferation of the 64K Apple IIe and 128K Apple IIc, a platform 
+for Pascal applications was available. However, by that time the primary
+ disk system being promoted by Apple for the II was <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html#ProDOS">ProDOS</a>, and Apple never officially released a version of their original UCSD Pascal that would run under that operating system.</p>
+											<p>The Apple Pascal system has evolved up to version 1.3, 
+which will support the more advanced features of the Apple IIe and IIc, 
+but does not work as well with the IIGS as some would like. Instead, 
+IIGS programmers now have versions of Pascal distributed by third party 
+companies (like ORCA/Pascal from ByteWorks) created to take full 
+advantage of that machine in 16-bit mode.</p>
+											<br>
+											<div align="left">
+												<p class="subhead"><a name="02"></a>INSTANT PASCAL</p>
+											</div>
+											<p class="initial">This version of Pascal was written by 
+Think Technologies, and Apple later bought the rights to sell it as a 
+program for teaching Pascal. It would run only on The Apple IIc or on a 
+128K IIe because it used the double hi-res graphics mode, functioning 
+much like a Macintosh "desktop" with multiple resizable windows. It had a
+ mouse-based editor that checked program syntax as each line was entered
+ (as did the older Integer BASIC) and automatically indented lines and 
+boldfaced Pascal reserved words. Since it was intended for teaching, it 
+also had a single-step trace function and the ability to modify the 
+contents of variables while a program was running. Though good for 
+learning the language, it was quite slow because of the overhead needed 
+to display everything in graphics, and because it was an interpreted 
+version of Pascal (instead of a compiled version).</p>
+											<p>Fans of the original Apple Pascal complained loudly after 
+Apple introduced Instant Pascal. After this new Pascal came out, Apple 
+didn't seem motivated to make any further upgrades to the older Pascal, 
+which still used the original Pascal disk system format (Instant Pascal 
+was made to run directly under ProDOS).<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x2">[2]</a></p>
+											<br>
+											<div align="left">
+												<p class="subhead"><a name="03"></a>FORTRAN</p>
+											</div>
+											<p class="initial">Released by Apple in 1980, Apple FORTRAN 
+ran under the Pascal operating system. It cost $200 (over and above the 
+$495 needed to get the Language System). Programs written in FORTRAN for
+ other computers could run with little modification under Apple FORTRAN 
+(if a user needed that ability). As a compiled language, it ran faster 
+than Applesoft, and probably also faster than Pascal, since FORTRAN 
+wasn't translated into an intermediate "P-code". Apple's FORTRAN had 
+many bugs in it, though, and since its introduction in 1980 it was never
+ upgraded. By September 1986 it had disappeared from their product 
+catalogs.</p>
+											<p>Another way for an Apple II user to get FORTRAN was to buy the Microsoft Z-80 <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah12.html#Softcard">Softcard</a>
+ for $345 and Microsoft FORTRAN for $200. This version of FORTRAN was 
+more full-featured than Apple's, and offered some advantages in 
+usability. It did <i>not</i> require changing to the 16 sector disk 
+controller ROMs (if you didn't want to). Also, standard Microsoft BASIC 
+(which was more advanced than Applesoft) was included in the Softcard 
+package.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x3">[3]</a></p>
+											<p><a name="FortranPecan"></a>In June of 1987 Pecan Software released FORTRAN for the IIGS. It ran under <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html#ProDOS16">ProDOS 16</a> (<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html#GSOS">GS/OS</a>), but still used the UCSD format for its FORTRAN by creating a ProDOS file that acted as a UCSD Volume.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x3">[3]</a></p>
+											<br>
+											<div align="left">
+												<p class="subhead"><a name="04"></a>OTHER LANGUAGES</p>
+											</div>
+											<p class="initial"><b>PILOT</b>: Designed primarily for 
+creating tutorial modules, this language allowed educators to design 
+interactive programs to instruct students and test them on their 
+responses during the process. One early version was written in Applesoft
+ and was text-based. Apple later released their own version that ran 
+under the Pascal system for $125.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x4">[4]</a></p>
+											<p><b>FORTH</b>: This was a interesting language described as
+ "extensible". It had a number of built-in commands, and new ones could 
+be added as easily as typing its definition. These added commands could 
+then be used in larger programs. Two versions sold in the late 1970's 
+were "Apple Forth 1.6" (Cap'n Software) and "6502 Forth 1.2" (Programma 
+International). Apple Forth 1.6 was a good package, but it used a unique
+ disk system that was not compatible with <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah14.html#DOS32">DOS 3.2</a>. Programma's Forth was more extensive, but also more complicated.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x5">[5]</a>,<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x6">[6]</a></p>
+											<p><a name="Logo"></a><b>LOGO</b>: Developed from LISP (LISt 
+Processing) language to be an aid for learning, Logo has been popular 
+over the years in the school environment. Apple's first version of Logo 
+(which operated under the Pascal system) could run on any 64K Apple II, 
+while Apple Logo II (released in July 1984 for $100) ran under ProDOS on
+ Apple II's with 128K memory.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x7">[7]</a></p>
+											<p><b>COBOL</b>: This language has had limited availability 
+for the Apple II. The only version I am aware of was from Microsoft. It 
+sold for $599 and ran under the<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html#CPM">CP/M</a> system with the Microsoft Z-80 Softcard.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x8">[8]</a></p>
+											<p><b>C</b>: A language that is currently popular among 
+"power" programmers. It has some of the structure of Pascal, but also 
+some of the low-level power of assembly language.</p>
+											<br>
+											<div align="left">
+												<p class="subhead"><a name="05"></a>ASSEMBLERS</p>
+											</div>
+											<p class="initial">A large variety of Apple II assemblers 
+have been available over the years. The earliest one, of course, was the
+ mini-assembler that came with every Integer BASIC Apple II. The one was
+ only good for immediate entry of assembly code; if changes were needed,
+ much of the code would likely have to be re-entered from the beginning.
+ Some other assemblers available in the early days include:</p>
+											<p><b>TED/ASM</b>: Developed at Apple and smuggled out the 
+doors around May 1978, this assembler had memory conflicts with DOS, so 
+they couldn't be used together. The text editor module was written by 
+Randy Wigginton, and the assembler was written by Gary Shannon. In the 
+early days, it was the only assembler they had available that would run 
+on an Apple II.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x9">[9]</a></p>
+											<p><b>RANDY'S WEEKEND ASSEMBLER</b>: Also written by Randy 
+Wigginton, this one slipped out of Apple in September 1978. The text 
+editor was written mostly in SWEET-16 (Wozniak's 16-bit emulator in the 
+Integer BASIC ROM), and was therefore slow. Unfortunately, it had its 
+own set of bugs.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x9">[9]</a></p>
+											<p><b>MICROPRODUCTS ASSEMBLER</b>: The first commercially 
+available assembler for the Apple II, this was a "four character 
+assembler", meaning that labels (a designation identifying a line or 
+variable) could only be four characters long. Later it was expanded to 
+work with six character labels. Despite some annoying bugs, it was 
+inexpensive at only $39.95.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x10">[10]</a></p>
+											<p><b>SC-ASSEMBLER II</b>: Probably the second Apple II 
+assembler that was commercially distributed. Externally it was similar 
+to the Microproducts assembler, but was better supported and regularly 
+upgraded. It was very compact, and achieved that goal by making heavy 
+use of SWEET-16 code. Consequently, it was slow when assembling. The 
+author, Bob Sander-Cederlof, later started a popular newsletter called 
+"Apple Assembly Lines" to both support his product and to be an 
+information center for <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah02.html#6502">6502</a> assembly language tips and techniques.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x10">[10]</a></p>
+											<p><a name="Bredon1"></a><b>BIG MAC/MERLIN</b>: Sold 
+originally by A.P.P.L.E. as "Big Mac", and later under the name "Merlin"
+ by Southwestern Data Systems (later known as Roger Wagner Publishing). 
+This assembler has been well supported over the years and has been 
+extensively upgraded. It is one of the few remaining assemblers that 
+have moved on to the <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah10.html#65816">65816</a>
+ GS/OS world, while retaining full compatibility with the previous 8-bit
+ 6502 versions. Currently it is sold as Merlin 816 (including an 8-bit 
+version) and Merlin 16+. The author, <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/appy/aha82.html#Bredon2">Glen Bredon</a>, has also done many other programs and utilities for the Apple II.</p>
+											<p><b>ORCA/M</b>: Sold by the ByteWorks, the current version 
+was chosen by Apple Computer as the official assembler of the APW (Apple
+ Programmer's Workshop) programming environment on the IIGS. ByteWorks 
+has since expanded its product line to include versions of Pascal, C, 
+BASIC, and other IIGS languages.</p>
+											<p><b>APPLE EDASM</b>: This was Apple's original "official" 
+assembler for the II Plus and later 8-bit Apple II's. Though no longer 
+actively supported (ORCA/M having supplanted it in the APW environment),
+ the early versions for <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html#DOS33">DOS 3.3</a>
+ were included on the Apple Toolkit disk, which also had a hi-res 
+character generator that could be interfaced into Applesoft programs. 
+The early ProDOS versions of EDASM were sold with a 65c02 debugger 
+called <b>Bugbyter</b>.</p>
+											<p><a name="Huffin"></a><b>UCSD PASCAL ASSEMBLER</b>: Part of
+ the Apple Pascal package, it was popular because it had macro 
+capability, could do conditional assembly and create relocatable code, 
+and had a good text editor. However, programs created with it could not 
+be run on a standard (non-Language card) Apple, because there was no 
+utility available early on to transfer the files to <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah14.html#DOS32">DOS 3.2</a>. (Later, A.P.P.L.E. published transfer utilities called "HUFFIN" and "PUFFIN" for movement to and from <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html#DOS33">DOS 3.3</a>, named affectionately after Apple's "<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html#MUFFIN">MUFFIN</a>" utility for DOS 3.2 to 3.3 file transfers).</p>
+											<p><b>MISCELLANEOUS OTHER ASSEMBLERS</b>: ASM/65, sold by 
+Programma; "EAT" (Edit and Assemble Text) sold by Software Concepts, and
+ written in Integer BASIC; and L.I.S.A., sold by Laser Systems.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x10">[10]</a></p>
+											<br>
+											<div align="left">
+												<p class="subhead"><a name="06"></a>MACROS VS. SCRIPTS</p>
+											</div>
+											<p class="initial">With the increase in complexity of 
+applications programs has also come a secondary level of programming. 
+This extension has been called a "macro", meaning that a single step 
+would accomplish several separate ones that would ordinarily take more 
+effort. Early examples of this were available in some <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html#DOS33">DOS 3.3</a>
+ utilities, where pressing Ctrl-C from the keyboard (for example) might 
+cause the word "CATALOG" to appear on the command line. In this example,
+ a macro was used to save keystrokes and speed up repetitive activities.
+ Similar macros were available for BASIC programmers, making a control 
+key sequence print many of the common BASIC keywords, speeding program 
+entry. (This type of macro was different from macros used in some 
+assemblers, such as Big Mac/Merlin and the Pascal assembler. Here a 
+"macro" was a new command that was defined to represent several standard
+ assembly operation codes. This did not shorten the final resulting 
+program, but made it possible to more easily enter repeated sequences of
+ assembly codes).</p>
+											<p>Application programs began to take this concept and 
+include a macro capability (either offered with the program or as a 
+third-party add-on product). With time, some of these macro features 
+have become so complex that they have become programming languages in 
+their own right. In fact, many of them are being referred to as 
+"scripting" languages, since they "direct" the function of a program, as
+ a director uses a script to film a movie. This has been most popular 
+with telecommunications programs, where the process of logging on to a 
+remote computer, downloading new messages, and uploading replies is 
+automated with a script that analyzes the responses from the other 
+computer and takes the appropriate action. It has also been popular in 
+programs like <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah18.html#AppleWriter"><b>Apple Writer</b></a> (WPL, Word Processing Language) and <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah19.html"><b>AppleWorks</b></a> (<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah19.html#UltraMacros"><b>UltraMacros</b></a>), where each has had its own method of automating repetitive tasks.</p>
+											<br>
+											<div align="left">
+												<p class="subhead"><a name="07"></a>A LEAP IN COMPLEXITY</p>
+											</div>
+											<p class="initial">The environment for writing, compiling, 
+and debugging programs has evolved along with the applications created 
+by those programs. Originally, the Apple II and other computers of the 
+day were used in a "command-line interface" environment. This means that
+ each command was typed one at a time, and sometimes "batched" together 
+to simplify a repetitive process (as with EXEC files under Apple DOS). 
+An example of this command-line interface can be found by starting up 
+Applesoft (or by using MS-DOS on an IBM). Anything that is to be done 
+with this language has to be started by typing the proper command from 
+the keyboard. Misspell the word "LOAD", and an error message is printed 
+and it will stubbornly refuse to do what you wanted. The same command 
+line is used for entering the lines of a BASIC program, or RUNning the 
+program. This method was used because it was what programmers of the day
+ were accustomed to. Nearly every computer prior to the microcomputer 
+reVolution worked in the same way, even if it was done using punched 
+cards instead of being typed at a keyboard.</p>
+											<p>Minor differences were used from time to time in different
+ computer languages, but none really took effect and changed the way in 
+which people used computers until the release of the Macintosh in 1984. 
+Macintosh used a radically different method of operating a computer. 
+Instead of typing each command, the user would point to something on the
+ screen and "click" on it using the mouse pointing device. And Macintosh
+ programmers extended this concept to every application released with 
+it. This different environment has been called a "graphic user 
+interface" (GUI), and uses the concept of objects rather than typed 
+commands. To delete a file, you don't type "DELETE PROGRAM", but point 
+to the picture (icon) representing the file and drag it onto a picture 
+of a trash can. This "desktop" includes more complex commands chosen 
+from menus that appear in boxes called "windows" that pull down like a 
+window shade from command category names on a "menu bar".</p>
+											<p>As the command line disappeared, so did traditional 
+methods of handling program data. Words were still typed into a document
+ on a word processing program, but many of the features that set up 
+margins, tabs, and page breaks were translated into graphic icons 
+selected with the mouse. Eventually this progressed into the world of 
+the programmer. The text of computer program was entered much like any 
+word processor text, and the command to compile it into an executable 
+program was now selected from the menu bar at the top of the screen.</p>
+											<p>A step further along this path is the concept of 
+"object-oriented programming" (OOP). In this method, the details of 
+windows, menu bars, buttons, and other GUI standards are used to create 
+other programs that use a consistent interface. Instead of having to 
+laboriously define at the byte level how to create a window box, the 
+computer already knows how to do this; the programmer just has to tell 
+the computer how big it should be and where to place it on the screen. 
+OOP programming allows smaller modules (called "objects") to be used to 
+build a more complex final product. A language that works in an OOP 
+environment is finally available on an Apple II, but before we get to 
+it, a little more introduction is necessary.</p>
+											<br>
+											<div align="left">
+												<p class="subhead"><a name="08"></a>HYPERTEXT</p>
+											</div>
+											<p class="initial">The term "hypertext" was created by <u>Computer Lib</u>
+ author Ted Nelson, and refers to a method of allowing a user to move 
+from one concept to another in a text by linking the two concepts 
+together.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x11">[11]</a>
+ The first type of program that used "hypertext" was a simple text based
+ one. Certain words in the text of a document being viewed were marked 
+to indicate that other information about that word was available 
+elsewhere. Moving a cursor to that word and pressing a key would jump to
+ the additional facts. For example, in an article about the history of 
+music, the word "sonata" might be highlighted. Selecting this word could
+ jump to another article that discusses sonatas in greater detail. When 
+finished, the user could jump back over this link to the place where he 
+left off in the original article.</p>
+											<p><b>Tutor-Tech</b> was the first comprehensive hypertext 
+system available for the Apple II series. It worked on 8-bit Apple II's,
+ and was designed primarily for use in a classroom setting. Entirely 
+graphics-based, it defined certain parts of the screen as "buttons", and
+ moving the pointer to that area could allow the program to move to a 
+different screen or cause something else to happen. As with any graphic 
+interface, icons that represented certain functions were used to 
+designate commands (i.e., to exit the program, you point to a picture of
+ door labelled "EXIT").</p>
+											<p><a name="HyperCard"></a>In 1986 a remarkable program became available on the Macintosh that was, for a time, included with each Mac sold. <b>HyperCard</b>
+ was a comprehensive system that used the idea of hypertext, plus added a
+ programming language that consisted of words and phrases as close to 
+English as anything else previously available on a microcomputer. The <b>HyperCard</b>
+ system took care of the details of how to draw boxes and buttons, and 
+left it to the user to define where to put them and how to label them. 
+And because of the language (which Apple called "HyperTalk"), user 
+actions could do more than just move to a different picture (called a 
+"card" by the program). It was possible to design simple databases, 
+games, and much more using this system. Because it called a single part 
+of an application a "card", a collection of cards comprising an entire 
+HyperCard application was called a "stack".</p>
+											<p><a name="HyperStudio"></a>With the release of the IIGS, 
+the power was finally available in the Apple II world to create a 
+similar product. But it didn't come first from Apple Computer; instead, 
+Roger Wagner Publishing introduced a product called <b>HyperStudio</b> 
+in May of 1989. This program used the super hi-res graphics modes 
+accessible on the IIGS to create its own type of stacks. Like <b>HyperCard</b> on the Macintosh, <b>HyperStudio</b>
+ used buttons and objects on the screen to direct movement through a 
+stack application. It also included a hardware card that made it 
+possible to easily digitize sounds to use in stacks. Though more 
+extensive than <b>Tutor-Tech</b>, it was not quite as flexible as <b>HyperCard</b>, since it lacked a true programming language.</p>
+											<p>In January 1991, Apple released <b>HyperCard IIGS</b>, a 
+conversion of the Macintosh product. This finally made a fully 
+programmable hypermedia environment possible on the IIGS. Later in the 
+year Roger Wagner Publishing responded with an updated version of <b>HyperStudio</b>
+ that also included a programming language similar to HyperText that 
+afforded more control over that stacks that were created. Although 
+neither of these products gives the user power over details of the 
+computer system itself (as does "C" or assembly), it does make it 
+possible for a beginner to create programs that have outstanding 
+graphics and sound without having to know exactly how the hardware 
+produces these effects. This, along with the flexibility possible with 
+these products, has led Dennis Doms in an <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah21.html#A2Central">A2-Central</a> feature article to suggest that <b>HyperCard IIGS</b> (and now also possibly <b>HyperStudio</b>) will become the "Applesoft" of the 1990's; that is, an Apple IIGS user with <b>HyperCard IIGS</b> can create programs as easily as the Applesoft programmer of 1980 could do, but with far more attractive results.<a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah17.html#x11">[11]</a></p>
+										<!-- #EndEditable --></td>
+								</tr>
+								<tr>
+									<td>
+										<table bgcolor="#ffe7ba" width="100%">
+											<tbody><tr>
+												<td>
+													<div align="left">
+														<p class="subhead"><a name="99"></a>NOTES</p>
+														<!-- #BeginEditable "notetable" -->
+															<table border="0" cellpadding="0" cellspacing="2">
+																<tbody><tr>
+																	<td valign="top"><a name="x1"></a>[1]</td>
+																	<td>&nbsp;</td>
+																	<td>Walls, Keith S. "The Fantastic New World Of Apple Pascal", <u>PEEKing At Call-A.P.P.L.E.</u>, Vol 3, 1980, p. 237.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x2"></a>[2]</td>
+																	<td>&nbsp;</td>
+																	<td>Howerton, Christopher, and Purvis, Lee. "The Apple IIGS Pascal Revue", <u>Call-A.P.P.L.E.</u>, Apr 1988, pp. 12-17.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x3"></a>[3]</td>
+																	<td>&nbsp;</td>
+																	<td>Winston, Alan B. "The Multi Lingual Apple", <u>PEEKing At Call-A.P.P.L.E.</u>, Vol 3, 1980, pp. 222-224.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x4"></a>[4]</td>
+																	<td>&nbsp;</td>
+																	<td>Vanderpool, Tom. GEnie, <u>A2 Roundtable</u>, Mar &amp; Aug 1991, Category 2, Topic 16.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x5"></a>[5]</td>
+																	<td>&nbsp;</td>
+																	<td>Winston, Alan B. "The Multi-Lingual Apple: Languages", <u>PEEKing At Call-A.P.P.L.E.</u>, Vol 2, 1979, pp. 183-190.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x6"></a>[6]</td>
+																	<td>&nbsp;</td>
+																	<td>Cap'n Software's version was written by John 
+Draper, the legendary phone phreaker "Cap'n Crunch" who had worked at 
+Apple in its early days. During his time at Apple he had designed one of
+ the first peripheral cards for the Apple II: A telephone controlling 
+device that also just happened to be capable of hacking into long 
+distance telephone switching systems, and was therefore quite illegal.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x7"></a>[7]</td>
+																	<td>&nbsp;</td>
+																	<td>-----. Apple Computer, Inc, <u>Apple IIc Memory Expansion Card Owner's Guide</u>, Singapore, 1986, pp. 2-4.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x8"></a>[8]</td>
+																	<td>&nbsp;</td>
+																	<td>-----. (ads), <u>Call-A.P.P.L.E. In Depth #1</u>, 1981, p. 106.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x9"></a>[9]</td>
+																	<td>&nbsp;</td>
+																	<td>Hertzfeld, Andy. "A Consumer's Guide To Apple II Assemblers", <u>PEEKing At Call-A.P.P.L.E.</u>, Vol 2, 1979, pp. 164-166.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x10"></a>[10]</td>
+																	<td>&nbsp;</td>
+																	<td>Hyde, Randall. "Assembler Maxi-Reviews", <u>PEEKing At Call-A.P.P.L.E.</u>, Vol 3, 1980, pp. 240-246.</td>
+																</tr>
+																<tr>
+																	<td valign="top"><a name="x11"></a>[11]</td>
+																	<td>&nbsp;</td>
+																	<td>Doms, Dennis. "An Applesoft for the 1990's", <u>A2-Central</u>, Mar 1991, p. 7.09-7.13.</td>
+																</tr>
+															</tbody></table>
+														<!-- #EndEditable --></div>
+												</td>
+											</tr>
+										</tbody></table>
+									</td>
+								</tr>
+								<tr bgcolor="#ffe7ba">
+									<td>
+										<div align="center">
+											<table border="0" cellpadding="0" cellspacing="2">
+												<tbody><tr>
+													<td>
+														<div align="center">
+															<span class="date">Number of page views since </span><!-- #BeginEditable "datesince" --><span class="date">5/16/2003</span><!-- #EndEditable --><span class="date">:</span><br>
+															<!-- #BeginEditable "pagename" --><img src="ah17_files/counter.html" alt="counter"><!-- #EndEditable --></div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div align="center">
+															<span class="date">Last modified on 
+																<script type="text/javascript" language="JavaScript">
+<!--
+
+var d = new Date(document.lastModified);
+var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var monthname=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write(weekday[d.getDay()] + ", ")
+document.write(monthname[d.getMonth()] + " ")
+document.write(d.getDate() + ", ")
+document.write(d.getFullYear())
+
+//-->
+</script>Wednesday, March 2, 2011
+															</span></div>
+													</td>
+												</tr>
+											</tbody></table>
+										</div>
+									</td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+					<tr>
+						<td class="link" bgcolor="#beac8a" valign="top" width="640">
+							<div align="center">
+								<!-- #BeginEditable "Links2" --><a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah15.html">Prev</a> | <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/index.html">Home</a> | <a href="http://replay.waybackmachine.org/20070814133756/http://apple2history.org/history/ah18.html">Next </a><!-- #EndEditable --></div>
+						</td>
+					</tr>
+				</tbody></table>
+				<csobj csref="../../public_html.data/Components/bottom_bar.html" h="112" occur="51" t="Component" w="764">
+					<div align="center">
+						<table border="1" cellpadding="0" cellspacing="0" width="640">
+							<tbody><tr>
+								<td>
+									<div align="center">
+										<i><b>© 1991-2007 by Steven Weyhrich&nbsp;&nbsp;</b></i><!-- Creative Commons License --><a rel="license" href="http://replay.waybackmachine.org/20070814133756/http://creativecommons.org/licenses/by-nc-nd/2.0/"><img alt="Creative Commons License" src="ah17_files/somerights20.gif" border="0" align="absmiddle"></a><br>
+										
+<i>This work is licensed under a <a rel="license" href="http://replay.waybackmachine.org/20070814133756/http://creativecommons.org/licenses/by-nc-nd/2.0/">Creative Commons License</a>.
+</i><!-- /Creative Commons License --><!--
+
+<rdf:RDF xmlns="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<Work rdf:about="">
+   <dc:title>Apple II History</dc:title>
+   <dc:date>1991</dc:date>
+   <dc:description>A history of the Apple II computer and its associated hardware and software, including its origins at Apple Computer, Inc.`</dc:description>
+   <dc:creator><Agent>
+      <dc:title>Steven Weyhrich</dc:title>
+   </Agent></dc:creator>
+   <dc:rights><Agent>
+      <dc:title>Steven Weyhrich</dc:title>
+   </Agent></dc:rights>
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   <license rdf:resource="http://creativecommons.org/licenses/by-nc-nd/2.0/" />
+</Work>
+
+<License rdf:about="http://creativecommons.org/licenses/by-nc-nd/2.0/">
+   <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+   <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+   <requires rdf:resource="http://web.resource.org/cc/Notice" />
+   <requires rdf:resource="http://web.resource.org/cc/Attribution" />
+   <prohibits rdf:resource="http://web.resource.org/cc/CommercialUse" />
+</License>
+
+</rdf:RDF>
+
+--></div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</csobj></div>
+		<!-- #EndTemplate -->
+
+<!--
+     FILE ARCHIVED ON 13:37:56 Aug 14, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 10:49:56 Mar 2, 2011.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+</body></html>

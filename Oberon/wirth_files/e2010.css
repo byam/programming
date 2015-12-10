@@ -1,0 +1,157 @@
+﻿html 
+ {
+ overflow: -moz-scrollbars-vertical; 
+ overflow-y: scroll;
+ }
+  
+.selRow
+ {
+ border-bottom: 4px solid Orange;
+ }
+.selSpace
+ {
+ height: 18px;
+ }
+.selected
+ {
+ padding: 5px 18px 14px 18px;
+ background-color: Orange;
+ text-align: center;
+ }
+.unselected
+ {
+ padding: 5px 18px 0px 18px;
+ background: #ffefb7;
+ cursor: pointer;
+ text-align: center;
+ border-bottom: 4px solid Orange;
+ }
+.sep
+ {
+ padding: 5px;
+ width: 12px;
+ }
+ 
+.visible
+ {
+ 	 text-align:justify;
+ }
+.hidden
+ {
+ display: none;
+ }
+ 
+.eptaLogo
+ {
+ 	border:none;
+ 	padding-top:2px;
+ 	padding-left:12px;
+ 	padding-right:12px;
+ 	vertical-align:top;
+ }
+
+.homeFooter
+ {
+ margin: 16px 16px 0px 16px;
+ padding: 12px 18px 3px 18px;
+ border-top:1px solid #9E5205;
+ text-align: center;
+ font-size: 12px;
+ font-family: Arial,Verdana,Sans-Serif;
+ }
+
+.seqImg
+ {
+ 	border:none;
+ 	padding-top:2px;
+ 	padding-left:12px;
+ 	padding-right:12px;
+ 	vertical-align:middle;
+ }
+ 
+#header
+ {
+ padding: 5px 5px 5px 5px;
+ margin: 12px 16px 16px 16px;
+ border-bottom: 1px solid #9E5205;
+ color: #9E5205;
+ font-size: 24px;
+ font-family: Arial,Verdana,Sans-Serif;
+ vertical-align: middle;
+ } 
+#header a
+ {
+ color: #9E5205;
+ text-decoration: none;
+ }
+#header a:hover
+ {
+ color: #9E5205;
+ text-decoration: underline;
+ }
+ .smallerHeader
+ {
+ font-size:20px;
+ }
+ 
+#mainClm
+ {
+ margin: 0px 0px 8px 8px;
+ padding: 0px 16px 0px 16px;
+ border-right: 1px solid #9E5205;
+ }
+
+#mainClm b
+ {
+ color: #9E5205;
+ font-weight:normal;
+ }
+
+#mainClm li
+ {
+     margin-bottom:8px;
+ }
+
+#mainClm ul
+ {
+     margin-top:8px;
+ }
+ 
+#sideBar
+ {
+ margin: 0px 16px 0px -1px;
+ padding: 0px 0px 0px 16px;
+ text-align: left;
+ border-left: 1px solid #9E5205;
+ }
+    
+.bullet
+ {
+ font-family: Verdana,Sans-Serif;
+ color: #9E5205;
+ font-size: 105%;
+ }
+ 
+ .section
+ {
+ border-bottom:solid 2px #9E5205;
+ padding-bottom:4px;
+ margin-bottom:8px;
+ margin-top:8px;
+ }
+ 
+ .shorter
+ {
+     display:inline-block;
+     width:90%;
+ }
+ 
+ .articHTML
+ {
+ 	margin-left:16px;
+ }
+ 
+ .articPDF
+ {
+ 	margin-left:16px;
+ }

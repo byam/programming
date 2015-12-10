@@ -1,0 +1,646 @@
+/* xrail.css */
+
+/* main modules.css */
+div.scrape {
+    width: auto;
+    line-height: 1em;
+    margin-top: 10px;
+}
+
+.scrape a { text-decoration:none; }
+
+.replace {
+   display:none;
+}
+
+.scrape h2 {
+    font: normal 1.6em Georgia, "times new roman", serif;
+}
+
+.scrape h3 {
+    font: bold 1.4em arial, helvetica; 
+    color: #666;
+    height: 14px;
+}
+
+.scrape .pic {
+    margin: 6px 10px 7px 0;
+}
+
+.scrape h2 a:link { color: #000; }
+.scrape h2 a:visited { color:#666; } 
+.scrape h2 a:hover { color:#007CA5; }
+.scrape h2 a:active { color:#999; } 
+
+
+
+.scrape ul li {
+    margin: 13px 0 10px 0;
+	list-style-type:none; 
+}
+
+html>body .scrape ul li {
+    margin: 15px 0 16px 0;
+}
+
+.scrape h4 {
+    font: normal 1.1em "arial black", arial, helvetica;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.scrape a {
+    color: #007ca5;
+}
+
+.scrape a:hover {
+    color: #007ca5;
+}
+
+.scrape p strong {
+    font: normal .7em arial, verdana, sans-serif; 
+    text-transform: uppercase;
+    color: #000;
+}
+
+.scrape p a {
+    font: normal 1.1em arial, verdana, sans-serif; 
+    color: #007ca5;
+}
+  
+/* magazine & multimedia scrape */
+
+#mag h4,
+#mag h2,
+#multi h4,
+#multi h2 {
+    margin-left: 10px;
+}
+
+.scrape #mag h2,
+.scrape #multi h2 {
+    line-height: 1.2em;
+}
+
+#multi .pic {
+    margin: 6px 0 4px 0;
+    float: left;
+}
+
+html>body #multi .pic {
+    margin: 7px 0 7px 0;
+}
+
+#xrail #popular_sponsor .matchbook_bubble,
+#xrail #sponsor .matchbook_bubble {
+    display: none;
+}
+
+#xrail .matchbook_bubble {
+    background: transparent url(/images/bubble_tile.gif) repeat-x 0 0 !important;
+    clear: both;
+    width: 336px;    
+    height: 17px;
+    margin: 10px 0;
+}
+
+
+/* toolbox */
+
+.tool {
+    margin: .3em 0;
+    font: 1.1em arial, helvetica sans-serif;
+    color: #666;
+    font-weight: bold !important;
+}
+
+.tool img {
+    margin-right: 3px;    
+}
+
+.tool a {
+    text-decoration: none;
+    color: #007CA5;
+}
+
+/* toolbox 1 specific */
+
+/*for ie 6*/
+* html div#toolbox  {
+    padding: 0 0 24px 0;
+}
+/* for everyone else */
+div#toolbox {    
+    width: 336px;
+    /* height: 92px; for when comment icon appears */
+    height: 72px;
+    margin-top: 3em;
+    position:relative;
+    padding:0 0 34px 0; 
+    margin:0 0 10px 0; 
+    background: url(/images/mb/bubbles.gif) repeat-x bottom left;
+} 
+/* for ie7 */
+*+html div#toolbox  {
+    padding: 0 0 44px 0;
+}
+
+
+div#toolbox ul {
+    list-style-type: none;
+    margin: 12px 15px;
+}
+
+div#sponsor { position:absolute; right:0; top:46px;  }
+
+div#toolbox > div#sponsor { top:34px; width:171px; }
+
+/* for safari */
+html[xmlns*=""] body:last-child div#toolbox > div#sponsor { right:-10px; }
+
+#byTxt { width:auto; float:left; font-size:1.1em; margin:9px 0 0 0; display:none; /* text should not display if no ad - see global.js */ }
+
+
+/* featured commentary & promo scrapes -> "mod5" */
+
+.mod5 .col2 {
+    margin-bottom: 7px;
+}
+
+.mod5 h3 {
+    margin-bottom: 5px;
+}
+
+.mod5 h3 span {
+    display: block;
+    margin: 0 0 0 5000px;
+}   
+
+.mod5 ul {
+    font: bold 1.1em Georgia, "times new roman", serif;
+    color: #999;
+    clear: right;
+}
+
+.mod5 ul li {
+    list-style-type: none;
+    font-weight: normal;
+    line-height: 1.3em;
+    margin: -1px 0;
+    padding: 0;
+}
+
+* html .mod5 ul li {
+    margin: -3px 0;
+    line-height: 1.5em;
+}
+
+.mod5 .pic {
+    display: block;
+    float: left;
+    height: 110px;
+    width: 110px;
+    margin: 0 10px 0 0 ;
+}
+
+.mod5 #comment_by {
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+/* for ie6 & 7 */
+*div.mod5 #comment_by {
+    font-size: 1.3em;
+}
+
+/* for safari */
+html[xmlns*=""] body:last-child .mod5 #comment_by {
+    font-size: 1.1em;
+}
+
+.mod5 .gray {
+    color: #999;
+}
+
+.mod5 h4.gray {
+    font-family: georgia, "times new roman", serif;
+}
+
+.mod5 sub,
+.mod5 p .view_all {
+    display: block;
+}
+
+.mod5 p .view_all {
+    font-size: 1.1em; 
+    display: block;
+    margin-top: 7px;
+}
+
+.mod5 .pic {
+    margin: 0 10px 17px 0;
+}
+
+.mod5 blockquote {
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+.mod5 #matchbook_dot {
+    margin-top: 7px;
+}
+
+.mod5 #featuring {
+    display: block;
+    font: bold 1.2em arial, helvetical, sans-serif;
+    margin-top: 3px;
+}
+
+* html .mod5 #featuring {
+    margin-top: 5px;
+}
+
+h3#feat_com {
+    background: transparent;
+    /*background: transparent url(/images/modules/modhead_feat_com.gif) no-repeat 0 0;*/
+}
+
+h3#feat_com span {
+    color: #fff;
+    display: block;
+    margin: 0 0 0 5000px;
+}
+
+/* magazine & multimedia scrape */
+
+#mag h4,
+#mag h2,
+#multi h4,
+#multi h2 {
+    margin-left: 10px;
+}
+
+#mag h4 {
+    /*font-size: 1.1em;*/
+}
+
+.scrape #mag h2,
+.scrape #multi h2 {
+    line-height: 1.2em;
+}
+
+body.home .scrape, .scrape .multi_home {
+    width: 300px;
+}
+
+#multi h3 {
+    background: transparent;
+    /* background: transparent url(/images/modules/modhead_multimedia.gif) no-repeat 0 0;*/
+}
+
+#mag h3 {
+    backgound: transparent;
+    /*background: transparent url(/images/modules/modhead_mag_scrape.gif) no-repeat 0 1px;*/
+}
+
+#multi h3 span {
+    margin: 0 0 0 5000px;
+}
+
+#mag h3 span.remove {
+    position:absolute;
+    top: -5000px;
+}
+
+#multi .pic {
+    float: left;
+    margin: 6px 10px 0 0;
+}
+
+#multi .pic img {
+    margin: 0 10px 0 0;
+}
+
+html>body #multi .pic {
+    margin: 7px 0 7px 0;
+}
+
+
+/* magazine extras scrape */
+
+#mag_on_excl h4 {
+    line-height: 1em;
+}
+
+#mag_on_excl h3 {
+    margin: 0 0 -9px 0;
+}
+
+#mag_on_excl h4 {
+    font-size: 1em;
+}
+
+#mag_on_excl li p {
+    font-size: 1.3em;
+    line-height: 1em;
+}
+
+#mag_on_excl li p strong {
+    font: bold .8em arial, helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #000;
+}
+
+#mag_on_excl li p a {
+    font-size: .9em;
+}
+
+#mag_on_excl h3 {
+    background: transparent url(/images/modules/modhead_mag_on_extras.gif) no-repeat 0 0;
+}
+
+#mag_on_excl h3 span {
+    display: block;
+    margin: 0 0 0 5000px;
+}
+
+
+
+html>body #mag_on_excl h3 {
+    margin: 0 0 -6px 0;
+}
+
+
+* html #mag_on_excl h3 {
+    margin-bottom: -54px;
+}
+
+#mag_on_excl #mb_bubbles {
+    background: transparent url(/images/mb/bubbles.gif) no-repeat 0 0;
+    margin-top: -6px;
+}
+
+* html #mag_on_excl #mb_bubbles {
+    margin-top: 9px;
+}
+
+
+/* most popular/commented on wired module */
+
+.inner {
+    height: auto;
+}
+
+#popular_module {
+    width: 336px;
+    margin:20px 0 0 0;
+    height: auto;
+    font: normal 1.2em georgia,"times new roman", serif;
+}
+/* if comp gets approved, might not be used anymore */
+#popular_module .t_row {
+    margin-bottom: 0;
+    height: 40px;
+    background: transparent url(/images/modules/popular_bg_t.gif) 0 0 no-repeat;
+}
+
+/* tabs */
+#popular_module .t_row2 {
+    height: 30px;
+    font: bold 11px arial, helvetica, sans-serif;
+    position: relative;
+}
+
+#popular_module .t_row2 #most_pop_tab,
+#popular_module .t_row2 #most_com_tab,
+#popular_module .t_row2 #blank_tab {
+    float: left;
+    height: 32px;
+    text-align: center;
+}
+
+#popular_module .t_row2 a {
+    cursor: hand;
+    cursor: pointer;
+    display: block;
+    height: 25px;
+} 
+
+#popular_module .t_row2 #most_pop_tab {
+    
+}
+
+#popular_module .t_row2 #most_com_tab {
+
+}
+
+#most_pop_tab {
+    width: 110px;
+    background: transparent url(/images/modules/popular_bg_t_sel.gif) 0 0 no-repeat;
+}
+
+#most_com_tab {
+    width: 139px;
+    background: transparent url(/images/modules/commented_bg_t_un.gif) 0 0 no-repeat;
+}
+
+#popcom_bg_tr.gif {
+    width: 50px;
+}
+
+#blank_tab {
+    width: 50px;
+    background: transparent url(/images/modules/popcom_bg_tr.gif) 0 0 no-repeat;
+    clear: right;
+}
+/* end tabs */
+
+#popular_module .m_row {
+    height: 200px;
+    width: 300px;
+    background: transparent url(/images/modules/popcom_bg_m.gif) 0 0 repeat-y;
+    padding: 10px 0 5px 0;
+}
+
+html>body #popular_module .m_row {
+    height: auto;
+    min-height: 200px
+}
+
+#popular_module .m_row li {
+    font-weight: normal;
+    margin: 0 15px 10px 35px;
+}
+
+#popular_module .m_row li {
+   *margin-left: 39px;
+}
+
+/* tab content */
+
+#mostPopular {
+    display: 
+}
+
+#mostCommented {
+    display: none;
+}
+
+/* end tab content */
+
+#popular_module .b_row {
+    background:transparent url(/images/modules/popcom_bg_b.gif) no-repeat 0pt -30px;
+    height:20px;
+    position:relative;
+}
+
+#popular_module > .b_row { top:-10px; }
+
+.replace { display:none; }
+
+div#popular_sponsor { position:absolute; right:50px; top:5px; }
+
+.b_row > div#popular_sponsor { width:171px; }
+
+#popular_byTxt { width:auto; float:left; font-size:1em; font-weight:normal; margin:9px 0 0 0; display:none; /* text should not display if no ad - see global.js */ }
+
+
+/* services module */
+
+.scrape #services {
+    font: normal 1.1em  arial, helvetica;
+    line-height: 1.2em;
+    width: 336px;
+}
+
+.home .scrape #services  {
+    width: 302px;    
+} 
+
+.scrape #services h3 {
+    background: transparent url(/images/modules/modhead_services.gif) no-repeat 0 0;
+}
+
+#services h3 span {
+    display: none;
+}
+
+#services .group {
+    margin: 10px 0;
+    color: #007a5c;
+}
+
+#services .group strong {
+    color: black;
+}
+
+#services .group a {
+    margin: 0 2px;
+}
+
+#xrail #services .matchbook_bubbles {
+    background: transparent url(/images/bubble_tile.gif) repeat-x 0 0 !important;
+    clear: both;
+    width: 336px;    
+    height: 17px;
+    margin: 10px 0;
+}
+
+#xrail #services #mb_bottom {
+    margin-top: 15px;
+}
+
+/* jobthread */
+
+#xrail #job_thread h3 {
+    background: none;
+    margin-bottom: 10px;
+}
+
+.jt_list {
+    font-size: 1em;
+}
+
+.jt_list .job {
+    width: auto;
+}
+
+.location, .business, 
+.reward,  .job_thread_end {
+    font-size: .91em;
+}
+
+.location, .business {
+    float: left;
+    width: auto;
+}
+
+.jt_list .reward {
+    width: auto;
+    margin: -6px 0 7px;
+	position: relative;
+    text-align: left;
+    width: 450px;
+    left:-115px;
+}
+
+.jt_list .location {
+    font-site: .9em;
+    margin:0pt 6px 7px 2px;
+    text-align:right;
+    width:auto;
+}
+
+.jt_list . business {
+    float: left;
+    font-size: .9em;
+}
+
+.jt_list {
+    font-size: 1.1em;
+}
+
+.jt_list .referral {
+    font-site: .9em;
+}
+
+.jt_list .item {
+    clear: both;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+.jt_list .job_thread_end {
+    margin: 10px 0 -40px;
+    clear: both;
+}
+
+.jt_list .job_thread_end .job {
+    font-site: .9em;
+    width: 140px;
+    margin-bottom: 10px;
+    width: 163px;
+}
+
+.jt_list .job_thread_end .jt_logo {
+    position: relative;
+    top: -15px;
+    left: 175px;
+    font-size: 1em;
+    width: 100px;
+    margin: 25px 0pt 10px;
+}
+
+.jt_list .job_thread_end .jt_links {
+    width: 170px;
+    float: left;
+}
+
+.jt_list .job_thread_end img {
+    position: relative;
+    left: 62px;
+    top: -20px;
+}
+#services #srv_subscription li{
+    display: inline;
+}
